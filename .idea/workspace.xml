@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/datascraper/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datascraper/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datascraper/templates/todos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datascraper/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSEDataAnalising/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSEDataAnalising/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSEDataAnalising/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +21,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ManuelTrajcev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ManuelTrajcev&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ManuelTrajcev/MSEDataAnalising.git",
-    "accountId": "b1618747-589a-4a06-9cd6-81bacd85cb31"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ManuelTrajcev/MSEDataAnalising.git&quot;,
+    &quot;accountId&quot;: &quot;b1618747-589a-4a06-9cd6-81bacd85cb31&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2oImndA6sebum2CDp4o5znxCxdO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,9 +44,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Django Server.MSEDataAnalising.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Manuel",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +56,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\datascraper" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MSEDataAnalising" type="Python.DjangoServer" factoryName="Django server">
       <module name="MSEDataAnalising" />
@@ -57,6 +69,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="MSEDataAnalising.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -92,6 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730565631736</updated>
       <workItem from="1730565633824" duration="3266000" />
+      <workItem from="1730571474087" duration="6301000" />
     </task>
     <servers />
   </component>
