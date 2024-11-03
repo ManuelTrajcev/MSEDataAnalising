@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from models import DayEntry
 def filter_1():
     response = requests.get("https://www.mse.mk/mk/stats/symbolhistory/KMB")
     raw_html = response.text
