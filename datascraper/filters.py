@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.common.exceptions import NoSuchElementException
 import time
 
 def filter_1():
@@ -47,7 +48,7 @@ def select_issuer_code(driver, code):
 #
 #     while True:
 #         # Adjust the top property to scroll down
-#         new_top = last_top - 1000  # Adjust the value to scroll down by 10 pixels
+#         new_top = last_top - 31  # Adjust the value to scroll down by 10 pixels
 #         driver.execute_script("arguments[0].style.top = arguments[1] + 'px';", scrollable_div, new_top)
 #         time.sleep(1)  # Wait for new data to load
 #
@@ -70,71 +71,87 @@ def fetch_data(driver):
     show_button.click()
     time.sleep(3)  # Wait for data to load; adjust as needed
 
-    table = driver.find_element(By.ID, 'resultsTable')
+    try:
+        table = driver.find_element(By.ID, 'resultsTable')
 
-    # scroll_to_bottom(driver)
+        # scroll_to_bottom(driver)
+        rows = table.find_elements(By.TAG_NAME, 'tr')
+        # for row in rows:
+        #     if row.is_displayed():  # Check if the row is visible
+        #         print(row.text)
 
-    rows = table.find_elements(By.TAG_NAME, 'tr')
+        # rows are not visible when getting data for one year
 
-    data = []
-    for row in rows[1:]: # Skip the header row
-        # time.sleep(1)
-        cols = row.find_elements(By.TAG_NAME, 'td')
-        if cols:  # Check if row has any data
-            # Extract the relevant data
-            date = cols[0].text
-            last_transaction_price = convert_price_format(cols[1].text.strip()) if cols[1].text.strip() else None
-            max_price = convert_price_format(cols[2].text.strip()) if cols[2].text.strip() else None
-            min_price = convert_price_format(cols[3].text.strip()) if cols[3].text.strip() else None
-            average_price = convert_price_format(cols[4].text.strip()) if cols[4].text.strip() else None
-            percent_change = convert_price_format(cols[5].text.strip()) if cols[5].text.strip() else None
-            quantity = int(cols[6].text.strip()) if cols[6].text.strip() else None
-            turnover_in_best = convert_price_format(cols[7].text.strip()) if cols[7].text.strip() else None
-            total_turnover = convert_price_format(cols[8].text.strip()) if cols[8].text.strip() else None
+        data = []
+        for row in rows[1:]: # Skip the header row
+            # time.sleep(1)
+            # print(row.text)
+            cols = row.find_elements(By.TAG_NAME, 'td')
+            if cols:  # Check if row has any data
+                # Extract the relevant data
+                date = cols[0].text
+                last_transaction_price = convert_price_format(cols[1].text.strip()) if cols[1].text.strip() else None
+                max_price = convert_price_format(cols[2].text.strip()) if cols[2].text.strip() else None
+                min_price = convert_price_format(cols[3].text.strip()) if cols[3].text.strip() else None
+                average_price = convert_price_format(cols[4].text.strip()) if cols[4].text.strip() else None
+                percent_change = convert_price_format(cols[5].text.strip()) if cols[5].text.strip() else None
+                quantity = convert_price_format(cols[6].text.strip()) if cols[6].text.strip() else None
+                turnover_in_best = convert_price_format(cols[7].text.strip()) if cols[7].text.strip() else None
+                total_turnover = convert_price_format(cols[8].text.strip()) if cols[8].text.strip() else None
 
-            # Append to the data list
-            data.append((date, float(last_transaction_price) if last_transaction_price else None, float(max_price) if max_price else None,
-                         float(min_price) if min_price else None, float(average_price) if average_price else None,
-                         float(percent_change) if percent_change else None, quantity if quantity else None,
-                         float(turnover_in_best) if turnover_in_best else None,
-                         float(total_turnover) if total_turnover else None))
+                # Append to the data list
+                data.append((date, float(last_transaction_price) if last_transaction_price else None, float(max_price) if max_price else None,
+                             float(min_price) if min_price else None, float(average_price) if average_price else None,
+                             float(percent_change) if percent_change else None, float(quantity) if quantity else None,
+                             float(turnover_in_best) if turnover_in_best else None,
+                             float(total_turnover) if total_turnover else None))
 
-    return data # none for all other entries except the first 11 entries
+        return data # none for all other entries except the first 11 entries
+    except NoSuchElementException:
+        return []
 
 def save_data_to_db(data, issuer):
-    conn = sqlite3.connect('../db.sqlite3')  # Adjust path as needed
-    cursor = conn.cursor()
+    if data:
+        conn = sqlite3.connect('../db.sqlite3')  # Adjust path as needed
+        cursor = conn.cursor()
+        # Insert data into the database
+        for entry in data:
+            # Make sure to include the issuer in the entry
+            cursor.execute('''INSERT INTO transactions 
+                                  (issuer, date, last_transaction_price, max_price, min_price, average_price, percent_change, 
+                                  quantity, turnover_in_best, total_turnover)
+                                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
+                           (issuer,) + entry)  # Prepend issuer to entry
 
-    # Insert data into the database
-    for entry in data:
-        # Make sure to include the issuer in the entry
-        cursor.execute('''INSERT INTO transactions 
-                              (issuer, date, last_transaction_price, max_price, min_price, average_price, percent_change, 
-                              quantity, turnover_in_best, total_turnover)
-                              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
-                       (issuer,) + entry)  # Prepend issuer to entry
-
-    conn.commit()
-    cursor.close()
-    conn.close()
+        conn.commit()
+        cursor.close()
+        conn.close()
 
 def fetch_data_last_10_years(driver, issuer_code):
-    end_date = datetime.today()
-    start_date = end_date - timedelta(days=365)
+    end_year_date = datetime.today()
+    start_year_date = end_year_date - timedelta(days=365)
 
-    # Divide the last 10 years into 365-day intervals
-    for _ in range(2): # should be 10 not 2
-        set_date_range(driver, start_date, end_date)
-        select_issuer_code(driver, issuer_code)
-        data = fetch_data(driver)
-        # save_data_to_db(data, issuer_code) # uncomment this to save to db
+    # Loop for each year in the past 10 years
+    for _ in range(1): # should be 10 not 1, just for testing
+        current_end_date = end_year_date
+        current_start_date = end_year_date - timedelta(days=5)
 
-        # Process and save data as needed
-        # print(data)
+        # Divide the year into 15-day intervals
+        while current_start_date >= start_year_date:
+            set_date_range(driver, current_start_date, current_end_date)
+            select_issuer_code(driver, issuer_code)
+            data = fetch_data(driver)
+            save_data_to_db(data, issuer_code)  # uncomment this to save to db
 
-        # Move to the previous interval
-        end_date = start_date - timedelta(days=1)
-        start_date = end_date - timedelta(days=365)
+            # # Process and save data as needed
+            # print(data)  # Print or handle the data as needed
+
+            current_end_date = current_start_date - timedelta(days=1)
+            current_start_date = current_end_date - timedelta(days=5)
+
+        # Move to the previous year
+        end_year_date = start_year_date - timedelta(days=1)
+        start_year_date = end_year_date - timedelta(days=365)
 
 def filter_2(data):
     conn = sqlite3.connect('../db.sqlite3')
@@ -145,12 +162,22 @@ def filter_2(data):
     issuer_last_dates = {}
 
     for issuer in data[:2]: # remove [:2] only for testing
-        cursor.execute("SELECT MAX(date) FROM transactions WHERE issuer = ?", (issuer,))
+        # cursor.execute("SELECT MAX(date) FROM transactions WHERE issuer = ?", (issuer,))
+        cursor.execute("""
+            SELECT MAX(strftime('%Y-%m-%d', substr(date, 7, 4) || '-' || substr(date, 4, 2) || '-' || substr(date, 1, 2))) 
+            FROM transactions 
+            WHERE issuer = ?
+        """, (issuer,))
         result = cursor.fetchone()
 
         if result[0] is not None:
             last_date = result[0]
-            issuer_last_dates[issuer] = last_date
+
+            max_date = datetime.strptime(last_date, '%Y-%m-%d')
+
+            # Format it back to DD.MM.YYYY
+            max_date_formatted = max_date.strftime('%d.%m.%Y')
+            issuer_last_dates[issuer] = max_date_formatted
         else:
             print(f"Issuer: {issuer} does not exist in the database. Fetching data for the last 10 years...")
             fetch_data_last_10_years(driver, issuer)
@@ -166,26 +193,26 @@ def filter_3(last_dates):
 
     driver = initialize_driver()  # Initialize the Selenium driver
 
-    for issuer, last_date in last_dates.items():
-        # Convert last_date to datetime object
-        last_date_dt = datetime.strptime(last_date, '%d.%m.%Y')
+    if last_dates:
+        for issuer, last_date in last_dates.items():
+            # Convert last_date to datetime object
+            last_date_dt = datetime.strptime(last_date, '%d.%m.%Y')
 
-        # Set the date range for fetching new data
-        start_date = last_date_dt + timedelta(days=1)
-        end_date = datetime.today()
+            # Set the date range for fetching new data
+            start_date = last_date_dt + timedelta(days=1)
+            end_date = datetime.today()
 
-        while start_date < end_date:
-            next_end_date = min(end_date, start_date + timedelta(days=365))
+            while start_date < end_date:
+                next_end_date = min(end_date, start_date + timedelta(days=5))
 
-            set_date_range(driver, start_date, next_end_date)
-            select_issuer_code(driver, issuer)
-            new_data = fetch_data(driver)
+                set_date_range(driver, start_date, next_end_date)
+                select_issuer_code(driver, issuer)
+                new_data = fetch_data(driver)
 
-            if new_data:
-                save_data_to_db(new_data, issuer)
+                if new_data:
+                    save_data_to_db(new_data, issuer)
 
-            start_date = next_end_date
-
+                start_date = next_end_date
     cursor.close()
     conn.close()
     driver.quit()
@@ -281,6 +308,7 @@ if __name__ == '__main__':
     # check_table_exists('transactions')
     issuers = filter_1()
     last_dates = filter_2(issuers)
-    # filter_3(last_dates)
+    print(last_dates)
+    filter_3(last_dates)
     # check_table_population()
     # print(results)
