@@ -22,10 +22,29 @@ def set_date_range(driver, start_date, end_date):
 
 def get_10_year_data(company_code):
     print("Thread started...")
+
     chrome_options = Options()
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--headless=new")
     chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--disable-webgl")
+    chrome_options.add_argument("--disable-blink-features=CSSStyling")
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
+
+    prefs = {
+        "profile.managed_default_content_settings.images": 2,  # Disable images
+        "profile.managed_default_content_settings.javascript": 2,  # Disable JavaScript
+        "profile.default_content_setting_values.popups": 2,  # Block pop-ups
+        "profile.default_content_setting_values.geolocation": 2,  # Disable geolocation
+        "profile.default_content_setting_values.notifications": 2,  # Disable notifications
+        "profile.password_manager_enabled": False,  # Disable password manager
+        "credentials_enable_service": False,  # Disable credentials service
+        "profile.content_settings.plugin_whitelist.adobe-flash-player": 0,  # Disable Flash
+        "profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player": 0
+    }
+
+    chrome_options.add_experimental_option("prefs", prefs)
 
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -79,7 +98,6 @@ def search_company_year(driver, company_code, to_date, from_date):
     # scroll_position = -scroll_amount
     # scroll_height = driver.execute_script("return arguments[0].scrollHeight", scroll_container)
 
-    # Use JavaScript to modify the 'top' property for scrolling
     for i in range(NUMBER_OF_ITERATIONS):
         html = driver.page_source
         soup = BeautifulSoup(html, "html.parser")
@@ -87,12 +105,15 @@ def search_company_year(driver, company_code, to_date, from_date):
 
         # scroll_script = f"arguments[0].style.top = '{scroll_position}px';"
         # driver.execute_script(scroll_script, scroll_container)
-        rows = table.find_all('tr')
-        for row in rows:
-            columns = row.find_all('td')
-            row_data = [column.text.strip() for column in columns]  # Extract and clean text from each column
-            if row_data:
-                all_data.append(row_data)
+        rows = None
+        if table is not None:
+            rows = table.find_all('tr')
+        if rows is not None and len(rows) > 0:
+            for row in rows:
+                columns = row.find_all('td')
+                row_data = [column.text.strip() for column in columns]  # Extract and clean text from each column
+                if row_data:
+                    all_data.append(row_data)
 
         # scroll_position -= scroll_amount
         # if scroll_position < -6147:
