@@ -82,7 +82,7 @@ def fetch_data(driver):
 
 def filter_2(companies):
     threads = []
-    max_threads = 5
+    max_threads = 12
     semaphore = threading.Semaphore(max_threads)
 
     def thread_task(company):
@@ -91,11 +91,11 @@ def filter_2(companies):
 
     for company in companies:
         # Create a new thread for each company
-        # thread = threading.Thread(target=thread_task, args=(company,))
-        # threads.append(thread)
-        # thread.start()  # Start the thread
-        # sleep(1)
-        get_10_year_data(company)
+        thread = threading.Thread(target=thread_task, args=(company,))
+        threads.append(thread)
+        thread.start()  # Start the thread
+        sleep(1)
+        # get_10_year_data(company)
 
     # Wait for all threads to complete
     for thread in threads:
