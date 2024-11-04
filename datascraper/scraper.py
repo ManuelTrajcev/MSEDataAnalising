@@ -5,7 +5,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from bs4 import BeautifulSoup
 import requests
+import time
 from datetime import datetime, timedelta
+from selenium.webdriver.chrome.options import Options
 
 
 def set_date_range(driver, start_date, end_date):
@@ -19,7 +21,14 @@ def set_date_range(driver, start_date, end_date):
 
 
 def get_10_year_data(company_code):
-    driver = webdriver.Chrome()  # Initialize the driver once
+    print("Thread started...")
+    chrome_options = Options()
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--window-size=1920,1080")
+
+    driver = webdriver.Chrome(options=chrome_options)
+
     base_url = "https://www.mse.mk/mk/stats/symbolhistory/"
     url = base_url + company_code
     driver.get(url)
@@ -31,6 +40,10 @@ def get_10_year_data(company_code):
         search_company_year(driver, company_code, end_date.strftime('%d.%m.%Y'), start_date.strftime('%d.%m.%Y'))
         end_date = start_date - timedelta(days=1)
         start_date = end_date - timedelta(days=365)
+
+    driver.quit()
+    print("Thread finnished...")
+
 
 
 def search_company_year(driver, company_code, to_date, from_date):
@@ -96,4 +109,8 @@ def search_company_year(driver, company_code, to_date, from_date):
 
 
 if __name__ == '__main__':
-    get_10_year_data("KMB")
+    start_time = time.time()  # Start timer
+    get_10_year_data("KMB")  # Run the function
+    end_time = time.time()  # End timer
+    execution_time = end_time - start_time  # Calculate total execution time
+    print(f"Total execution time: {execution_time:.2f} seconds")  # Print the execution time
