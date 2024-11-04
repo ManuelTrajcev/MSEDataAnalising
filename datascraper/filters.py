@@ -6,6 +6,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import time
+from scraper import get_10_year_data
+import threading
+from time import sleep
 
 def filter_1():
     response = requests.get("https://www.mse.mk/mk/stats/symbolhistory/KMB")
@@ -78,70 +81,28 @@ def fetch_data(driver):
 
 
 def filter_2(companies):
+    threads = []
+    max_threads = 5
+    semaphore = threading.Semaphore(max_threads)
+
+    def thread_task(company):
+        with semaphore:  # Acquire the semaphore
+            get_10_year_data(company)
+
     for company in companies:
+        # Create a new thread for each company
+        # thread = threading.Thread(target=thread_task, args=(company,))
+        # threads.append(thread)
+        # thread.start()  # Start the thread
+        # sleep(1)
+        get_10_year_data(company)
 
+    # Wait for all threads to complete
+    for thread in threads:
+        thread.join()
 
-def filter_3(last_dates):
-    conn = sqlite3.connect('../db.sqlite3')  # Adjust path as needed
-    cursor = conn.cursor()
+#def filter_3(last_dates):
 
-    driver = initialize_driver()  # Initialize the Selenium driver
-
-    for issuer, last_date in last_dates.items():
-        # Convert last_date to datetime object
-        last_date_dt = datetime.strptime(last_date, '%d.%m.%Y')
-
-        # Set the date range for fetching new data
-        start_date = last_date_dt + timedelta(days=1)
-        end_date = datetime.today()
-
-        while start_date < end_date:
-            next_end_date = min(end_date, start_date + timedelta(days=365))
-
-            set_date_range(driver, start_date, next_end_date)
-            select_issuer_code(driver, issuer)
-            new_data = fetch_data(driver)
-
-            if new_data:
-                save_data_to_db(new_data, issuer)
-
-            start_date = next_end_date
-
-    cursor.close()
-    conn.close()
-    driver.quit()
-
-def create_table():
-    # Connect to the SQLite database
-    conn = sqlite3.connect('../db.sqlite3')  # Adjust path as needed
-    cursor = conn.cursor()
-
-    # Define the SQL command to create the table
-    create_table_sql = '''
-    CREATE TABLE IF NOT EXISTS transactions (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        issuer TEXT,
-        date TEXT,
-        last_transaction_price REAL,
-        max_price REAL,
-        min_price REAL,
-        average_price REAL,
-        percent_change REAL,
-        quantity INTEGER,
-        turnover_in_best REAL,
-        total_turnover REAL
-    );
-    '''
-
-    # Execute the SQL command to create the table
-    cursor.execute(create_table_sql)
-
-    # Commit the changes
-    conn.commit()
-
-    # Close the connection
-    cursor.close()
-    conn.close()
 
 def check_table_exists(table_name):
     # Connect to the SQLite database
@@ -197,5 +158,9 @@ def check_table_population():
     conn.close()
 
 if __name__ == '__main__':
+    start_time = time.time()
     companies = filter_1()
     filter_2(companies)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f"Total execution time: {execution_time:.2f} seconds")
