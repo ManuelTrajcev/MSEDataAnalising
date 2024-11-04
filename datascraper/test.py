@@ -18,18 +18,19 @@ def set_date_range(driver, start_date, end_date):
 
 #TODO MAIN
 
-# Initialize the WebDriver (using Chrome in this example)
-driver = webdriver.Chrome()  # Or specify the path: webdriver.Chrome(executable_path='path_to_chromedriver')
+driver = webdriver.Chrome()
 
-# Open the target URL
-url = "https://www.mse.mk/mk/stats/symbolhistory/KMB"  # Replace with your actual URL
+company_code = "KMB"
+url = "https://www.mse.mk/mk/stats/symbolhistory/"
+url += company_code
 driver.get(url)
 
 date_to = driver.find_element(By.ID, "ToDate")
 date_from = driver.find_element(By.ID, "FromDate")
 btn = driver.find_element(By.CLASS_NAME, "btn-primary-sm")
 
-
+new_data_to = "04.11.2024"
+new_data_from = "05.11.2023"
 
 #BEAUTIFUL SOUP
 response = requests.get(url)
@@ -38,21 +39,19 @@ soup = BeautifulSoup(raw_html, "html.parser")
 table = soup.find('table', id='resultsTable')
 
 
-#sleep(3)
-driver.execute_script("arguments[0].value = arguments[1];", date_to, "04.11.2024")
-driver.execute_script("arguments[0].value = arguments[1];", date_from, "05.11.2023")
+driver.execute_script("arguments[0].value = arguments[1];", date_to, new_data_to)
+driver.execute_script("arguments[0].value = arguments[1];", date_from, new_data_from)
 btn.click()
-sleep(1)
+sleep(0.01)
 
 scroll_container = driver.find_element(By.ID, "mCSB_1_container")
 scroll_increment = -31
-NUMBER_OF_ITERATIONS = 5
+NUMBER_OF_ITERATIONS = 1
 all_data = []
 scrollHeight = 100
 
-# Locate the scrolling container
-# Define the amount to scroll
-scroll_amount = 31*10  # Adjust this value as needed (negative for down, positive for up)
+
+scroll_amount = 31*10
 scroll_position = -scroll_amount
 scroll_height = driver.execute_script("return arguments[0].scrollHeight", scroll_container)
 
@@ -62,8 +61,8 @@ for i in range(NUMBER_OF_ITERATIONS):
     soup = BeautifulSoup(html, "html.parser")
     table = soup.find('table', id='resultsTable')
 
-    scroll_script = f"arguments[0].style.top = '{scroll_position}px';"
-    driver.execute_script(scroll_script, scroll_container)
+    #scroll_script = f"arguments[0].style.top = '{scroll_position}px';"
+    #driver.execute_script(scroll_script, scroll_container)
     rows = table.find_all('tr')
     for row in rows:
         columns = row.find_all('td')
