@@ -1,5 +1,6 @@
 from celery_app import celery_app
 from utils import get_10_year_data
+
 @celery_app.task
 def start_scrapper(company):
     try:
