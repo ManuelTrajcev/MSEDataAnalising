@@ -109,30 +109,36 @@ def search_company_year(driver, company_code, to_date, from_date):
         soup = BeautifulSoup(html, "html.parser")
         table = soup.find('table', id='resultsTable')
 
-        # scroll_script = f"arguments[0].style.top = '{scroll_position}px';"
-        # driver.execute_script(scroll_script, scroll_container)
         rows = None
         if table is not None:
             rows = table.find_all('tr')
+        entries = []
         if rows is not None and len(rows) > 0:
             for row in rows:
                 columns = row.find_all('td')
-                row_data = [column.text.strip() for column in columns]  # Extract and clean text from each column
-                if row_data:
-                    all_data.append(row_data)
-
                 if columns:
                     # Parse each column and map it to the DayEntry fields
                     date = datetime.strptime(columns[0].text.strip(), '%d.%m.%Y').date()
                     last_transaction_price = float(columns[1].text.strip().replace(',', ''))
-                    max_price = float(columns[2].text.strip().replace('.', '').replace(',', '.'))     #replace(',','.')
-                    min_price = float(columns[3].text.strip().replace(',', ''))
-                    avg_price = float(columns[4].text.strip().replace(',', ''))
-                    percentage = float(columns[5].text.strip().replace('%', '').replace(',', ''))
-                    profit = float(columns[6].text.strip().replace('.', ''))
-                    total_profit = float(columns[7].text.strip().replace('.', ''))
 
-                    # Create a DayEntry object and save it to the database
+                    max_price_text = columns[2].text.strip().replace('.', '').replace(',', '.')
+                    max_price = float(max_price_text) if max_price_text else None
+
+                    min_price_text = columns[3].text.strip().replace(',', '')
+                    min_price = float(min_price_text) if min_price_text else None
+
+                    avg_price_text = columns[4].text.strip().replace(',', '')
+                    avg_price = float(avg_price_text) if avg_price_text else None
+
+                    percentage_text = columns[5].text.strip().replace('%', '').replace(',', '')
+                    percentage = float(percentage_text) if percentage_text else None
+
+                    profit_text = columns[6].text.strip().replace('.', '')
+                    profit = float(profit_text) if profit_text else None
+
+                    total_profit_text = columns[7].text.strip().replace('.', '')
+                    total_profit = float(total_profit_text) if total_profit_text else None
+
                     entry = DayEntry(
                         date=date,
                         last_transaction_price=last_transaction_price,
@@ -144,21 +150,14 @@ def search_company_year(driver, company_code, to_date, from_date):
                         total_profit=total_profit,
                         company_code=company_code
                     )
-                    entry.save()
+
+                    entries.append(entry)
+
                     print(f"Saved entry for {entry.date} - {entry.company_code}")
-
-        # scroll_position -= scroll_amount
-        # if scroll_position < -6147:
-        #     break
-
-    # Wait a bit to observe the scroll
-
-    # Print or process the collected data
-    for row in all_data:
-        print(row)
-
-    print(len(all_data))
-    # Close the driver after finishing
+                    print(f"Date: {date}, Last Transaction Price: {last_transaction_price}, Max Price: {max_price}, "
+                          f"Min Price: {min_price}, Average Price: {avg_price}, Percentage: {percentage}, "
+                          f"Profit: {profit}, Total Profit: {total_profit}")
+        DayEntry.objects.bulk_create(entries)
 
 
 if __name__ == '__main__':
