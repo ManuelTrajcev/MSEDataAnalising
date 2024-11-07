@@ -1,9 +1,12 @@
+from concurrent.futures import ThreadPoolExecutor
+from datetime import date
+
 import requests
 from bs4 import BeautifulSoup
 import time
 from datascraper.tasks import start_scrapper
-from utils import get_10_year_data, get_data_from_day
-from databaseTesting import get_last_date
+from utils import get_10_year_data, get_data_from_day, search_company_year
+from databaseTesting import get_last_date, get_last_date_string
 
 
 def filter_1(url):
@@ -23,24 +26,23 @@ def filter_1(url):
 def filter_2(companies):
     companies_last_dates = []
     for company in companies:
-        companies_last_dates.append(get_last_date(company))
+        companies_last_dates.append(get_last_date_string(company))
 
     return companies_last_dates
 
 
 def filter_3(companies_last_dates):
-    task_results = []
+    def process_company(company):
+        print(company[1])
+        if company[1] is None:
+            get_10_year_data(company[0])
+        elif company[1] != date.today():
+            get_data_from_day(company[0], company[1])
 
-    for company in companies_last_dates:
-        if (company[1] is None):
-            get_10_year_data(company)
-        else:
-            get_data_from_day(company[1])
-        # result = start_scrapper.delay(company)
-        # task_results.append(result)
-
-    # for result in task_results:
-    #     result.wait()
+    # Use ThreadPoolExecutor with a maximum of 5 threads
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        # Submit each company to be processed in a separate thread
+        executor.map(process_company, companies_last_dates)
 
 
 # async
@@ -56,7 +58,8 @@ def filter_3(companies_last_dates):
 if __name__ == '__main__':
     start_time = time.time()
     companies = filter_1("https://www.mse.mk/mk/stats/symbolhistory/KMB")
-    filter_2(companies)
+    data = filter_2(companies)
+    filter_3(data)
     end_time = time.time()
     execution_time = end_time - start_time
     print(f"Total execution time: {execution_time:.2f} seconds")
