@@ -7,5 +7,9 @@ django.setup()
 
 from datascraper.models import DayEntry
 
-last_entry = DayEntry.objects.filter(company_code="ALK").order_by('-date').last()
+def get_last_date(company_code):
+    last_entry = DayEntry.objects.filter(company_code=company_code).order_by('-date').last()
+    return company_code, last_entry.date
+
+last_entry = DayEntry.objects.filter(company_code="sda").order_by('-date').last()
 print(last_entry)

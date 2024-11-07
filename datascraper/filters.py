@@ -2,6 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import time
 from datascraper.tasks import start_scrapper
+from utils import get_10_year_data, get_data_from_day
+from databaseTesting import get_last_date
+
 
 def filter_1(url):
     response = requests.get(url)
@@ -16,17 +19,31 @@ def filter_1(url):
 
     return filtered_options
 
+
 def filter_2(companies):
+    companies_last_dates = []
+    for company in companies:
+        companies_last_dates.append(get_last_date(company))
+
+    return companies_last_dates
+
+
+def filter_3(companies_last_dates):
     task_results = []
 
-    for company in companies:
-        result = start_scrapper.delay(company)
-        task_results.append(result)
+    for company in companies_last_dates:
+        if (company[1] is None):
+            get_10_year_data(company)
+        else:
+            get_data_from_day(company[1])
+        # result = start_scrapper.delay(company)
+        # task_results.append(result)
 
-    for result in task_results:
-        result.wait()
+    # for result in task_results:
+    #     result.wait()
 
-#async
+
+# async
 # def filter_2(companies):
 #     task_results = [start_scrapper.delay(company) for company in companies]
 #     for result in task_results:
@@ -34,9 +51,6 @@ def filter_2(companies):
 #             print(f"Task {result.id} completed successfully.")
 #         else:
 #             print(f"Task {result.id} is still processing.")
-
-def filter_3(last_dates):
-    print("Fileter 3")
 
 
 if __name__ == '__main__':
