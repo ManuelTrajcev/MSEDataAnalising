@@ -160,6 +160,10 @@ def search_company_year(driver, company_code, to_date, from_date):
         DayEntry.objects.bulk_create(entries)
 
 
+def get_data_from_day(date_from):
+    print("")
+
+
 if __name__ == '__main__':
     start_time = time.time()
     get_10_year_data("ALK")
