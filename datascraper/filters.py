@@ -35,7 +35,8 @@ def filter_2(companies):
 #         else:
 #             print(f"Task {result.id} is still processing.")
 
-#def filter_3(last_dates):
+def filter_3(last_dates):
+    print("Fileter 3")
 
 
 if __name__ == '__main__':
