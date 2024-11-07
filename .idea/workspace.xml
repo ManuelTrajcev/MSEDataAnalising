@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/datascraper/pipeline_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/templates/datascraper.html" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/templates/datascraper.html" afterDir="false" />
-    </list>
+    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,7 +268,7 @@
       <workItem from="1730918631963" duration="2858000" />
       <workItem from="1730926025419" duration="470000" />
       <workItem from="1730970834333" duration="1818000" />
-      <workItem from="1730992435395" duration="616000" />
+      <workItem from="1730992435395" duration="962000" />
     </task>
     <servers />
   </component>
