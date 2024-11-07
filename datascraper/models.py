@@ -16,7 +16,7 @@ class DayEntry(models.Model):
     company_code = models.CharField(max_length=50)
 
     def __str__(self):
-        return f"{self.date} - {self.code}"
+        return f"{self.date} - {self.company_code}"
 
     class Meta:
         ordering = ['date']

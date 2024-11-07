@@ -11,10 +11,10 @@ import time
 from datetime import datetime, timedelta
 from selenium.webdriver.chrome.options import Options
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')  # Update with your actual settings module
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import DayEntry  # Now import your models after Django setup
+from datascraper.models import DayEntry
 
 
 def set_date_range(driver, start_date, end_date):
@@ -162,7 +162,7 @@ def search_company_year(driver, company_code, to_date, from_date):
 
 if __name__ == '__main__':
     start_time = time.time()
-    get_10_year_data("KMB")
+    get_10_year_data("ALK")
     end_time = time.time()
     execution_time = end_time - start_time
     print(f"Total execution time: {execution_time:.2f} seconds")
