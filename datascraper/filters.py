@@ -40,7 +40,7 @@ def filter_3(companies_last_dates):
             get_data_from_day(company[0], company[1])
 
     # Use ThreadPoolExecutor with a maximum of 5 threads
-    with ThreadPoolExecutor(max_workers=3) as executor:
+    with ThreadPoolExecutor(max_workers=5) as executor:
         # Submit each company to be processed in a separate thread
         executor.map(process_company, companies_last_dates)
 
@@ -56,10 +56,12 @@ def filter_3(companies_last_dates):
 
 
 if __name__ == '__main__':
-    start_time = time.time()
-    companies = filter_1("https://www.mse.mk/mk/stats/symbolhistory/KMB")
-    data = filter_2(companies)
-    filter_3(data)
-    end_time = time.time()
-    execution_time = end_time - start_time
-    print(f"Total execution time: {execution_time:.2f} seconds")
+    # start_time = time.time()
+    # companies = filter_1("https://www.mse.mk/mk/stats/symbolhistory/KMB")
+    # data = filter_2(companies)
+    # filter_3(data)
+    # end_time = time.time()
+    # execution_time = end_time - start_time
+    # print(f"Total execution time: {execution_time:.2f} seconds")
+    comp = filter_1("https://www.mse.mk/mk/stats/symbolhistory/KMB")
+    print(len(comp))
