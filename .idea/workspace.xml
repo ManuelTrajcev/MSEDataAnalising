@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/filters_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/filters_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/pipeline_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/pipeline_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/utils_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/utils_lists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/databaseTesting.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/databaseTesting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/utils_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/utils_lists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,7 +270,7 @@
       <workItem from="1731091439476" duration="3246000" />
       <workItem from="1731100087672" duration="567000" />
       <workItem from="1731132487206" duration="310000" />
-      <workItem from="1731135401074" duration="5544000" />
+      <workItem from="1731135401074" duration="5868000" />
     </task>
     <servers />
   </component>
@@ -383,7 +371,7 @@
     <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline.coverage" NAME="pipeline Coverage Results" MODIFIED="1731154717641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$filters_list.coverage" NAME="filters_list Coverage Results" MODIFIED="1731152867539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$filters.coverage" NAME="filters Coverage Results" MODIFIED="1731068367462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline_list.coverage" NAME="pipeline_list Coverage Results" MODIFIED="1731155479071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline_list.coverage" NAME="pipeline_list Coverage Results" MODIFIED="1731155880397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$test.coverage" NAME="test Coverage Results" MODIFIED="1730717863697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils__1_.coverage" NAME="utils (1) Coverage Results" MODIFIED="1730998540999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$databaseTesting.coverage" NAME="databaseTesting Coverage Results" MODIFIED="1731013096599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
