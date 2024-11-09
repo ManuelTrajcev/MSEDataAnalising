@@ -238,7 +238,7 @@ def get_data_from_day(company, date_from):
                 #     "percentage": columns[5].text.strip(),
                 #     "profit": columns[6].text.strip(),
                 #     "total_profit": columns[7].text.strip(),
-                #     "company_code": company_code
+                #     "company_code": company.company_code
                 # }
 
                 # print(columns_dict)
@@ -296,6 +296,8 @@ def save_entry_as_string(columns, company_code):
     #     print(f"New entry created for {company_code} on {date}.")
     # else:
     #     print(f"Entry with company_code {company_code} and date {date} already exists, skipping save.")
+
+
 
 
 if __name__ == '__main__':
