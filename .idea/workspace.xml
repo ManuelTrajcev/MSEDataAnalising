@@ -6,174 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ADIN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ALK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ALKB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/AMEH.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/APTK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ATPP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/AUMK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/BANA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/BGOR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/BIKF.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/BIM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/BLTU.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/CBNG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/CDHV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/CEVI.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/CKB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/CKBKO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/DEBA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/DIMI.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/EDST.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ELMA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ELNC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ENER.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ENSA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/EUHA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/EUMK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/EVRO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/FAKM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/FERS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/FKTL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/FROT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/FUBT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GALE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GDKM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GECK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GECT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GIMS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GRDN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GRNT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GRSN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GRZD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GTC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/GTRG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/IJUG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/INB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/INHO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/INOV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/INPR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/INTP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/JAKO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/JUSK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KARO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KDFO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KJUBI.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KKST.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KLST.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KMB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KMPR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KOMU.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KONF.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KONZ.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KORZ.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KPSS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KULT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/KVAS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/LAJO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/LHND.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/LOTO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/LOZP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MAGP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MAKP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MAKS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MERM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MKSD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MLKR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MODA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MPOL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MPT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MPTE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MTUR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MZHE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/MZPU.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/NEME.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/NOSK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OBPP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OILK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OKTA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OMOS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OPFO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OPTK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ORAN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OSPO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/OTEK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PELK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PGGV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PKB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/POPK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PPIV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PROD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PROT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/PTRS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RADE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/REPL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RIMI.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RINS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZEK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZIT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZIZ.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZLE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZLV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZTK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZUG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/RZUS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SBT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SDOM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SIL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SKON.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SKP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SLAV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SNBT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SNBTO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SOLN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SPAZ.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SPAZP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SPOL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/SSPR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/STB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/STBP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/STIL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/STOK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TAJM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TBKO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TEAL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TEHN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TEL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TETE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TIKV.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TKPR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TKVS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TNB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TRDB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TRPS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TRUB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TSMP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TSZS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TTK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/TTKO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/UNI.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/USJE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/VARG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/VFPM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/VITA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/VROS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/VSC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/VTKS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZAS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZILU.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZILUP.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZIMS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZKAR.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZPKO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZPOG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/all_data/ZUAS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/filters_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/filters_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/pipeline_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/pipeline_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/utils_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/utils_lists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOMASNA_1/filters_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOMASNA_1/pipeline_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOMASNA_1/utils_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +53,7 @@
     "Django Server.MSEDataAnalising.executor": "Run",
     "Python.databaseTesting.executor": "Run",
     "Python.filters.executor": "Run",
-    "Python.filters_list.executor": "Run",
+    "Python.filters_list.executor": "Debug",
     "Python.models.executor": "Run",
     "Python.pipeline.executor": "Run",
     "Python.pipeline_list.executor": "Run",
@@ -245,6 +80,8 @@
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\data_from_previous_execution" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\datascraper" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
     </key>
@@ -273,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="filters_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="filters" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MSEDataAnalising" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -287,7 +124,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DOMASNA_1/filters_list.py" />
+      <option name="SCRIPT_NAME" value="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\filters.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -319,7 +156,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pipeline_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pipeline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MSEDataAnalising" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -333,7 +170,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DOMASNA_1/pipeline_list.py" />
+      <option name="SCRIPT_NAME" value="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\pipeline.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -342,7 +179,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="utils_lists (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MSEDataAnalising" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -356,7 +193,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DOMASNA_1/utils_lists.py" />
+      <option name="SCRIPT_NAME" value="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -441,7 +278,7 @@
       <workItem from="1731100087672" duration="567000" />
       <workItem from="1731132487206" duration="310000" />
       <workItem from="1731135401074" duration="8821000" />
-      <workItem from="1731250316611" duration="10378000" />
+      <workItem from="1731250316611" duration="13436000" />
     </task>
     <servers />
   </component>
@@ -493,24 +330,19 @@
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DOMASNA_1/pipeline_list.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="183" />
+          <url>file://$PROJECT_DIR$/DOMASNA_1/filters.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DOMASNA_1/pipeline_list.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="184" />
+          <url>file://$PROJECT_DIR$/DOMASNA_1/filters.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="197" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DOMASNA_1/pipeline_list.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="185" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DOMASNA_1/pipeline_list.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="195" />
+          <url>file://$PROJECT_DIR$/DOMASNA_1/filters.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="198" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -526,9 +358,9 @@
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils_lists__1_.coverage" NAME="utils_lists (1) Coverage Results" MODIFIED="1731257858503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils_lists.coverage" NAME="utils_lists Coverage Results" MODIFIED="1731068230358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline.coverage" NAME="pipeline Coverage Results" MODIFIED="1731154717641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters_list.coverage" NAME="filters_list Coverage Results" MODIFIED="1731253525676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters_list.coverage" NAME="filters_list Coverage Results" MODIFIED="1731262903485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$filters.coverage" NAME="filters Coverage Results" MODIFIED="1731068367462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline_list.coverage" NAME="pipeline_list Coverage Results" MODIFIED="1731262051328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline_list.coverage" NAME="pipeline Coverage Results" MODIFIED="1731265564226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$test.coverage" NAME="test Coverage Results" MODIFIED="1730717863697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils__1_.coverage" NAME="utils (1) Coverage Results" MODIFIED="1730998540999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$databaseTesting.coverage" NAME="databaseTesting Coverage Results" MODIFIED="1731013096599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
