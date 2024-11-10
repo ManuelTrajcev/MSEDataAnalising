@@ -39,25 +39,29 @@ def get_10_year_data_list(company_code):
 
 def get_missing_data_list(company_code, date):
     data = []
+    again = True
     date = datetime.strptime(date, '%d.%m.%Y').date()
     base_url = "https://www.mse.mk/mk/stats/symbolhistory/"
     url = base_url + company_code
-
-    to_date = datetime.now()
+    to_date = datetime.now().date()
     from_date = date
-
-    while True:
+    while again:
         if (to_date - from_date).days >= 364:
             from_date = to_date - timedelta(days=364)
-            data.extend(search_company_year_list(company_code, to_date, from_date))
+
+            to_date_str = to_date.strftime('%Y-%m-%d')
+            from_date_str = from_date.strftime('%Y-%m-%d')
+            data.extend(search_company_year_list(company_code, to_date_str, from_date_str))
         else:
             from_date = date
-            data.extend(search_company_year_list(company_code, to_date, from_date))
-            break
+            to_date_str = to_date.strftime('%Y-%m-%d')
+            from_date_str = from_date.strftime('%Y-%m-%d')
+            data.extend(search_company_year_list(company_code, to_date_str, from_date_str))
+            again = False
 
     df = pd.DataFrame(data)
     old_data = pd.read_csv(f'all_data/{company_code}.csv')
-    df.extend(old_data)
+    df = pd.concat([df, old_data], ignore_index=True)
     df.to_csv(f'all_data/{company_code}.csv', index=False)
 
 
@@ -108,6 +112,7 @@ def get_last_date(company_code):
     # Check if the file exists
     if os.path.exists(file_path):
         df = pd.read_csv(file_path)
+        last_date = df.iloc[0]["date"]
         return company_code, df.iloc[0]["date"]
     else:
         return company_code, None
