@@ -1,23 +1,13 @@
 import os
-import django
-import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from bs4 import BeautifulSoup
 import requests
 import time
 from datetime import datetime, timedelta
-from selenium.webdriver.chrome.options import Options
 import pandas as pd
-
 
 def get_10_year_data_list(company_code):
     data = []
-    print("Thread started...")
-    start_time = time.time()
 
     years = 10
     end_date = datetime.now()
@@ -28,38 +18,36 @@ def get_10_year_data_list(company_code):
         end_date = start_date - timedelta(days=1)
         start_date = end_date - timedelta(days=365)
 
-    # driver.quit()
-
-    end_time = time.time()
-    execution_time = end_time - start_time
-    print("Thread finnished in {} seconds".format(execution_time))
-    df = pd.DataFrame(data)
-    df.to_csv(f'all_data/{company_code}.csv', index=False)
-
+    # df = pd.DataFrame(data)
+    # df.to_csv(f'all_data/{company_code}.csv', index=False)
+    return company_code, data
 
 def get_missing_data_list(company_code, date):
     data = []
+    again = True
     date = datetime.strptime(date, '%d.%m.%Y').date()
     base_url = "https://www.mse.mk/mk/stats/symbolhistory/"
     url = base_url + company_code
-
-    to_date = datetime.now()
+    to_date = datetime.now().date()
     from_date = date
-
-    while True:
+    while again:
         if (to_date - from_date).days >= 364:
             from_date = to_date - timedelta(days=364)
-            data.extend(search_company_year_list(company_code, to_date, from_date))
+
+            to_date_str = to_date.strftime('%Y-%m-%d')
+            from_date_str = from_date.strftime('%Y-%m-%d')
+            data.extend(search_company_year_list(company_code, to_date_str, from_date_str))
         else:
             from_date = date
-            data.extend(search_company_year_list(company_code, to_date, from_date))
-            break
+            to_date_str = to_date.strftime('%Y-%m-%d')
+            from_date_str = from_date.strftime('%Y-%m-%d')
+            data.extend(search_company_year_list(company_code, to_date_str, from_date_str))
+            again = False
 
     df = pd.DataFrame(data)
     old_data = pd.read_csv(f'all_data/{company_code}.csv')
-    df.extend(old_data)
+    df = pd.concat([df, old_data], ignore_index=True)
     df.to_csv(f'all_data/{company_code}.csv', index=False)
-
 
 def search_company_year_list(company_code, to_date, from_date):
     data = []
@@ -101,17 +89,16 @@ def search_company_year_list(company_code, to_date, from_date):
                 data.append(columns_dict)
     return data
 
-
 def get_last_date(company_code):
     file_path = f'all_data/{company_code}.csv'
 
     # Check if the file exists
     if os.path.exists(file_path):
         df = pd.read_csv(file_path)
+        last_date = df.iloc[0]["date"]
         return company_code, df.iloc[0]["date"]
     else:
         return company_code, None
-
 
 if __name__ == "__main__":
     start_time = time.time()
