@@ -5,7 +5,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import time
-from utils_lists import get_10_year_data_list, get_missing_data_list, search_company_year_list, get_last_date
+from utils import get_10_year_data_list, get_missing_data_list, search_company_year_list, get_last_date
 
 def filter_1(url):
     response = requests.get(url)
