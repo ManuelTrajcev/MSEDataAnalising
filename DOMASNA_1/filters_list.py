@@ -38,7 +38,7 @@ def filter_3(companies_last_dates):
     print(f"Starting data scraping...")
 
     def process_company(company):
-        print(company[1])
+        print(company[0])
         if company[1] is None:
             get_10_year_data_list(company[0])
         elif company[1] != date.today():
