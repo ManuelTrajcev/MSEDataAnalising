@@ -1,7 +1,16 @@
+from concurrent.futures import ThreadPoolExecutor
+from datetime import date
+
 import requests
 from bs4 import BeautifulSoup
-def filter_1():
-    response = requests.get("https://www.mse.mk/mk/stats/symbolhistory/KMB")
+import time
+from datascraper.tasks import start_scrapper
+from utils import get_10_year_data, get_data_from_day, search_company_year
+from databaseTesting import get_last_date, get_last_date_string
+
+
+def filter_1(url):
+    response = requests.get(url)
     raw_html = response.text
     soup = BeautifulSoup(raw_html, "html.parser")
     select_menu = soup.find('select', class_='form-control')
@@ -13,14 +22,46 @@ def filter_1():
 
     return filtered_options
 
-def filter_2(data):
-    #for item in data:
 
-    return data.lower()
+def filter_2(companies):
+    companies_last_dates = []
+    for company in companies:
+        companies_last_dates.append(get_last_date_string(company))
 
-def filter_3(data):
+    return companies_last_dates
 
-    return ''.join(filter(str.isalnum, data))
+
+def filter_3(companies_last_dates):
+    def process_company(company):
+        print(company[1])
+        if company[1] is None:
+            get_10_year_data(company[0])
+        elif company[1] != date.today():
+            get_data_from_day(company[0], company[1])
+
+    # Use ThreadPoolExecutor with a maximum of 5 threads
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        # Submit each company to be processed in a separate thread
+        executor.map(process_company, companies_last_dates)
+
+
+# async
+# def filter_2(companies):
+#     task_results = [start_scrapper.delay(company) for company in companies]
+#     for result in task_results:
+#         if result.ready():
+#             print(f"Task {result.id} completed successfully.")
+#         else:
+#             print(f"Task {result.id} is still processing.")
+
 
 if __name__ == '__main__':
-    filter_1()
+    # start_time = time.time()
+    # companies = filter_1("https://www.mse.mk/mk/stats/symbolhistory/KMB")
+    # data = filter_2(companies)
+    # filter_3(data)
+    # end_time = time.time()
+    # execution_time = end_time - start_time
+    # print(f"Total execution time: {execution_time:.2f} seconds")
+    comp = filter_1("https://www.mse.mk/mk/stats/symbolhistory/KMB")
+    print(len(comp))
