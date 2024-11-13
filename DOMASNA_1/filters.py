@@ -25,17 +25,14 @@ def filter_1_corrected(url):
     raw_html = response.text
     soup = BeautifulSoup(raw_html, "html.parser")
 
-    # Find all tbody elements on the page
     tbodies = soup.find_all('tbody')
     filtered_options = []
 
-    # Iterate over each tbody and each row in those tbodies
     for tbody in tbodies:
         for row in tbody.find_all('tr'):
-            symbol_tag = row.find('a')  # Find the first anchor tag (assuming it contains the symbol)
+            symbol_tag = row.find('a')
             if symbol_tag:
                 symbol = symbol_tag.get_text(strip=True)
-                # Check if the symbol contains only alphabetic characters
                 if symbol.isalpha() and symbol not in filtered_options:
                     filtered_options.append(symbol)
 
