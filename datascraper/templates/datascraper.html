@@ -1,50 +1,5 @@
-{% extends "base.html" %}
-{% block title %} Data Scraping MSE {% endblock %}
+{% extends "base.html" %} {% block title %} Data Scraping MSE {% endblock %}
 {% block content %}
-    <div style="text-align: center; margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #605678 0%, #8ABFA3 100%); min-height: 100vh;">
-
-        <! --BUTTON FOR RUNNING PIPELINE -->
-        <form action="/run_pipeline" method="post" style="margin-top: 20px;">
-            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #EEEEEE; color: #605678; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                Run Stock Exchange
-            </button>
-        </form>
-
-        <! -- TIMER -->
-        <div id="timer" style="font-size: 18px; color: whitesmoke; margin-top: 15px;">
-            Elapsed Time: 0s
-        </div>
-
-
-        <! -- HANDLE OUTPUT FROM PIPELINE -->
-        {% if output %}
-            <div style="margin-top: 30px; padding: 20px; background: rgba(255, 230, 165, 0.2); border-radius: 12px; backdrop-filter: blur(10px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                <h3 style="font-size: 20px; color: whitesmoke;">Pipeline Output:</h3>
-                <pre style="white-space: pre-wrap; word-wrap: break-word; font-size: 14px; color: whitesmoke;">{{ output }}</pre>
-            </div>
-        {% endif %}
-    </div>
-
-    <! -- SCRIPT FOR TIMER -->
-    <script>
-        let timer;
-        let elapsedSeconds = 0;
-
-        document.getElementById("pipeline-form").addEventListener("submit", function(event) {
-            // Start the timer
-            elapsedSeconds = 0;
-            document.getElementById("timer").innerText = `Elapsed Time: ${elapsedSeconds}s`;
-            timer = setInterval(function() {
-                elapsedSeconds++;
-                document.getElementById("timer").innerText = `Elapsed Time: ${elapsedSeconds}s`;
-            }, 1000);
-        });
-
-        {% if output %}
-            // Stop the timer if output is available (meaning the process has finished)
-            clearInterval(timer);
-        {% endif %}
-    </script>
-
+    <p>Start Scraping</p>
 
 {% endblock %}
