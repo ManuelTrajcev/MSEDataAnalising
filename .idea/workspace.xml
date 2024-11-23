@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSEDataAnalising/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSEDataAnalising/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSEDataAnalising/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,36 +47,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.MSEDataAnalising.executor": "Run",
-    "Python.databaseTesting.executor": "Run",
-    "Python.filters (1).executor": "Run",
-    "Python.filters.executor": "Run",
-    "Python.filters_list.executor": "Debug",
-    "Python.models.executor": "Run",
-    "Python.pipeline (1).executor": "Run",
-    "Python.pipeline.executor": "Run",
-    "Python.pipeline_list.executor": "Run",
-    "Python.scraper (1).executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.utils (1).executor": "Run",
-    "Python.utils_lists (1).executor": "Debug",
-    "Python.utils_lists.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "Manuel",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/DOMASNA_1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.MSEDataAnalising.executor&quot;: &quot;Run&quot;,
+    &quot;Python.databaseTesting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters_list.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils_lists (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.utils_lists.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Manuel&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
@@ -86,7 +88,7 @@
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pipeline (1)">
+  <component name="RunManager" selected="Django Server.MSEDataAnalising">
     <configuration name="filters (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MSEDataAnalising" />
       <option name="ENV_FILES" value="" />
@@ -331,7 +333,10 @@
       <workItem from="1731477421290" duration="242000" />
       <workItem from="1731529519607" duration="1925000" />
       <workItem from="1731531548203" duration="250000" />
-      <workItem from="1731607240789" duration="3389000" />
+      <workItem from="1731607240789" duration="3924000" />
+      <workItem from="1731927486787" duration="25000" />
+      <workItem from="1732384537942" duration="1468000" />
+      <workItem from="1732388409110" duration="1520000" />
     </task>
     <servers />
   </component>
@@ -381,11 +386,6 @@
           <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
           <line>269</line>
           <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DOMASNA_1/pipeline.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
