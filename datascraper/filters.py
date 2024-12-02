@@ -1,12 +1,34 @@
+import os
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
-
 import requests
 from bs4 import BeautifulSoup
-import time
-from datascraper.tasks import start_scrapper
-from utils import get_10_year_data, get_data_from_day, search_company_year
+from utils import get_10_year_data, get_data_from_day, search_company_year, get_missing_data
 from databaseTesting import get_last_date, get_last_date_string
+from concurrent.futures import ThreadPoolExecutor
+from multiprocessing import Process, Manager
+import time
+
+
+def worker(companies_subset, max_workers):
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for company in companies_subset:
+            executor.submit(process_company, company)
+
+
+def process_company(company):
+    print("Thread started...")
+    print(f"Processing company: {company[0]}")
+    start_time = time.time()
+
+    if company[1] is None:
+        get_10_year_data(company[0])
+    elif company[1] != date.today():
+        get_missing_data(company[0], company[1])
+
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print("Thread finished in {} seconds".format(execution_time))
 
 
 def filter_1(url):
@@ -23,36 +45,54 @@ def filter_1(url):
     return filtered_options
 
 
-def filter_2(companies):
-    companies_last_dates = []
-    for company in companies:
-        companies_last_dates.append(get_last_date_string(company))
+def filter_1_corrected(url):
+    response = requests.get(url)
+    raw_html = response.text
+    soup = BeautifulSoup(raw_html, "html.parser")
 
+    tbodies = soup.find_all('tbody')
+    filtered_options = []
+
+    for tbody in tbodies:
+        for row in tbody.find_all('tr'):
+            symbol_tag = row.find('a')
+            if symbol_tag:
+                symbol = symbol_tag.get_text(strip=True)
+                if symbol.isalpha() and symbol not in filtered_options:
+                    filtered_options.append(symbol)
+
+    return filtered_options
+
+
+def filter_2(companies):
+    companies_last_dates = [get_last_date_string(company) for company in companies]
     return companies_last_dates
 
 
 def filter_3(companies_last_dates):
-    def process_company(company):
-        print(company[1])
-        if company[1] is None:
-            get_10_year_data(company[0])
-        elif company[1] != date.today():
-            get_data_from_day(company[0], company[1])
+    num_cores = os.cpu_count()
+    max_workers = num_cores
 
-    # Use ThreadPoolExecutor with a maximum of 5 threads
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        # Submit each company to be processed in a separate thread
-        executor.map(process_company, companies_last_dates)
+    with Manager() as manager:
 
+        start_time = time.time()
+        print("Starting scraping data from MSE...")
 
-# async
-# def filter_2(companies):
-#     task_results = [start_scrapper.delay(company) for company in companies]
-#     for result in task_results:
-#         if result.ready():
-#             print(f"Task {result.id} completed successfully.")
-#         else:
-#             print(f"Task {result.id} is still processing.")
+        chunk_size = len(companies_last_dates) // num_cores
+        company_chunks = [companies_last_dates[i:i + chunk_size] for i in range(0, len(companies_last_dates), chunk_size)]
+
+        processes = []
+        for chunk in company_chunks:
+            p = Process(target=worker, args=(chunk, max_workers))
+            processes.append(p)
+            p.start()
+
+        for p in processes:
+            p.join()
+
+        end_time = time.time()
+        execution_time = end_time - start_time
+        print(f"Total execution time: {execution_time:.2f} seconds")
 
 
 if __name__ == '__main__':
