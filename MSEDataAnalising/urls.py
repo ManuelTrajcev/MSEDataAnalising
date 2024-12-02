@@ -21,4 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path("", include("datascraper.urls")),
     path('', TemplateView.as_view(template_name="index.html"), name='index'),
+    path('about', TemplateView.as_view(template_name="index.html"), name='index'),
+    path('get-data', TemplateView.as_view(template_name="index.html"), name='index'),
+    path('show-data', TemplateView.as_view(template_name="index.html"), name='index'),
+    path('visulisation', TemplateView.as_view(template_name="index.html"), name='index'),
+
 ]
