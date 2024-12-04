@@ -6,14 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/DataTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/DataTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/navBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/navBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/GetData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/Visualise.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/Visualise.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +357,7 @@
       <workItem from="1733224906657" duration="13217000" />
       <workItem from="1733294266903" duration="1272000" />
       <workItem from="1733300881754" duration="3351000" />
-      <workItem from="1733333531923" duration="2113000" />
+      <workItem from="1733333531923" duration="10430000" />
     </task>
     <servers />
   </component>

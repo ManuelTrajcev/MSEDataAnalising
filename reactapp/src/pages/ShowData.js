@@ -15,9 +15,9 @@ export default function ShowData() {
         }
     }
     return (
-        <div>
-            <h1>Show</h1>
-            <DataTable companyCode="KMB" />
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+            <h1>Историски податоци за издавачи</h1>
+            <DataTable companyCode="KMB"/>
         </div>
 
     )
