@@ -1,3 +1,12 @@
+import graph from '../images/graph.png';
+
 export default function Visualise() {
-    return <h1>Visualise</h1>
+    return (
+        <div>
+            <h1>Visualize Data</h1>
+            <img src={graph} alt="Graphic"/>
+        </div>
+
+
+    )
 }
