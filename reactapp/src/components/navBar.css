@@ -1,8 +1,18 @@
+* {
+    font-family: 'Jost', sans-serif
+}
+
+#title {
+    font-size: 2.5vh;
+    padding-left: 10%;
+    font-weight: bold;
+}
+
 .nav {
     justify-content: space-between;
     display: flex;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #e6e6e6;
     padding: 10px;
 }
 
@@ -15,29 +25,56 @@
     display: flex;
     justify-content: end;
     margin: 0;
-    padding: 0;
+    padding: 0 5%;
 }
 
 .nav li {
     margin: 0 5px; /* Space between rectangles */
-    padding: 10px; /* Adjust for rectangle size */
-    background-color: #007bff; /* Background color for the rectangle */
-    color: white; /* Text color */
+    padding: 0px 20px; /* Adjust for rectangle size */
     text-align: center;
-    border-radius: 5px; /* Rounded corners */
-    min-width: 80px; /* Minimum width for each rectangle */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease; /* Smooth hover transition */
+    position: relative; /* Required for the pseudo-element positioning */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.nav li .active {
+    padding: 15px 20px;
+    background-color: #33486a;
+    color: white;
+}
+
+.nav li:hover::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Positioned relative to the li */
+    bottom: 0; /* Align at the bottom of li */
+    left: 15%; /* Center the underline */
+    width: 70%; /* Adjust width of the underline */
+    height: 2px; /* Height of the underline */
+    background-color: #33486a; /* Color of the underline */
+    transition: transform 0.5s ease;
+    transform: scaleX(1);
+}
+
+.nav li::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Positioned relative to the li */
+    bottom: 0; /* Align at the bottom of li */
+    left: 10%; /* Center the underline */
+    width: 80%; /* Adjust width of the underline */
+    height: 2px; /* Height of the underline */
+    background-color: #33486a; /* Color of the underline */
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
 }
 
 .nav li:hover {
-    background-color: #0056b3; /* Darker color on hover */
+    color: #33486a; /* Change text color on hover */
 }
 
 .nav a {
-    color: white; /* Text color inside rectangles */
+    color: inherit; /* Inherit text color from li */
     text-decoration: none; /* Remove underline */
-    font-size: 14px;
+    font-size: 1.5vh;
 }
