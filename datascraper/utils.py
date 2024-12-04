@@ -2,91 +2,78 @@ import os
 import django
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from bs4 import BeautifulSoup
 import requests
 import time
 from datetime import datetime, timedelta
-from selenium.webdriver.chrome.options import Options
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import DayEntry, DayEntryAsString
+from datascraper.models import DayEntry, DayEntryAsString, Company
 
 
-def init_driver():
-    chrome_options = Options()
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--headless=new")
-    chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument("--disable-webgl")
-    chrome_options.add_argument("--disable-blink-features=CSSStyling")
-    chrome_options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
+def save_company(company_code):
+    c = Company.objects.create(name=company_code)
+    c.save()
 
-    prefs = {
-        "profile.managed_default_content_settings.images": 2,  # Disable images
-        "profile.managed_default_content_settings.javascript": 2,  # Disable JavaScript
-        "profile.default_content_setting_values.popups": 2,  # Block pop-ups
-        "profile.default_content_setting_values.geolocation": 2,  # Disable geolocation
-        "profile.default_content_setting_values.notifications": 2,  # Disable notifications
-        "profile.password_manager_enabled": False,  # Disable password manager
-        "credentials_enable_service": False,  # Disable credentials service
-        "profile.content_settings.plugin_whitelist.adobe-flash-player": 0,  # Disable Flash
-        "profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player": 0
-    }
 
-    chrome_options.add_experimental_option("prefs", prefs)
+def get_missing_data(company_code, date):
+    data = []
+    again = True
+    date = datetime.strptime(date, '%d.%m.%Y').date()
+    base_url = "https://www.mse.mk/mk/stats/symbolhistory/"
+    url = base_url + company_code
+    to_date = datetime.now().date()
+    from_date = date
+    while again:
+        if (to_date - from_date).days >= 364:
+            from_date = to_date - timedelta(days=364)
 
-    driver = webdriver.Chrome(options=chrome_options)
-    return driver
+            to_date_str = to_date.strftime('%Y-%m-%d')
+            from_date_str = from_date.strftime('%Y-%m-%d')
+            search_company_year(company_code, to_date_str, from_date_str)
+        else:
+            from_date = date
+            to_date_str = to_date.strftime('%Y-%m-%d')
+            from_date_str = from_date.strftime('%Y-%m-%d')
+            search_company_year(company_code, to_date_str, from_date_str)
+            again = False
 
 
 def get_10_year_data(company_code):
-    print("Thread started...")
-    driver = init_driver()
-
-    base_url = "https://www.mse.mk/mk/stats/symbolhistory/"
-    url = base_url + company_code
-    driver.get(url)
-
     years = 10
     end_date = datetime.now()
     start_date = end_date - timedelta(days=364)
     for i in range(years):
-        search_company_year(driver, company_code, end_date.strftime('%d.%m.%Y'), start_date.strftime('%d.%m.%Y'))
+        search_company_year(company_code, end_date.strftime('%d.%m.%Y'),
+                            start_date.strftime('%d.%m.%Y'))
         end_date = start_date - timedelta(days=1)
         start_date = end_date - timedelta(days=365)
 
-    driver.quit()
-    print("Thread finnished...")
 
-
-def search_company_year(driver, company_code, to_date, from_date):
+def search_company_year(company_code, to_date, from_date):
+    data = []
     base_url = "https://www.mse.mk/mk/stats/symbolhistory/"
     url = base_url + company_code
-    # driver.get(url)
 
-    date_to = driver.find_element(By.ID, "ToDate")
-    date_from = driver.find_element(By.ID, "FromDate")
-    btn = driver.find_element(By.CLASS_NAME, "btn-primary-sm")
+    json_payload = {
+        "FromDate": from_date,
+        "ToDate": to_date,
+        "Code": company_code,
+    }
 
-    new_data_to = to_date
-    new_data_from = from_date
-
-    # BEAUTIFUL SOUP
-    response = requests.get(url)
+    response = requests.get(url, json=json_payload)
     raw_html = response.text
     soup = BeautifulSoup(raw_html, "html.parser")
     table = soup.find('table', id='resultsTable')
 
-    driver.execute_script("arguments[0].value = arguments[1];", date_to, new_data_to)
-    driver.execute_script("arguments[0].value = arguments[1];", date_from, new_data_from)
-    btn.click()
     sleep(0.01)
+
+    rows = None
+    if table is not None:
+        rows = table.find_all('tr')
 
     # scroll_container = driver.find_element(By.ID, "mCSB_1_container")
     # scroll_increment = -31
@@ -97,10 +84,6 @@ def search_company_year(driver, company_code, to_date, from_date):
     # scroll_amount = 31*10
     # scroll_position = -scroll_amount
     # scroll_height = driver.execute_script("return arguments[0].scrollHeight", scroll_container)
-
-    html = driver.page_source
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find('table', id='resultsTable')
 
     rows = None
     if table is not None:
@@ -132,17 +115,17 @@ def search_company_year(driver, company_code, to_date, from_date):
                 # total_profit_text = columns[7].text.strip().replace('.', '')
                 # total_profit = float(total_profit_text) if total_profit_text else None
 
-                # columns_dict = {
-                #     "date": columns[0].text.strip(),
-                #     "last_transaction_price": columns[1].text.strip(),
-                #     "max_price": columns[2].text.strip(),
-                #     "min_price": columns[3].text.strip(),
-                #     "avg_price": columns[4].text.strip(),
-                #     "percentage": columns[5].text.strip(),
-                #     "profit": columns[6].text.strip(),
-                #     "total_profit": columns[7].text.strip(),
-                #     "company_code": company_code
-                # }
+                columns_dict = {
+                    "date": columns[0].text.strip(),
+                    "last_transaction_price": columns[1].text.strip(),
+                    "max_price": columns[2].text.strip(),
+                    "min_price": columns[3].text.strip(),
+                    "avg_price": columns[4].text.strip(),
+                    "percentage": columns[5].text.strip(),
+                    "profit": columns[6].text.strip(),
+                    "total_profit": columns[7].text.strip(),
+                    "company_code": company_code
+                }
 
                 # print(columns_dict)
 
@@ -166,7 +149,7 @@ def search_company_year(driver, company_code, to_date, from_date):
                 # print(f"Date: {date}, Last Transaction Price: {last_transaction_price}, Max Price: {max_price}, "
                 #       f"Min Price: {min_price}, Average Price: {avg_price}, Percentage: {percentage}, "
                 #       f"Profit: {profit}, Total Profit: {total_profit}")
-    DayEntry.objects.bulk_create(entries)
+    # DayEntry.objects.bulk_create(entries)
 
 
 def get_data_from_day(company, date_from):
@@ -298,6 +281,12 @@ def save_entry_as_string(columns, company_code):
     #     print(f"Entry with company_code {company_code} and date {date} already exists, skipping save.")
 
 
+def get_last_date_string(company_code):
+    last_entry = DayEntryAsString.objects.filter(company_code=company_code).order_by('-date').first()
+    if (last_entry):
+        return company_code, last_entry.date
+    else:
+        return company_code, None
 
 
 if __name__ == '__main__':

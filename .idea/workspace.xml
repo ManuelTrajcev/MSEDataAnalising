@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASNA_1/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASNA_1/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/navBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/navBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/GetData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/Visualise.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/Visualise.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,8 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -45,71 +55,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.MSEDataAnalising.executor": "Run",
-    "Python.databaseTesting.executor": "Run",
-    "Python.filters (1).executor": "Run",
-    "Python.filters.executor": "Run",
-    "Python.filters_list.executor": "Debug",
-    "Python.models.executor": "Run",
-    "Python.pipeline (1).executor": "Run",
-    "Python.pipeline.executor": "Run",
-    "Python.pipeline_list.executor": "Run",
-    "Python.scraper (1).executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.utils (1).executor": "Run",
-    "Python.utils_lists (1).executor": "Debug",
-    "Python.utils_lists.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "Manuel",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/DOMASNA_1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.MSEDataAnalising.executor&quot;: &quot;Run&quot;,
+    &quot;Python.databaseTesting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters_list.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils_lists (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.utils_lists.executor&quot;: &quot;Run&quot;,
+    &quot;Python.views.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Manuel&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/reactapp/src/pages&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\reactapp\src\pages" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\reactapp\src\images" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\data_from_previous_execution" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\datascraper" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pipeline (1)">
-    <configuration name="filters (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DOMASNA_1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DOMASNA_1/filters.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Django Server.MSEDataAnalising">
     <configuration name="filters" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MSEDataAnalising" />
       <option name="ENV_FILES" value="" />
@@ -234,12 +226,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DOMASNA_1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datascraper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datascraper/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MSEDataAnalising" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datascraper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datascraper/views.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -275,10 +290,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pipeline (1)" />
-        <item itemvalue="Python.filters (1)" />
         <item itemvalue="Python.pipeline" />
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.views" />
         <item itemvalue="Python.filters" />
+        <item itemvalue="Python.pipeline (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +347,17 @@
       <workItem from="1731477421290" duration="242000" />
       <workItem from="1731529519607" duration="1925000" />
       <workItem from="1731531548203" duration="250000" />
-      <workItem from="1731607240789" duration="3389000" />
+      <workItem from="1731607240789" duration="3924000" />
+      <workItem from="1731927486787" duration="25000" />
+      <workItem from="1732384537942" duration="1468000" />
+      <workItem from="1732388409110" duration="1520000" />
+      <workItem from="1733138551779" duration="3795000" />
+      <workItem from="1733151746781" duration="6885000" />
+      <workItem from="1733213050019" duration="2014000" />
+      <workItem from="1733224906657" duration="13217000" />
+      <workItem from="1733294266903" duration="1272000" />
+      <workItem from="1733300881754" duration="3351000" />
+      <workItem from="1733333531923" duration="10430000" />
     </task>
     <servers />
   </component>
@@ -354,38 +380,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
-          <line>90</line>
+          <line>77</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
-          <line>89</line>
+          <line>76</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
-          <line>47</line>
+          <line>44</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
-          <line>267</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
-          <line>268</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/datascraper/utils.py</url>
-          <line>269</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DOMASNA_1/pipeline.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -399,16 +405,18 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils_lists__1_.coverage" NAME="utils_lists (1) Coverage Results" MODIFIED="1731257858503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils_lists.coverage" NAME="utils_lists Coverage Results" MODIFIED="1731068230358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline.coverage" NAME="pipeline Coverage Results" MODIFIED="1731154717641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters.coverage" NAME="filters Coverage Results" MODIFIED="1731068367462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline.coverage" NAME="pipeline Coverage Results" MODIFIED="1733301882186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters.coverage" NAME="filters Coverage Results" MODIFIED="1733294821886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline_list.coverage" NAME="pipeline Coverage Results" MODIFIED="1731265564226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$filters__1_.coverage" NAME="filters (1) Coverage Results" MODIFIED="1731612884929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$utils.coverage" NAME="utils Coverage Results" MODIFIED="1733301852431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$views.coverage" NAME="views Coverage Results" MODIFIED="1733295018664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$test.coverage" NAME="test Coverage Results" MODIFIED="1730717863697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$models.coverage" NAME="models Coverage Results" MODIFIED="1730998532051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$filters_list.coverage" NAME="filters_list Coverage Results" MODIFIED="1731262903485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$utils__1_.coverage" NAME="utils (1) Coverage Results" MODIFIED="1730998540999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$databaseTesting.coverage" NAME="databaseTesting Coverage Results" MODIFIED="1731013096599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
     <SUITE FILE_PATH="coverage/MSEDataAnalising$scraper__1_.coverage" NAME="scraper (1) Coverage Results" MODIFIED="1730809205232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline__1_.coverage" NAME="pipeline (1) Coverage Results" MODIFIED="1731613331893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
+    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline__1_.coverage" NAME="pipeline (1) Coverage Results" MODIFIED="1733261238762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
   </component>
 </project>
