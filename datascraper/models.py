@@ -1,8 +1,10 @@
 from django.db import models
+
+
 # Create your models here.
 
-#python manage.py makemigrations - on every change
-#python manage.py migrate
+# python manage.py makemigrations - on every change
+# python manage.py migrate
 
 class DayEntry(models.Model):
     date = models.DateField(null=True, blank=True)
@@ -26,16 +28,18 @@ class DayEntry(models.Model):
         # TODO:
         # 1. null, blank
         # 2.
+
+
 class DayEntryAsString(models.Model):
     date = models.DateField(null=True, blank=True)
     date_string = models.CharField(max_length=50, null=True, blank=True)
-    last_transaction_price = models.CharField(max_length=50,null=True, blank=True)
-    max_price = models.CharField(max_length=50,null=True, blank=True)
-    min_price = models.CharField(max_length=50,null=True, blank=True)
-    avg_price = models.CharField(max_length=50,null=True, blank=True)
-    percentage = models.CharField(max_length=50,null=True, blank=True)
-    profit = models.CharField(max_length=50,null=True, blank=True)
-    total_profit = models.CharField(max_length=50,null=True, blank=True)
+    last_transaction_price = models.CharField(max_length=50, null=True, blank=True)
+    max_price = models.CharField(max_length=50, null=True, blank=True)
+    min_price = models.CharField(max_length=50, null=True, blank=True)
+    avg_price = models.CharField(max_length=50, null=True, blank=True)
+    percentage = models.CharField(max_length=50, null=True, blank=True)
+    profit = models.CharField(max_length=50, null=True, blank=True)
+    total_profit = models.CharField(max_length=50, null=True, blank=True)
     company_code = models.CharField(max_length=50)
 
     def __str__(self):
@@ -46,9 +50,12 @@ class DayEntryAsString(models.Model):
         app_label = 'datascraper'
         unique_together = ('company_code', 'date')
 
-class TodoItem(models.Model):
-    title = models.CharField(max_length=200)
-    completed = models.BooleanField(default=False)
+
+class Company(models.Model):
+    name = models.CharField(null=False, max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
 
     class Meta:
-        app_label = 'datascraper'
+        ordering = ['name']
