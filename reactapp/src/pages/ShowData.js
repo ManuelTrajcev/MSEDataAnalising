@@ -18,7 +18,6 @@ export default function ShowData() {
         <div>
             <h1>Show</h1>
             <DataTable companyCode="KMB" />
-            <button onClick={scrapeData}>Call Django Function</button>
         </div>
 
     )

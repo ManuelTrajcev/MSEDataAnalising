@@ -1,6 +1,4 @@
 import os
-import sys
-from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 import requests
 from bs4 import BeautifulSoup

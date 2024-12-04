@@ -290,9 +290,8 @@ def get_last_date_string(company_code):
 
 
 if __name__ == '__main__':
-    # start_time = time.time()
-    # get_10_year_data("KMB")
-    # end_time = time.time()
-    # execution_time = end_time - start_time
-    # print(f"Total execution time: {execution_time:.2f} seconds")
-    Company.objects.all().delete()
+    start_time = time.time()
+    get_10_year_data("KMB")
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f"Total execution time: {execution_time:.2f} seconds")
