@@ -2,47 +2,22 @@ import os
 import django
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 from bs4 import BeautifulSoup
 import requests
 import time
 from datetime import datetime, timedelta
-from selenium.webdriver.chrome.options import Options
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import DayEntry, DayEntryAsString
+from datascraper.models import DayEntry, DayEntryAsString, Company
 
 
-def init_driver():
-    chrome_options = Options()
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--headless=new")
-    chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument("--disable-webgl")
-    chrome_options.add_argument("--disable-blink-features=CSSStyling")
-    chrome_options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
+def save_company(company_code):
+    c = Company.objects.create(name=company_code)
+    c.save()
 
-    prefs = {
-        "profile.managed_default_content_settings.images": 2,  # Disable images
-        "profile.managed_default_content_settings.javascript": 2,  # Disable JavaScript
-        "profile.default_content_setting_values.popups": 2,  # Block pop-ups
-        "profile.default_content_setting_values.geolocation": 2,  # Disable geolocation
-        "profile.default_content_setting_values.notifications": 2,  # Disable notifications
-        "profile.password_manager_enabled": False,  # Disable password manager
-        "credentials_enable_service": False,  # Disable credentials service
-        "profile.content_settings.plugin_whitelist.adobe-flash-player": 0,  # Disable Flash
-        "profile.content_settings.exceptions.plugins.*,*.per_resource.adobe-flash-player": 0
-    }
-
-    chrome_options.add_experimental_option("prefs", prefs)
-
-    driver = webdriver.Chrome(options=chrome_options)
-    return driver
 
 def get_missing_data(company_code, date):
     data = []
@@ -73,10 +48,9 @@ def get_10_year_data(company_code):
     start_date = end_date - timedelta(days=364)
     for i in range(years):
         search_company_year(company_code, end_date.strftime('%d.%m.%Y'),
-                                             start_date.strftime('%d.%m.%Y'))
+                            start_date.strftime('%d.%m.%Y'))
         end_date = start_date - timedelta(days=1)
         start_date = end_date - timedelta(days=365)
-
 
 
 def search_company_year(company_code, to_date, from_date):
@@ -305,6 +279,8 @@ def save_entry_as_string(columns, company_code):
     #     print(f"New entry created for {company_code} on {date}.")
     # else:
     #     print(f"Entry with company_code {company_code} and date {date} already exists, skipping save.")
+
+
 def get_last_date_string(company_code):
     last_entry = DayEntryAsString.objects.filter(company_code=company_code).order_by('-date').first()
     if (last_entry):
@@ -313,10 +289,10 @@ def get_last_date_string(company_code):
         return company_code, None
 
 
-
 if __name__ == '__main__':
-    start_time = time.time()
-    get_10_year_data("KMB")
-    end_time = time.time()
-    execution_time = end_time - start_time
-    print(f"Total execution time: {execution_time:.2f} seconds")
+    # start_time = time.time()
+    # get_10_year_data("KMB")
+    # end_time = time.time()
+    # execution_time = end_time - start_time
+    # print(f"Total execution time: {execution_time:.2f} seconds")
+    Company.objects.all().delete()

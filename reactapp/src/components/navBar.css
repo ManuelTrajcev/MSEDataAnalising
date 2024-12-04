@@ -1,0 +1,43 @@
+.nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.nav img {
+    margin-right: 10px;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0 5px; /* Space between rectangles */
+    padding: 10px; /* Adjust for rectangle size */
+    background-color: #007bff; /* Background color for the rectangle */
+    color: white; /* Text color */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    min-width: 80px; /* Minimum width for each rectangle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.nav li:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.nav a {
+    color: white; /* Text color inside rectangles */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px;
+}
