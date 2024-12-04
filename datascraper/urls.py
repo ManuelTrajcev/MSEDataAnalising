@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import my_function, get_data
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("todos/", views.todos, name="ToDos"),
-    path("datascraper/", views.StartScraper, name="Datascraper"),
+    path('api/my-function/', my_function, name='my-function'),
+    path('api/get-data/', get_data, name='get-data'),
+
 ]

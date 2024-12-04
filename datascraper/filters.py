@@ -1,14 +1,14 @@
 import os
+import sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 import requests
 from bs4 import BeautifulSoup
-from utils import get_10_year_data, get_data_from_day, search_company_year, get_missing_data
+from utils import get_10_year_data, get_data_from_day, search_company_year, get_missing_data, save_company
 from databaseTesting import get_last_date, get_last_date_string
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Process, Manager
 import time
-
 
 def worker(companies_subset, max_workers):
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -41,6 +41,11 @@ def filter_1(url):
     for option in options:
         if option.isalpha():
             filtered_options.append(option)
+            save_company(option)
+            # c = Company(
+            #     name=option
+            # )
+            # c.save()
 
     return filtered_options
 

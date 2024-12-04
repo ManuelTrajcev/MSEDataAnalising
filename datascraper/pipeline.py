@@ -1,4 +1,7 @@
 from datascraper.filters import filter_1, filter_2, filter_3
+import os
+import sys
+from django.core.management import execute_from_command_line
 
 def process_data(input_data):
     # data = filter_1(input_data)
@@ -14,6 +17,11 @@ if __name__ == "__main__":
     url_corrected = "https://www.mse.mk/en/stats/current-schedule"  #Input for option 2
     # data = process_data(url)  #OPTON 1
     data = process_data(url)    #OPTION 2
+
+    #TODO
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "MSEDataAnalising.settings")
+    # execute_from_command_line(sys.argv)
+
 
     # print(f"Total number of new companies: {len(data)}")
     # total_data = 0

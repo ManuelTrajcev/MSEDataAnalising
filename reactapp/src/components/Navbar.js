@@ -1,6 +1,9 @@
-import './styles.css'
+import './navBar.css'
+import logo from '../images/logo.png';
+
 export default function Navbar() {
     return <nav className="nav">
+        <img src={logo} alt="logo" width="70px" height="37px"/>
         <a href="/" className="site-title"/>
         <ul>
             <li>
