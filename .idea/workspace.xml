@@ -5,16 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/MSEDataAnalising/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/MSEDataAnalising/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/MSEDataAnalising/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/MSEDataAnalising/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/MSEDataAnalising/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/databaseTesting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0002_dayentry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0003_dayentryasstring.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0004_alter_dayentryasstring_options_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0005_dayentryasstring_date_string_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0006_company_delete_todoitem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/0007_alter_company_options_alter_company_name.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/utils_lists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DOMASNA_2/TEHNICKI_PROTOTIP/datascraper/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/navBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/navBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/GetData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/Visualise.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/Visualise.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +44,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -55,50 +74,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.MSEDataAnalising.executor&quot;: &quot;Run&quot;,
-    &quot;Python.databaseTesting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.filters (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.filters.executor&quot;: &quot;Run&quot;,
-    &quot;Python.filters_list.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pipeline (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.pipeline.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pipeline_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils_lists (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Python.utils_lists.executor&quot;: &quot;Run&quot;,
-    &quot;Python.views.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Manuel&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/reactapp/src/pages&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.MSEDataAnalising.executor": "Run",
+    "Python.databaseTesting.executor": "Run",
+    "Python.filters (1).executor": "Run",
+    "Python.filters.executor": "Run",
+    "Python.filters_list.executor": "Debug",
+    "Python.models.executor": "Run",
+    "Python.pipeline (1).executor": "Run",
+    "Python.pipeline.executor": "Run",
+    "Python.pipeline_list.executor": "Run",
+    "Python.scraper (1).executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.utils (1).executor": "Run",
+    "Python.utils.executor": "Run",
+    "Python.utils_lists (1).executor": "Debug",
+    "Python.utils_lists.executor": "Run",
+    "Python.views.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "git-widget-placeholder": "Manuel",
+    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/DOMASNA_2/TEHNICKI_PROTOTIP",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2\TEHNICKI_PROTOTIP" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\reactapp\src\pages" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2\TEHNICKI_PROTOTIP" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\reactapp\src\images" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1\data_from_previous_execution" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\datascraper" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.MSEDataAnalising">
@@ -357,7 +378,7 @@
       <workItem from="1733224906657" duration="13217000" />
       <workItem from="1733294266903" duration="1272000" />
       <workItem from="1733300881754" duration="3351000" />
-      <workItem from="1733333531923" duration="10430000" />
+      <workItem from="1733333531923" duration="11322000" />
     </task>
     <servers />
   </component>
