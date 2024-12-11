@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="" />
+    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,12 +69,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "Teona",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/DOMASNA_2/TEHNICKI_PROTOTIP",
+    "last_opened_file_path": "C:/Users/Lenovo/MSE",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Lenovo/AppData/Roaming/JetBrains/PyCharm2024.2/node/versions/22.12.0/node",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -349,7 +352,8 @@
       <workItem from="1733294266903" duration="1272000" />
       <workItem from="1733300881754" duration="3351000" />
       <workItem from="1733333531923" duration="11322000" />
-      <workItem from="1733829229114" duration="676000" />
+      <workItem from="1733829229114" duration="1755000" />
+      <workItem from="1733842622728" duration="175000" />
     </task>
     <servers />
   </component>
