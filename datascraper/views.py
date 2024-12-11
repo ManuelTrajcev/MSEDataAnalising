@@ -3,7 +3,7 @@ from datascraper.models import *
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import DayEntryAsStringSerializer, CompanySerializer
+from .serializers import DayEntryAsStringSerializer, CompanySerializer, TimeSeriesDataSerializer
 
 
 def my_function(request):
@@ -48,5 +48,4 @@ def get_company_codes(request):
     company_codes = Company.objects.all()
     serializer = CompanySerializer(company_codes, many=True)
     return Response(serializer.data)
-
 
