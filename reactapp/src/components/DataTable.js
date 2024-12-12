@@ -1,4 +1,5 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import TimeSeriesChart from "./TimeSeriesChart";
 
 export default function DataTable() {
     const [data, setData] = useState([]);
@@ -7,6 +8,7 @@ export default function DataTable() {
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
     const [message, setMessage] = useState("Please select a company.");
+    const [chartData, setChartData] = useState([]);
 
     // Fetch all company codes on component mount
     useEffect(() => {
@@ -44,6 +46,14 @@ export default function DataTable() {
                     );
                     const data = await response.json();
                     setData(data);
+
+                    const formattedData = data.map((entry) => ({
+                        timestamp: entry.date,
+                        value: parseFloat(entry.total_profit.replace('.', '').replace(',', '.')),
+                    }));
+
+                    console.log("Formatted Chart Data:", formattedData);
+                    setChartData(formattedData);
                 } catch (error) {
                     console.error("Error fetching data:", error);
                     setMessage("Error fetching data. Please try again.");
@@ -151,6 +161,7 @@ export default function DataTable() {
                 )}
                 </tbody>
             </table>
+            <TimeSeriesChart chartData={chartData}/>
         </div>
     );
 }
