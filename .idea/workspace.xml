@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/tasks.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp - Copy/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp - Copy/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp - Copy/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp - Copy/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/DataTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/DataTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/ShowData.js" afterDir="false" />
-    </list>
+    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -373,7 +363,7 @@
       <workItem from="1733935081694" duration="1757000" />
       <workItem from="1733945587119" duration="2269000" />
       <workItem from="1734000542492" duration="244000" />
-      <workItem from="1734024917661" duration="4428000" />
+      <workItem from="1734024917661" duration="4807000" />
     </task>
     <servers />
   </component>
