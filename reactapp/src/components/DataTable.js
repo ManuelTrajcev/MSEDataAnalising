@@ -162,7 +162,6 @@ export default function DataTable() {
                 </tbody>
             </table>
             <TimeSeriesChart chartData={chartData}/>
-
         </div>
     );
 }
