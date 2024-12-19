@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascraper/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/datascraper/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +371,8 @@
       <workItem from="1734471269997" duration="60000" />
       <workItem from="1734472239134" duration="2810000" />
       <workItem from="1734549256389" duration="1311000" />
-      <workItem from="1734553202317" duration="909000" />
+      <workItem from="1734553202317" duration="3548000" />
+      <workItem from="1734607485869" duration="1201000" />
     </task>
     <servers />
   </component>
