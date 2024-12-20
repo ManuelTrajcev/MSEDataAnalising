@@ -1,5 +1,6 @@
 * {
-    font-family: 'Jost', sans-serif
+    font-family: 'Jost', sans-serif;
+    background-color: #FFFBF4;
 }
 
 #title {
@@ -9,28 +10,30 @@
 }
 
 .nav {
-    justify-content: space-between;
+    width: 80%;
+    margin: 2vh auto 0 auto; /* Center the navbar and move it down using viewport height */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #e6e6e6;
-    padding: 10px;
+    border-bottom: 2px solid #388087; /* Долен бордер */
 }
 
-.nav img {
-    margin-right: 10px;
+#logo {
+    list-style: none;
+    margin: 0 0 0 5%;
+    padding: 0;
 }
 
-.nav ul {
-    list-style-type: none;
+#pages {
+    list-style: none;
     display: flex;
     justify-content: end;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 3%;
 }
 
-.nav li {
-    margin: 0 5px; /* Space between rectangles */
-    padding: 0px 20px; /* Adjust for rectangle size */
+#pages li {
+    margin: 0 10px; /* Додава простор од 10px лево и десно */
     text-align: center;
     display: flex;
     align-items: center;
@@ -39,42 +42,45 @@
     transition: color 0.3s ease; /* Smooth text color transition */
 }
 
-.nav li .active {
-    padding: 15px 20px;
-    background-color: #33486a;
-    color: white;
-}
-
-.nav li:hover::after {
-    content: ''; /* Empty content for the pseudo-element */
-    position: absolute; /* Positioned relative to the li */
-    bottom: 0; /* Align at the bottom of li */
-    left: 15%; /* Center the underline */
-    width: 70%; /* Adjust width of the underline */
-    height: 2px; /* Height of the underline */
+#pages a::after {
+    content: ""; /* No text, just the line */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width of the button */
+    height: 3px; /* Thickness of the underline */
     background-color: #33486a; /* Color of the underline */
-    transition: transform 0.5s ease;
-    transform: scaleX(1);
+    transform: scaleX(0); /* Start with no underline */
+    transition: transform 0.3s ease; /* Smooth transition for the underline */
+    transform-origin: left; /* Animate from left to right */
 }
 
-.nav li::after {
-    content: ''; /* Empty content for the pseudo-element */
-    position: absolute; /* Positioned relative to the li */
-    bottom: 0; /* Align at the bottom of li */
-    left: 10%; /* Center the underline */
-    width: 80%; /* Adjust width of the underline */
-    height: 2px; /* Height of the underline */
-    background-color: #33486a; /* Color of the underline */
-    transition: transform 0.5s ease;
-    transform: scaleX(0);
+
+/* Show underline when hovering or when the link is active */
+#pages a:hover::after,
+#pages a.active::after {
+    transform: scaleX(1); /* Show the underline on hover or when active */
 }
 
-.nav li:hover {
-    color: #33486a; /* Change text color on hover */
+#pages a.active::after {
+    background-color: #6FB3B8; /* Color of the underline */
 }
 
-.nav a {
-    color: inherit; /* Inherit text color from li */
+#pages a:hover {
+    color: #669BBC; /* Hover link color */
+}
+
+#pages a.active {
+    color: #388087; /* Active link color */
+    background-color: #C2EDCE; /* Боја на позадина за активниот линк */
+    transition: background-color 0.3s ease; /* Лесно преминување за позадинската боја */
+}
+
+#pages a {
+    color: #33486a;
     text-decoration: none; /* Remove underline */
-    font-size: 1.5vh;
+    font-size: 2.1vh;
+    transition: background-color 0.1s ease; /* Додај transition за позадинската боја */
+    padding: 0.8em 1em; /* Adjust for rectangle size */
+    display: inline-block; /* Обезбедува дека елементот не е блок и не ја зголемува големината */
 }
