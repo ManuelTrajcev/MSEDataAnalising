@@ -1,20 +1,18 @@
 import './navBar.css';
 import { NavLink } from 'react-router-dom';
-import logo from '../images/logo.png';
+import logo from '../images/stock-logo.png';
 
 export default function Navbar() {
     return (
         <nav className="nav">
-            <span id="title">МАКЕДОНСКА БЕРЗА</span>
-            <ul>
+            <ul id="logo">
                 <li>
-                    <NavLink
-                        to="/"
-                        className={({isActive}) => (isActive ? 'active' : '')}
-                    >
-                        Home
+                    <NavLink to="/">
+                        <img src={logo} alt="logo" width="300" height="80"/>
                     </NavLink>
                 </li>
+            </ul>
+            <ul id="pages">
                 <li>
                     <NavLink
                         to="/about"
@@ -36,7 +34,7 @@ export default function Navbar() {
                         to="/visulisation"
                         className={({isActive}) => (isActive ? 'active' : '')}
                     >
-                        Тренд и сезоналност
+                        Визуелизација
                     </NavLink>
                 </li>
 
