@@ -5,14 +5,22 @@ import re
 import pdfplumber
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor
-from multiprocessing import Process, Manager
+from multiprocessing import Process
 from datetime import datetime, timedelta
+import time
 from html.parser import HTMLParser
+import django
 
 parser = HTMLParser()
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
+django.setup()
 
-def process_document(document, shared_results):
+from NLP.models import News
+
+
+def process_document(document):
     content = document.get('content', '')
+    document_id = document.get('documentId', '')
     description = document['layout']['description']
     content = html.unescape(content)
     content = re.sub(r'<[^>]*>', '', content)
@@ -38,26 +46,37 @@ def process_document(document, shared_results):
                 with pdfplumber.open(pdf_file) as pdf:
                     for page in pdf.pages:
                         text += page.extract_text()
+            content += "\n"
             content += text
-
-    shared_results.append({
-        "issuer_code": issuer_code,
-        "content": content,
-        "published_date": published_date,
-        "description": description,
-        "display_name": display_name,
-        "extracted_text": text
-    })
-    print(f"Processed document from issuer: {issuer_code}")
 
     print(f"Issuer Code: {issuer_code}", flush=True)
     print(f"Content: {content}", flush=True)
     print(f"Published Date: {published_date}", flush=True)
     print(f"Description: {description}", flush=True)
     print(f"Display Name: {display_name}", flush=True)
+    print(f"document_id: {document_id}", flush=True)
     print(" ")
 
-def process_page(page, shared_results):
+    existing_entry = News.objects.filter(document_id=document_id).exists()
+
+    if not existing_entry:
+        try:
+            new_entry = News.objects.create(
+                document_id=document_id,
+                date=published_date,
+                description=description,
+                content=content,
+                company_code=issuer_code,
+                company_name=display_name
+            )
+            print(f"New entry created: {new_entry}")
+        except Exception as e:
+            print(f"Error creating entry for document_id {document_id}: {e}")
+    else:
+        print(f"Entry with document_id {document_id} already exists. Skipping...")
+
+
+def process_page(page):
     payload = {
         "issuerId": 0,
         "languageId": 2,
@@ -76,37 +95,40 @@ def process_page(page, shared_results):
         documents = json_data.get('data', [])
         with ThreadPoolExecutor(max_workers=4) as executor:
             for document in documents:
-                executor.submit(process_document, document, shared_results)
+                executor.submit(process_document, document)
     else:
         print(f"Failed to fetch page {page}")
 
+
 def fetch_pages_multiprocessing(total_pages, num_processes=4):
-    manager = Manager()
-    shared_results = manager.list()
     processes = []
     chunk_size = total_pages // num_processes
     page_chunks = [range(i, min(i + chunk_size, total_pages + 1)) for i in range(1, total_pages + 1, chunk_size)]
 
     for chunk in page_chunks:
-        p = Process(target=fetch_pages_worker, args=(chunk, shared_results))
+        p = Process(target=fetch_pages_worker, args=(chunk,))
         processes.append(p)
         p.start()
 
     for p in processes:
         p.join()
 
-    return list(shared_results)
 
-def fetch_pages_worker(pages_subset, shared_results):
+def fetch_pages_worker(pages_subset):
     for page in pages_subset:
-        process_page(page, shared_results)
+        process_page(page)
 
 
 if __name__ == "__main__":
-    total_pages = 20
+    News.objects.all().delete()
+    total_pages = 2694
+    start_time = time.time()
     num_processes = os.cpu_count()
 
-    results = fetch_pages_multiprocessing(total_pages, num_processes)
+    fetch_pages_multiprocessing(total_pages, num_processes)
 
-    print(f"Total processed documents: {len(results)}")
-    # TODO: Save `results` to a database or process further.
+
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f"Total execution time: {execution_time:.2f} seconds")
+    print(f"Processing complete.")
