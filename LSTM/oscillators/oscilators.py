@@ -151,7 +151,7 @@ def calculate_missing_entries(df, total_entries=2520):
 
 if __name__ == '__main__':
     # Example: print the results for each frequency
-    company_code = 'ADIN'
+    company_code = 'ALK'
     indicators = ['RSI', 'stoch_k', 'cci', 'macd', 'adx']
     freqs = ['1D', '1W', '1ME']
 
