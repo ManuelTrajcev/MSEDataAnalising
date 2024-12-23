@@ -23,7 +23,6 @@ def save_company(company_code):
         c.save()
 
 
-
 def get_missing_data(company_code, date):
     data = []
     again = True
