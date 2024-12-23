@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/nlp_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/nlp_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/scraper_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/scraper_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/NLP.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/NLP.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +91,7 @@
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;NLP&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#16 on NLP&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising/NLP&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -371,7 +361,9 @@
       <workItem from="1734884029737" duration="10783000" />
       <workItem from="1734947775676" duration="5634000" />
       <workItem from="1734960104831" duration="3063000" />
-      <workItem from="1734969737365" duration="4543000" />
+      <workItem from="1734969737365" duration="5236000" />
+      <workItem from="1734978791526" duration="447000" />
+      <workItem from="1734979256432" duration="318000" />
     </task>
     <servers />
   </component>
