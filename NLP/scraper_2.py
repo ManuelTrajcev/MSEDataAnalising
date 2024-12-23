@@ -6,8 +6,8 @@ import pdfplumber
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Process
-from datetime import datetime, timedelta
 import time
+from datetime import datetime, timedelta
 from html.parser import HTMLParser
 import django
 
@@ -100,7 +100,7 @@ def process_page(page):
         print(f"Failed to fetch page {page}")
 
 
-def fetch_pages_multiprocessing(total_pages, num_processes=4):
+def fetch_pages_multiprocessing(total_pages, num_processes):
     processes = []
     chunk_size = total_pages // num_processes
     page_chunks = [range(i, min(i + chunk_size, total_pages + 1)) for i in range(1, total_pages + 1, chunk_size)]
@@ -120,7 +120,7 @@ def fetch_pages_worker(pages_subset):
 
 
 if __name__ == "__main__":
-    News.objects.all().delete()
+    # News.objects.all().delete()
     total_pages = 2694
     start_time = time.time()
     num_processes = os.cpu_count()

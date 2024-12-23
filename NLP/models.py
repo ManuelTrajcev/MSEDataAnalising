@@ -8,9 +8,10 @@ class News(models.Model):
     content = models.TextField(null=True, blank=True)
     company_code = models.CharField(max_length=20, null=True, blank=True)
     company_name = models.CharField(max_length=100, null=True, blank=True)
+    sentiment = models.CharField(max_length=20, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.document_id} - {self.date}"
+        return f"{self.document_id} - {self.date} - {self.sentiment}"
 
     class Meta:
         ordering = ['date']
