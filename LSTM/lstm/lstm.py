@@ -196,7 +196,7 @@ if __name__ == '__main__':
 
     # example usage of predictions
     try:
-        predictions, pd, cd = predictions(combined_data, 'ZUAS', encoder, model, scaler)
+        predictions, pd, cd = predictions(combined_data, 'ALK', encoder, model, scaler)
         print(predictions)
     except ValueError as e:
         print(f"Error: {e}")
