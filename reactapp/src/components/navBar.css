@@ -11,7 +11,7 @@
 
 .nav {
     width: 80%;
-    margin: 2vh auto 0 auto; /* Center the navbar and move it down using viewport height */
+    margin: 1vh auto 0 auto; /* Center the navbar and move it down using viewport height */
     display: flex;
     justify-content: space-between;
     align-items: center;
