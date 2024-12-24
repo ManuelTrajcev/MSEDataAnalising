@@ -9,6 +9,7 @@ import Visualise from "./pages/Visualise";
 import Navbar from "./components/Navbar";
 
 import ShowData from "./pages/ShowData";
+import Test from "./pages/test";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Routes>
                 {/*<Route exact path="/" element={<Home/>}/>*/}
                 <Route path="/" element={<Home/>}/>
+                <Route path="/test" element={<Test/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/show-data" element={<ShowData/>}/>
                 <Route path="/visulisation" element={<Visualise/>}/>

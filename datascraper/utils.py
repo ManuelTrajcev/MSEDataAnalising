@@ -15,8 +15,12 @@ from datascraper.models import DayEntry, DayEntryAsString, Company
 
 
 def save_company(company_code):
-    c = Company.objects.create(name=company_code)
-    c.save()
+    existing_company = Company.objects.filter(name=company_code).first()
+    if existing_company:
+        print(f"Company '{company_code}' already exists with ID: {existing_company.id}")
+    else:
+        c = Company.objects.create(name=company_code)
+        c.save()
 
 
 def get_missing_data(company_code, date):
