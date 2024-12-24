@@ -2,7 +2,7 @@
     background-image: url('../images/trader.jpg');
     background-size: cover;
     background-position: center;
-    height: 65vh;
+    height: 86vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end; /* Aligns the text at the bottom */
