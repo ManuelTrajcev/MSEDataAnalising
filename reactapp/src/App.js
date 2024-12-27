@@ -12,6 +12,7 @@ import Visualise from "./pages/Visualise";
 import Navbar from "./components/Navbar";
 
 import ShowData from "./pages/ShowData";
+import Nlp_predictions from "./pages/nlp_predictions";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Routes>
                 {/*<Route exact path="/" element={<Home/>}/>*/}
                 <Route path="/" element={<Home/>}/>
+                <Route path="/test" element={<Nlp_predictions/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/show-data" element={<ShowData/>}/>
                 <Route path="/visulisation" element={<Visualise/>}/>
