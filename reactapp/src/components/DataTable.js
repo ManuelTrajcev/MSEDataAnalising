@@ -42,7 +42,7 @@ export default function DataTable() {
             const fetchData = async () => {
                 try {
                     const response = await fetch(
-                        `http://localhost:8000/api/get-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
+                        `http://localhost:8000/api/get-last-day-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
                     );
                     const data = await response.json();
                     setData(data);
