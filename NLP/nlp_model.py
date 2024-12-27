@@ -1,52 +1,67 @@
 import torch
-from datasets import load_dataset
-from torch.utils.data import DataLoader
-from transformers import DataCollatorWithPadding
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from transformers import get_scheduler
-from tqdm import tqdm
+from torch.utils.data import DataLoader, Dataset
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, DataCollatorWithPadding, get_scheduler
 from sklearn.metrics import classification_report
+from tqdm import tqdm
+import os
+import django
 
+# Django setup
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
+django.setup()
+from NLP.models import News
+
+# Device configuration
 device = "cuda" if torch.cuda.is_available() else "cpu"
+torch.cuda.empty_cache()
 
-ds = load_dataset("zeroshot/twitter-financial-news-sentiment")
+# Load tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained("AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis")
+model = AutoModelForSequenceClassification.from_pretrained(
+    "AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis",
+    num_labels=3  # Three labels: 0=negative, 1=positive, 2=neutral
+).to(device)
 
-# tokenizer = AutoTokenizer.from_pretrained("AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis")
-tokenizer = AutoTokenizer.from_pretrained("trained_models/fine_tuned_financial_sentiment_model")
+label_map = {"negative": 0, "positive": 1, "neutral": 2}
 
+# Custom dataset class
+class NewsDataset(Dataset):
+    def __init__(self, news_entries, tokenizer, label_map):
+        self.news_entries = news_entries
+        self.tokenizer = tokenizer
+        self.label_map = label_map
 
-def preprocess_function(examples):
-    inputs = tokenizer(examples["text"], truncation=True, padding="max_length", max_length=128)
-    inputs["labels"] = examples["label"]
-    return inputs
+    def __len__(self):
+        return len(self.news_entries)
 
-encoded_dataset = ds.map(preprocess_function, batched=True)
+    def __getitem__(self, idx):
+        news_entry = self.news_entries[idx]
+        content = news_entry.content
+        label = self.label_map[news_entry.sentiment.lower()]
+        inputs = self.tokenizer(content, truncation=True, padding="max_length", max_length=128)
+        return {**inputs, "labels": torch.tensor(label)}
 
-encoded_dataset.set_format(type="torch", columns=["input_ids", "attention_mask", "labels"])
+# Fetch data from the database
+all_news_entries = list(News.objects.all())
+train_size = int(0.8 * len(all_news_entries))
+train_news_entries = all_news_entries[:train_size]
+valid_news_entries = all_news_entries[train_size:]
 
-# print(encoded_dataset["train"][0])
+# Create datasets
+train_dataset = NewsDataset(train_news_entries, tokenizer, label_map)
+valid_dataset = NewsDataset(valid_news_entries, tokenizer, label_map)
 
-train_dataset = encoded_dataset["train"]
-valid_dataset = encoded_dataset["validation"]
-
+# Data loaders
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 train_loader = DataLoader(train_dataset, shuffle=True, batch_size=16, collate_fn=data_collator)
 valid_loader = DataLoader(valid_dataset, batch_size=16, collate_fn=data_collator)
 
-# model = AutoModelForSequenceClassification.from_pretrained(       #NEW MODEL
-#     "AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis",
-#     num_labels=3  # Three labels: 1=positive, 0=negatice, 2=neutral
-# ).to(device)
-model = AutoModelForSequenceClassification.from_pretrained(     #TRAINED MODEL
-    "trained_models/fine_tuned_financial_sentiment_model",
-    num_labels=3
-).to(device)
-
+# Optimizer and scheduler
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5)
-num_training_steps = 3 * len(train_loader)  # 3 epochs
+num_training_steps = 5 * len(train_loader)  # 3 epochs
 lr_scheduler = get_scheduler("linear", optimizer=optimizer, num_warmup_steps=0, num_training_steps=num_training_steps)
 
-
+# Training loop
 model.train()
 epochs = 3
 
@@ -66,6 +81,7 @@ for epoch in range(epochs):
         loop.set_description(f"Epoch {epoch}")
         loop.set_postfix(loss=loss.item())
 
+# Evaluation
 model.eval()
 predictions, true_labels = [], []
 
@@ -77,9 +93,10 @@ with torch.no_grad():
         predictions.extend(torch.argmax(logits, axis=1).cpu().numpy())
         true_labels.extend(batch["labels"].cpu().numpy())
 
-
+# Classification report
 print(classification_report(true_labels, predictions, target_names=["negative", "positive", "neutral"]))
 
-
-model.save_pretrained("trained_models/fine_tuned_financial_sentiment_model_5")
-tokenizer.save_pretrained("trained_models/fine_tuned_financial_sentiment_model_5")
+# Save the fine-tuned model
+model.save_pretrained("trained_models/fine_tuned_financial_sentiment_model_db_5")
+tokenizer.save_pretrained("trained_models/fine_tuned_financial_sentiment_model_db_5")
+torch.cuda.empty_cache()
