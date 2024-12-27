@@ -1,8 +1,18 @@
-export default function About() {
-     return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <h1>За берзата</h1>
-            <p style={{ width: '80%'}}>Мисијата на Берзата е да овозможи ефикасно, транспарентно и безбедно работење на организираниот секундарен пазар на хартии од вредност во Република Македонија. Целта е да се обезбеди пристап за сите инвеститори при купување или продавање финансиски инструменти на различните берзански пазари, по фер пазарна цена. Дополнително, Берзата се стреми да им помогне на компаниите да привлечат нов капитал за нивниот развој, истовремено придонесувајќи за зголемување на довербата во македонскиот пазар на хартии од вредност.</p>
+import React, { useState } from "react";
+import './About.css';
+import AboutBackground from "../components/AboutBackground";
+
+const About = () => {
+    const heroData = [
+        { text1: "Мисија и визија", text2: "на тимот" },
+    ];
+
+    return (
+        <div>
+            <AboutBackground/>
+            <h1>Мисија и визија на тимот</h1>
         </div>
-    )
-}
+    );
+};
+
+export default About;

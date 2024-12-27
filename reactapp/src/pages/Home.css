@@ -1,7 +1,4 @@
 .home-section {
-    background-image: url('../images/trader.jpg');
-    background-size: cover;
-    background-position: center;
     height: 86vh;
     display: flex;
     justify-content: flex-start;
