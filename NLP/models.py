@@ -15,3 +15,15 @@ class News(models.Model):
 
     class Meta:
         ordering = ['date']
+
+class Company(models.Model):
+    company_code = models.CharField(null=False, max_length=50, unique=True)
+    company_name = models.CharField(null=False, max_length=50, default="")
+    max_sentiment = models.CharField(max_length=10, default='neutral')
+    max_sentiment_value = models.FloatField(default=0.5)
+
+    def __str__(self):
+        return f"{self.company_code} - {self.max_sentiment} - {self.max_sentiment_value}"
+
+    class Meta:
+        ordering = ['company_code']
