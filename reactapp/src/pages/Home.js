@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Background from "../components/Background";
 import Hero from "../components/Hero";
+import LandingPageTable1 from "../components/LandingPageTable1";
 
 const Home = () => {
     const heroData = [
@@ -21,7 +22,7 @@ const Home = () => {
                 setHeroCount={setHeroCount}
                 playStatus={playStatus}
             />
-
+            <LandingPageTable1/>
         </div>
     );
 };
