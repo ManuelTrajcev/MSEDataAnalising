@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactapp/src/components/LatestNews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/finbert.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/finbert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/labeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/labeling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/nlp_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/nlp_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLP/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLP/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/NLP.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/NLP.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactapp/src/pages/nlp_predictions.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/nlp_predictions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +25,8 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -127,8 +119,8 @@
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\NLP" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2\TEHNICKI_PROTOTIP" />
@@ -386,7 +378,10 @@
       <workItem from="1735223320259" duration="1049000" />
       <workItem from="1735231319668" duration="1298000" />
       <workItem from="1735236432923" duration="763000" />
-      <workItem from="1735242705881" duration="2919000" />
+      <workItem from="1735242705881" duration="3856000" />
+      <workItem from="1735246666248" duration="9000" />
+      <workItem from="1735277667122" duration="3301000" />
+      <workItem from="1735283235393" duration="888000" />
     </task>
     <servers />
   </component>
