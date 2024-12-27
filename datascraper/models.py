@@ -1,6 +1,4 @@
 from django.db import models
-
-
 # Create your models here.
 
 # python manage.py makemigrations - on every change
@@ -24,11 +22,6 @@ class DayEntry(models.Model):
         ordering = ['date']
         app_label = 'datascraper'
         unique_together = ('company_code', 'date')
-        #
-        # TODO:
-        # 1. null, blank
-        # 2.
-
 
 class DayEntryAsString(models.Model):
     date = models.DateField(null=True, blank=True)
