@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reactapp/src/components/LatestNews.js" afterDir="false" />
+    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-Dec-24_22_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-Dec-24_22_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-Dec-24_22_06__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-Dec-24_22_06__Changes_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLP/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/nlp_predictions.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/nlp_predictions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +19,6 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="Python Script" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
     <envs>
@@ -42,434 +32,67 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Manuel" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;ManuelTrajcev&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ManuelTrajcev"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ManuelTrajcev/MSEDataAnalising.git&quot;,
-    &quot;accountId&quot;: &quot;b1618747-589a-4a06-9cd6-81bacd85cb31&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ManuelTrajcev/MSEDataAnalising",
+    "accountId": "b1618747-589a-4a06-9cd6-81bacd85cb31"
   }
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2oImndA6sebum2CDp4o5znxCxdO" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2qnrdomn0zhqeLTMbAbJUf3HB2d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.MSEDataAnalising.executor&quot;: &quot;Run&quot;,
-    &quot;Python.databaseTesting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.filters (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.filters.executor&quot;: &quot;Run&quot;,
-    &quot;Python.filters_list.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.finbert.executor&quot;: &quot;Run&quot;,
-    &quot;Python.labeling.executor&quot;: &quot;Run&quot;,
-    &quot;Python.models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.nlp_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pipeline (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.pipeline.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pipeline_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tmp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils_lists (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Python.utils_lists.executor&quot;: &quot;Run&quot;,
-    &quot;Python.views.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;NLP&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSEDataAnalising&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.MSEDataAnalising.executor": "Run",
-    "Python.databaseTesting.executor": "Run",
-    "Python.filters (1).executor": "Run",
-    "Python.filters.executor": "Run",
-    "Python.filters_list.executor": "Debug",
-    "Python.models.executor": "Run",
-    "Python.pipeline (1).executor": "Run",
-    "Python.pipeline.executor": "Run",
-    "Python.pipeline_list.executor": "Run",
-    "Python.scraper (1).executor": "Run",
-    "Python.scraper.executor": "Run",
-    "Python.scraper_2.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.tests.executor": "Run",
-    "Python.tmp.executor": "Run",
-    "Python.utils (1).executor": "Run",
-    "Python.utils.executor": "Run",
-    "Python.utils_lists (1).executor": "Debug",
-    "Python.utils_lists.executor": "Run",
-    "Python.views.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "Teona",
-    "last_opened_file_path": "C:/Users/Lenovo/MSE/MSEDataAnalising",
-    "list.type.of.created.stylesheet": "CSS",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2\TEHNICKI_PROTOTIP" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\reactapp\src\pages" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\NLP" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_1" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSEDataAnalising\DOMASNA_2\TEHNICKI_PROTOTIP" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Django Server.MSEDataAnalising">
-    <configuration name="pipeline (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NLP" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NLP/finbert.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="labeling" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NLP" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NLP/scraper.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scraper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NLP" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NLP/nlp_model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NLP" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NLP/predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tmp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datascraper" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datascraper/tmp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MSEDataAnalising" type="Python.DjangoServer" factoryName="Django server">
-      <module name="MSEDataAnalising" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="MSEDataAnalising.settings" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="localhost" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.predict" />
-        <item itemvalue="Python.nlp_model" />
-        <item itemvalue="Python.labeling" />
-        <item itemvalue="Python.finbert" />
-        <item itemvalue="Python.scraper_2" />
-        <item itemvalue="Python.pipeline (1)" />
-        <item itemvalue="Python.scraper (1)" />
-        <item itemvalue="Python.tmp" />
-        <item itemvalue="Python.scraper" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
-        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="" />
-      <created>1730565631736</created>
+      <changelist id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="" />
+      <created>1735309270514</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1730565631736</updated>
-      <workItem from="1730565633824" duration="3266000" />
-      <workItem from="1730571474087" duration="9743000" />
-      <workItem from="1730614915553" duration="185000" />
-      <workItem from="1730632001330" duration="1455000" />
-      <workItem from="1730647309762" duration="6451000" />
-      <workItem from="1730711119342" duration="6656000" />
-      <workItem from="1730746592940" duration="7373000" />
-      <workItem from="1730754475899" duration="2873000" />
-      <workItem from="1730794204656" duration="1867000" />
-      <workItem from="1730808344295" duration="1833000" />
-      <workItem from="1730824686256" duration="8116000" />
-      <workItem from="1730894817498" duration="1394000" />
-      <workItem from="1730918631963" duration="2858000" />
-      <workItem from="1730926025419" duration="470000" />
-      <workItem from="1730970834333" duration="2594000" />
-      <workItem from="1730981485631" duration="2170000" />
-      <workItem from="1730992308420" duration="578000" />
-      <workItem from="1730998107031" duration="1737000" />
-      <workItem from="1730999877237" duration="6229000" />
-      <workItem from="1731064528448" duration="4102000" />
-      <workItem from="1731084567499" duration="1320000" />
-      <workItem from="1731091439476" duration="3246000" />
-      <workItem from="1731100087672" duration="567000" />
-      <workItem from="1731132487206" duration="310000" />
-      <workItem from="1731135401074" duration="8821000" />
-      <workItem from="1731250316611" duration="13770000" />
-      <workItem from="1731272892076" duration="120000" />
-      <workItem from="1731273107389" duration="271000" />
-      <workItem from="1731302205685" duration="681000" />
-      <workItem from="1731442073469" duration="180000" />
-      <workItem from="1731477421290" duration="242000" />
-      <workItem from="1731529519607" duration="1925000" />
-      <workItem from="1731531548203" duration="250000" />
-      <workItem from="1731607240789" duration="3924000" />
-      <workItem from="1731927486787" duration="25000" />
-      <workItem from="1732384537942" duration="1468000" />
-      <workItem from="1732388409110" duration="1520000" />
-      <workItem from="1733138551779" duration="3795000" />
-      <workItem from="1733151746781" duration="6885000" />
-      <workItem from="1733213050019" duration="2014000" />
-      <workItem from="1733224906657" duration="13217000" />
-      <workItem from="1733294266903" duration="1272000" />
-      <workItem from="1733300881754" duration="3351000" />
-      <workItem from="1733333531923" duration="12749000" />
-      <workItem from="1733382095455" duration="120000" />
-      <workItem from="1733818648461" duration="2710000" />
-      <workItem from="1733850039239" duration="5338000" />
-      <workItem from="1733905678935" duration="4543000" />
-      <workItem from="1733935081694" duration="1757000" />
-      <workItem from="1733945587119" duration="2269000" />
-      <workItem from="1734000542492" duration="244000" />
-      <workItem from="1734024917661" duration="7222000" />
-      <workItem from="1734103556380" duration="674000" />
-      <workItem from="1734164589634" duration="723000" />
-      <workItem from="1734270847516" duration="681000" />
-      <workItem from="1734275246289" duration="382000" />
-      <workItem from="1734277466493" duration="170000" />
-      <workItem from="1734277749065" duration="2045000" />
-      <workItem from="1734282169525" duration="1405000" />
-      <workItem from="1734351608471" duration="2695000" />
-      <workItem from="1734365136966" duration="750000" />
-      <workItem from="1734423980054" duration="3182000" />
-      <workItem from="1734471269997" duration="60000" />
-      <workItem from="1734472239134" duration="2810000" />
-      <workItem from="1734549256389" duration="1311000" />
-      <workItem from="1734553202317" duration="3548000" />
-      <workItem from="1734607485869" duration="10011000" />
-      <workItem from="1734771714220" duration="3269000" />
-      <workItem from="1734784025745" duration="6488000" />
-      <workItem from="1734983709231" duration="2553000" />
-      <workItem from="1735046007933" duration="237000" />
-      <workItem from="1735019565167" duration="282000" />
-      <workItem from="1735028520124" duration="3155000" />
-      <workItem from="1735050255421" duration="1271000" />
-      <workItem from="1735054398251" duration="6000" />
-      <workItem from="1735054517915" duration="2929000" />
-      <workItem from="1735072534253" duration="2681000" />
-      <workItem from="1735075683625" duration="302000" />
-      <workItem from="1735105915061" duration="4713000" />
-      <workItem from="1735126197115" duration="622000" />
-      <workItem from="1735136395475" duration="57000" />
-      <workItem from="1735143696226" duration="1623000" />
-      <workItem from="1735156145046" duration="3577000" />
-      <workItem from="1735223320259" duration="1049000" />
-      <workItem from="1735231319668" duration="1298000" />
-      <workItem from="1735236432923" duration="763000" />
-      <workItem from="1735242705881" duration="3856000" />
-      <workItem from="1735246666248" duration="9000" />
-      <workItem from="1735277667122" duration="3301000" />
-      <workItem from="1735283235393" duration="888000" />
+      <updated>1735309270514</updated>
+      <workItem from="1735309273261" duration="80000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NLP/predict.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/NLP/predict.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$scraper__1_.coverage" NAME="scraper (1) Coverage Results" MODIFIED="1730809205232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline_list.coverage" NAME="pipeline Coverage Results" MODIFIED="1731265564226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$utils.coverage" NAME="utils Coverage Results" MODIFIED="1733301852431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$utils__1_.coverage" NAME="utils (1) Coverage Results" MODIFIED="1730998540999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline__1_.coverage" NAME="pipeline (1) Coverage Results" MODIFIED="1733261238762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters_list.coverage" NAME="filters_list Coverage Results" MODIFIED="1731262903485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$utils_lists.coverage" NAME="utils_lists Coverage Results" MODIFIED="1731068230358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$test.coverage" NAME="test Coverage Results" MODIFIED="1730717863697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters.coverage" NAME="filters Coverage Results" MODIFIED="1733294821886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters__1_.coverage" NAME="filters (1) Coverage Results" MODIFIED="1731612884929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$views.coverage" NAME="views Coverage Results" MODIFIED="1733295018664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$databaseTesting.coverage" NAME="databaseTesting Coverage Results" MODIFIED="1731013096599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/_gitignore$moving_avgs.coverage" NAME="moving_avgs Coverage Results" MODIFIED="1735041005820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper/moving_averages" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$utils_lists__1_.coverage" NAME="utils_lists (1) Coverage Results" MODIFIED="1731257858503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DOMASNA_1" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$models.coverage" NAME="models Coverage Results" MODIFIED="1730998532051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$pipeline.coverage" NAME="pipeline Coverage Results" MODIFIED="1733301882186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$filters.coverage" NAME="filters Coverage Results" MODIFIED="1730581082302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datascraper" />
-    <SUITE FILE_PATH="coverage/finbert_py$nlp_model.coverage" NAME="nlp_model Coverage Results" MODIFIED="1735119233626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$predict.coverage" NAME="predict Coverage Results" MODIFIED="1735073677708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
-    <SUITE FILE_PATH="coverage/finbert_py$predict.coverage" NAME="predict Coverage Results" MODIFIED="1735243505295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$labeling.coverage" NAME="labeling Coverage Results" MODIFIED="1735057966582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
-    <SUITE FILE_PATH="coverage/finbert_py$finbert.coverage" NAME="finbert Coverage Results" MODIFIED="1735117590293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
-    <SUITE FILE_PATH="coverage/finbert_py$labeling.coverage" NAME="labeling Coverage Results" MODIFIED="1735117952241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
-    <SUITE FILE_PATH="coverage/MSEDataAnalising$finbert.coverage" NAME="finbert Coverage Results" MODIFIED="1735075248476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLP" />
   </component>
 </project>
