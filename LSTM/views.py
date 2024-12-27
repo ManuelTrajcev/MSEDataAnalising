@@ -11,9 +11,12 @@ import joblib
 import pandas as pd
 import tensorflow as tf
 from .lstm.lstm import predictions
-from .oscillators.oscilators import process_company_data
+from .oscillators.oscilators import process_company_data, clean_data
 from .moving_averages.moving_avgs import process_company_data2
-
+from datascraper.serializers import DayEntryAsStringSerializer
+from datascraper.models import *
+from statsmodels.tsa.seasonal import seasonal_decompose
+from datetime import datetime
 
 @api_view(['GET'])
 def get_prediction_data(request):
@@ -86,3 +89,47 @@ def moving_average_signals(request):
         return Response({"error": str(e)})
     except Exception as e:
         return Response({"error": "An unexpected error occurred: " + str(e)})
+
+
+@api_view(['GET'])
+def time_series_analysis(request):
+    company_code = request.query_params.get('company_code')
+    start_date = request.query_params.get('start_date')
+    end_date = request.query_params.get('end_date')
+
+    if start_date:
+        try:
+            start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
+        except ValueError:
+            return Response({"error": "Invalid start date format. Please use YYYY-MM-DD."}, status=400)
+
+    if end_date:
+        try:
+            end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
+        except ValueError:
+            return Response({"error": "Invalid end date format. Please use YYYY-MM-DD."}, status=400)
+
+    entries = DayEntryAsString.objects.filter(company_code=company_code, date__range=[start_date, end_date])
+    serializer = DayEntryAsStringSerializer(entries, many=True)
+    data = serializer.data
+
+    df = pd.DataFrame(data)
+
+    df = clean_data(df)
+    df = df.resample('D').last()
+    df['last_transaction_price'] = df['last_transaction_price'].fillna(
+        method='ffill')
+
+    decomposition_A = seasonal_decompose(df['last_transaction_price'], model='additive')
+
+    trend = decomposition_A.trend.dropna().tolist()
+    seasonal = decomposition_A.seasonal.dropna().tolist()
+    residual = decomposition_A.resid.dropna().tolist()
+
+    response_data = {
+        'trend': trend,
+        'seasonal': seasonal,
+        'residual': residual
+    }
+
+    return Response(response_data)
