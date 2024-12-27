@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f736a3-e364-451c-9db6-40efc32bfd6f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MSEDataAnalising.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSTM/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/LSTM/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LSTM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/LSTM/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,46 +57,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.MSEDataAnalising.executor": "Run",
-    "Python.databaseTesting.executor": "Run",
-    "Python.filters (1).executor": "Run",
-    "Python.filters.executor": "Run",
-    "Python.filters_list.executor": "Debug",
-    "Python.lstm.executor": "Run",
-    "Python.lstm_train.executor": "Run",
-    "Python.models.executor": "Run",
-    "Python.moving_avgs.executor": "Run",
-    "Python.oscilators (1).executor": "Run",
-    "Python.oscilators.executor": "Run",
-    "Python.pipeline (1).executor": "Run",
-    "Python.pipeline.executor": "Run",
-    "Python.pipeline_list.executor": "Run",
-    "Python.scraper (1).executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.utils (1).executor": "Run",
-    "Python.utils.executor": "Run",
-    "Python.utils_lists (1).executor": "Debug",
-    "Python.utils_lists.executor": "Run",
-    "Python.views.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "LSTM",
-    "last_opened_file_path": "/home/draganapetrova/my_files/university/treta_godina/dians/MSEDataAnalising/datascraper/lstm",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.MSEDataAnalising.executor&quot;: &quot;Run&quot;,
+    &quot;Python.databaseTesting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters_list.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.lstm.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lstm_train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.moving_avgs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.oscilators (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.oscilators.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils_lists (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.utils_lists.executor&quot;: &quot;Run&quot;,
+    &quot;Python.views.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LSTM&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/draganapetrova/my_files/university/treta_godina/dians/MSEDataAnalising/datascraper/lstm&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2024.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/datascraper/lstm" />
