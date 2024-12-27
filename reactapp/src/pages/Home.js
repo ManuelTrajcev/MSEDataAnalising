@@ -21,6 +21,7 @@ const Home = () => {
                 setHeroCount={setHeroCount}
                 playStatus={playStatus}
             />
+
         </div>
     );
 };
