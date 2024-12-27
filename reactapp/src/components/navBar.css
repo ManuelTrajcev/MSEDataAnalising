@@ -1,80 +1,96 @@
-* {
-    font-family: 'Jost', sans-serif
-}
-
-#title {
-    font-size: 2.5vh;
-    padding-left: 10%;
-    font-weight: bold;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
 }
 
 .nav {
+    width: 84%;
+    margin: 2vh auto 0 auto;
+    display: flex;
     justify-content: space-between;
-    display: flex;
     align-items: center;
-    background-color: #e6e6e6;
-    padding: 10px;
+    padding: 0;
 }
 
-.nav img {
-    margin-right: 10px;
-}
-
-.nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: end;
+#logo {
+    list-style: none;
     margin: 0;
-    padding: 0 5%;
+    padding: 0;
+    flex: 1; /* Осигурај рамномерно ширење */
 }
 
-.nav li {
-    margin: 0 5px; /* Space between rectangles */
-    padding: 0px 20px; /* Adjust for rectangle size */
+#pages {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+#pages li {
+    margin: 0 10px; /* Простор од 10px лево и десно */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Required for the pseudo-element positioning */
-    transition: color 0.3s ease; /* Smooth text color transition */
+    position: relative; /* Потребно за позиционирање на псевдо-елементот */
+    transition: color 0.3s ease; /* Лесен премин за бојата на текстот */
 }
 
-.nav li .active {
-    padding: 15px 20px;
-    background-color: #33486a;
+/* Додавање underline за линкови */
+#pages a::after {
+    content: ""; /* Празен псевдо-елемент */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #F7C703;
+    transform: scaleX(0); /* Почетно е скриен underline */
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+/* Покажи underline при hover или кога линкот е активен */
+#pages a:hover::after,
+#pages a.active::after {
+    transform: scaleX(1); /* Прикажи underline */
+}
+
+#pages a.active::after {
+    background-color: #6FB3B8; /* Боја на underline за активен линк */
+}
+
+#pages a:hover {
+    color: white; /* Боја на текст при hover */
+}
+
+#pages a.active {
+    color: #388087; /* Боја на текст за активен линк */
+    background-color: #C2EDCE; /* Позадинска боја за активен линк */
+    transition: background-color 0.3s ease; /* Лесен премин за позадинската боја */
+}
+
+#pages a {
     color: white;
+    text-decoration: none; /* Отстрани underline */
+    font-size: 2.1vh;
+    transition: background-color 0.1s ease;
+    padding: 0.8em 1em; /* Простор за линковите */
+    display: inline-block; /* Осигурај дека линковите се inline-block */
 }
 
-.nav li:hover::after {
-    content: ''; /* Empty content for the pseudo-element */
-    position: absolute; /* Positioned relative to the li */
-    bottom: 0; /* Align at the bottom of li */
-    left: 15%; /* Center the underline */
-    width: 70%; /* Adjust width of the underline */
-    height: 2px; /* Height of the underline */
-    background-color: #33486a; /* Color of the underline */
-    transition: transform 0.5s ease;
-    transform: scaleX(1);
+#pages li:last-of-type {
+    background-color: #742CD8;
+    border-radius: 50px;
 }
 
-.nav li::after {
-    content: ''; /* Empty content for the pseudo-element */
-    position: absolute; /* Positioned relative to the li */
-    bottom: 0; /* Align at the bottom of li */
-    left: 10%; /* Center the underline */
-    width: 80%; /* Adjust width of the underline */
-    height: 2px; /* Height of the underline */
-    background-color: #33486a; /* Color of the underline */
-    transition: transform 0.5s ease;
-    transform: scaleX(0);
-}
 
-.nav li:hover {
-    color: #33486a; /* Change text color on hover */
-}
-
-.nav a {
-    color: inherit; /* Inherit text color from li */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.5vh;
+#pages li:last-of-type a:hover {
+    background-color: #742CD8;
+    transition: ease-in-out 200ms;
+    color: white;
 }
