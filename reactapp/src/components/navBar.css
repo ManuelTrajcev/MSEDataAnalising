@@ -1,86 +1,96 @@
-* {
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Jost', sans-serif;
-    background-color: #FFFBF4;
-}
-
-#title {
-    font-size: 2.5vh;
-    padding-left: 10%;
-    font-weight: bold;
 }
 
 .nav {
-    width: 80%;
-    margin: 1vh auto 0 auto; /* Center the navbar and move it down using viewport height */
+    width: 84%;
+    margin: 2vh auto 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #388087; /* Долен бордер */
+    padding: 0;
 }
 
 #logo {
     list-style: none;
-    margin: 0 0 0 5%;
+    margin: 0;
     padding: 0;
+    flex: 1; /* Осигурај рамномерно ширење */
 }
 
 #pages {
     list-style: none;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin: 0;
-    padding: 0 3%;
+    padding: 0;
+    flex: 1;
 }
 
 #pages li {
-    margin: 0 10px; /* Додава простор од 10px лево и десно */
+    margin: 0 10px; /* Простор од 10px лево и десно */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Required for the pseudo-element positioning */
-    transition: color 0.3s ease; /* Smooth text color transition */
+    position: relative; /* Потребно за позиционирање на псевдо-елементот */
+    transition: color 0.3s ease; /* Лесен премин за бојата на текстот */
 }
 
+/* Додавање underline за линкови */
 #pages a::after {
-    content: ""; /* No text, just the line */
+    content: ""; /* Празен псевдо-елемент */
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%; /* Full width of the button */
-    height: 3px; /* Thickness of the underline */
-    background-color: #33486a; /* Color of the underline */
-    transform: scaleX(0); /* Start with no underline */
-    transition: transform 0.3s ease; /* Smooth transition for the underline */
-    transform-origin: left; /* Animate from left to right */
+    width: 100%;
+    height: 3px;
+    background-color: #F7C703;
+    transform: scaleX(0); /* Почетно е скриен underline */
+    transition: transform 0.3s ease;
+    transform-origin: left;
 }
 
-
-/* Show underline when hovering or when the link is active */
+/* Покажи underline при hover или кога линкот е активен */
 #pages a:hover::after,
 #pages a.active::after {
-    transform: scaleX(1); /* Show the underline on hover or when active */
+    transform: scaleX(1); /* Прикажи underline */
 }
 
 #pages a.active::after {
-    background-color: #6FB3B8; /* Color of the underline */
+    background-color: #6FB3B8; /* Боја на underline за активен линк */
 }
 
 #pages a:hover {
-    color: #669BBC; /* Hover link color */
+    color: white; /* Боја на текст при hover */
 }
 
 #pages a.active {
-    color: #388087; /* Active link color */
-    background-color: #C2EDCE; /* Боја на позадина за активниот линк */
-    transition: background-color 0.3s ease; /* Лесно преминување за позадинската боја */
+    color: #388087; /* Боја на текст за активен линк */
+    background-color: #C2EDCE; /* Позадинска боја за активен линк */
+    transition: background-color 0.3s ease; /* Лесен премин за позадинската боја */
 }
 
 #pages a {
-    color: #33486a;
-    text-decoration: none; /* Remove underline */
+    color: white;
+    text-decoration: none; /* Отстрани underline */
     font-size: 2.1vh;
-    transition: background-color 0.1s ease; /* Додај transition за позадинската боја */
-    padding: 0.8em 1em; /* Adjust for rectangle size */
-    display: inline-block; /* Обезбедува дека елементот не е блок и не ја зголемува големината */
+    transition: background-color 0.1s ease;
+    padding: 0.8em 1em; /* Простор за линковите */
+    display: inline-block; /* Осигурај дека линковите се inline-block */
+}
+
+#pages li:last-of-type {
+    background-color: #742CD8;
+    border-radius: 50px;
+}
+
+
+#pages li:last-of-type a:hover {
+    background-color: #742CD8;
+    transition: ease-in-out 200ms;
+    color: white;
 }

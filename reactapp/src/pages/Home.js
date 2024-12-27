@@ -1,19 +1,28 @@
-import React from 'react';
-import './Home.css';
-import TickerComponent from '../components/Ticker'; // Import the new Ticker component
+import React, { useState } from "react";
+import Background from "../components/Background";
+import Hero from "../components/Hero";
 
-export default function Home() {
-   return (
-       <div id="page">
-           <div className="home-section">
-               <div className="home-text">
-                   <h1><span>Инвестирај</span> правилно во твојата иднина</h1>
-                   <p>преку нашата анализа на Македонската берза</p>
-               </div>
-           </div>
+const Home = () => {
+    const heroData = [
+        { text1: "Следете", text2: "трендови" },
+        { text1: "Учете", text2: "стратегии" },
+        { text1: "Инвестирајте", text2: "правилно" },
+    ];
+    const [heroCount, setHeroCount] = useState(0);
+    const [playStatus, setPlayStatus] = useState(false);
 
-           {/* Add the Ticker component below the text */}
-           {/*<TickerComponent />*/}
-       </div>
-   );
-}
+    return (
+        <div>
+            <Background playStatus={playStatus} heroCount={heroCount} />
+            <Hero
+                setPlayStatus={setPlayStatus}
+                heroData={heroData[heroCount]}
+                heroCount={heroCount}
+                setHeroCount={setHeroCount}
+                playStatus={playStatus}
+            />
+        </div>
+    );
+};
+
+export default Home;

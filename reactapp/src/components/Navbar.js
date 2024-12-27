@@ -1,14 +1,16 @@
 import './navBar.css';
 import { NavLink } from 'react-router-dom';
-import logo from '../images/stock-logo.png';
+import logo from '../images/white-logo.png';
 
 export default function Navbar() {
     return (
         <nav className="nav">
+            <div className="logo">
+            </div>
             <ul id="logo">
                 <li>
                     <NavLink to="/">
-                        <img src={logo} alt="logo" width="300" height="80"/>
+                        <img src={logo} alt="logo" width="280" height="66"/>
                     </NavLink>
                 </li>
             </ul>
@@ -37,7 +39,14 @@ export default function Navbar() {
                         Визуелизација
                     </NavLink>
                 </li>
-
+                <li>
+                    <NavLink
+                        to="/technical-analysis"
+                        className={({isActive}) => (isActive ? 'active' : '')}
+                    >
+                        Техничка Анализа
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );
