@@ -1,6 +1,15 @@
-h1:first-of-type {
+#container {
+    background-color: transparent;
+    margin-left: 3%;
+}
+#container .heading {
     margin-top: 9%;
-    margin-left: 2%;
-    font-size: 5vh;
     color: white;
+    font-size: 3rem;
+}
+#container p {
+    margin-top: 3%;
+    color: black;
+    width: 86%;
+    font-size: 2rem;
 }

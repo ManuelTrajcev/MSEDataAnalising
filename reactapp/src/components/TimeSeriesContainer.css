@@ -1,0 +1,77 @@
+/* General container styling */
+.time-series-container {
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px;
+    width: 86%; /* Occupy 86% of the page width */
+    background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling (if any title is added in future) */
+.time-series-container h1 {
+    text-align: left; /* Align the title to the left */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1c2d70; /* Dark blue */
+    font-weight: bold;
+}
+
+/* Message styling */
+.time-series-container p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Input section styling */
+.data-selection-input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow inputs to wrap on smaller screens */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.data-selection-input select,
+.data-selection-input input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.data-selection-input select:focus,
+.data-selection-input input[type="date"]:focus {
+    outline: none;
+    border-color: #1c2d70;
+    box-shadow: 0 0 4px rgba(28, 45, 112, 0.5); /* Subtle blue glow */
+}
+
+/* Chart section styling */
+.time-series-chart {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Placeholder text in chart area */
+.time-series-chart-placeholder {
+    color: #666;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Chart canvas */
+.time-series-chart canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

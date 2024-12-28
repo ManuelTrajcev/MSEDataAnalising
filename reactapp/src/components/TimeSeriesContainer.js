@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TimeSeriesChart from "./TimeSeriesChart";
 import DataSelectionInput from "./DataSelectionInput";
+import './TimeSeriesContainer.css'
 
 const TimeSeriesContainer = () => {
     const [rawData, setRawData] = useState([]);
@@ -68,7 +69,7 @@ const TimeSeriesContainer = () => {
     };
 
     return (
-        <div>
+        <div className="time-series-container">
             <DataSelectionInput
                 companyCodes={companyCodes}
                 selectedCompanyCode={selectedCompanyCode}
@@ -76,9 +77,10 @@ const TimeSeriesContainer = () => {
                 endDate={endDate}
                 onInputChange={handleInputChange}
             />
-            {message && <p style={{ color: "red" }}>{message}</p>}
-            <TimeSeriesChart chartData={chartData} />
+            {message && <p>{message}</p>}
+            <TimeSeriesChart chartData={chartData}/>
         </div>
+
     );
 };
 
