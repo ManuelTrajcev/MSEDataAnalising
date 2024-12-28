@@ -33,7 +33,7 @@ export default function Navbar() {
                 </li>
                 <li>
                     <NavLink
-                        to="/visulisation"
+                        to="/visualisation"
                         className={({isActive}) => (isActive ? 'active' : '')}
                     >
                         Визуелизација

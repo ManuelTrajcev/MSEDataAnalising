@@ -9,7 +9,7 @@ import {
     Legend,
 } from "recharts";
 
-const TimeSeriesChart = ({chartData}) => {
+const TimeSeriesChart = ({chartData, yAxisLabel = "Цена на последна трансакција (MKD)" }) => {
     const formatXAxis = (tick) => {
         const date = new Date(tick);
         return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
@@ -40,7 +40,7 @@ const TimeSeriesChart = ({chartData}) => {
                     />
                     <YAxis
                         tickFormatter={formatYAxis}
-                        label={{value: "Profit (МКД)", angle: -45, position: "insideLeft", offset: -20}}
+                        label={{value: "Цена на последна трансакција (MKD)", angle: -45, position: "insideLeft", offset: -20}}
                     />
                     <Tooltip/>
                     <Legend/>
