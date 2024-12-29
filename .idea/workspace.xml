@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="" />
+    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,8 +61,8 @@
     "Django Server.Unnamed.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "cb0c1d0d",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/PROGRAMIRANJE NA VIDEO IGRI/PNVI",
+    "git-widget-placeholder": "e8f5d175",
+    "last_opened_file_path": "C:/Users/Manuel/Desktop/New folder/MSEDataAnalising",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
