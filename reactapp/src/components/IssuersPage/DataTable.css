@@ -5,7 +5,7 @@
     background-color: #f9f9f9; /* Light background for contrast */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 8px; /* Rounded corners */
-    font-family: Arial, sans-serif;
+    font-family: Jost, sans-serif;
 }
 
 .data-table h1 {
@@ -41,7 +41,7 @@
 }
 
 .data-table tbody tr:hover {
-    background-color: #e9f5ff; /* Light blue on hover */
+    background-color: rgba(224, 170, 255, 0.4);
     cursor: pointer; /* Add a pointer cursor for interactivity */
 }
 
