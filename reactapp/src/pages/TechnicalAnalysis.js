@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TechnicalAnalysisBackground from "../components/TechnicalAnalysisBackground";
+import TechnicalAnalysisBackground from "../components/AnalysisPage/TechnicalAnalysisBackground";
 import TimeSeriesChart from "../components/VisualizationPage/TimeSeriesChart";
 
 export default function TechnicalAnalysis() {

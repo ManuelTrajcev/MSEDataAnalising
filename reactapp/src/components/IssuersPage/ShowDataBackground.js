@@ -1,6 +1,6 @@
 import React from 'react'
-import './AboutBackground.css'
-import image1 from '../images/about.jpg'
+import '../AboutPage/AboutBackground.css'
+import image1 from '../../images/about.jpg'
 
 
 const ShowDataBackground = () => {

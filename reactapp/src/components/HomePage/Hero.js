@@ -13,7 +13,7 @@ const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) 
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroCount((prevCount) => (prevCount + 1) % 3); // Loop back to 0 after 2
-    }, 10000); // Change every 5 seconds
+    }, 20000); // Change every 5 seconds
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, [setHeroCount]);

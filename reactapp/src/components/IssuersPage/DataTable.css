@@ -41,7 +41,7 @@
 }
 
 .data-table tbody tr:hover {
-    background-color: #e9f5ff; /* Light blue on hover */
+    background-color: rgba(224, 170, 255, 0.4);
     cursor: pointer; /* Add a pointer cursor for interactivity */
 }
 

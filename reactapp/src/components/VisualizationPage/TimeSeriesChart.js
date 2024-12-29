@@ -47,7 +47,7 @@ const TimeSeriesChart = ({chartData}) => {
                     <Line type="monotone" dataKey="value" stroke="#8884d8"/>
                 </LineChart>
             ) : (
-                <p>No data available for the selected inputs.</p>
+                <p>Нема достапни податоци за избраните влезни параметри.</p>
             )}
         </div>
     );

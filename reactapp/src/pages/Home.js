@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Background from "../components/Background";
-import Hero from "../components/AboutPage/Hero";
-import Companies from "../components/AboutPage/Companies";
+import Hero from "../components/HomePage/Hero";
+import Companies from "../components/HomePage/Companies";
 import Footer from "../components/Footer";
-import News from "../components/AboutPage/News";
-import Features from "../components/AboutPage/Feautres";
-import StaticContent from "../components/AboutPage/StaticContent";
+import News from "../components/HomePage/News";
+import Features from "../components/HomePage/Feautres";
+import StaticContent from "../components/HomePage/StaticContent";
 
 const Home = () => {
     const heroData = [

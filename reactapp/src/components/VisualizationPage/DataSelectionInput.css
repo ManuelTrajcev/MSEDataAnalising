@@ -5,8 +5,8 @@
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Center the items vertically */
     gap: 20px; /* Space between inputs */
-    flex-wrap: wrap; /* Allow the elements to wrap on smaller screens */
-    text-align: center; /* Ensures everything inside the div is centered */
+    flex-wrap: nowrap; /* Prevent wrapping of elements */
+    text-align: center; /* Ensure everything inside the div is centered */
 }
 
 /* Label styling for the inputs */
@@ -14,6 +14,7 @@
     font-weight: bold;
     margin-right: 10px;
     font-size: 14px;
+    white-space: nowrap; /* Prevent label text from wrapping */
 }
 
 /* Styling for the select and date inputs */
@@ -24,7 +25,8 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    width: 200px; /* Set a width to prevent inputs from stretching */
+    width: 180px; /* Consistent width for inputs */
+    box-sizing: border-box; /* Prevent overflow due to padding */
 }
 
 /* Focus styles for inputs */
@@ -41,13 +43,10 @@
     color: #333;
 }
 
-/* For spacing between input fields */
+/* Flex container for input field and label */
 .time-series-container .data-selection span {
     display: flex;
-    align-items: center; /* Align label and input on the same line */
-    justify-content: space-evenly; /* Center the label and input together */
-}
-
-.data-selection {
-    margin: 0;
+    align-items: center; /* Align label and input vertically */
+    justify-content: center; /* Keep label and input centered together */
+    gap: 5px; /* Space between label and input */
 }

@@ -12,18 +12,18 @@ const Footer = () => {
                 <div className="footer-box">
                     <h1>Брзи линкови</h1>
                     <div className="footer-links">
-                        <a href="#">Последно на берза</a>
-                        <a href="#">Мотивација</a>
-                        <a href="#">Издавачи на берза</a>
-                        <a href="#">Новости</a>
+                        <a href="#feature">Последно на берза</a>
+                        <a href="#static">Мотивација</a>
+                        <a href="#company-container">Издавачи на берза</a>
+                        <a href="#news">Новости</a>
                     </div>
                 </div>
                 <div className="footer-box">
                     <h1>Потребни линкови</h1>
                     <div className="footer-links">
-                        <a href="#">Издавачи</a>
-                        <a href="#">Визуелизација</a>
-                        <a href="#">Техничка анализа</a>
+                        <a href="/show-data">Издавачи</a>
+                        <a href="/visualisation">Визуелизација</a>
+                        <a href="/technical-analysis">Техничка анализа</a>
                     </div>
                 </div>
             </div>
