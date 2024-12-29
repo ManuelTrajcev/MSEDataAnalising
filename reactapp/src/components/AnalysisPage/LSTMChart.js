@@ -34,8 +34,8 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
         <div>
             {chartData.length > 0 ? (
                 <LineChart
-                    width={800}
-                    height={400}
+                    width={window.innerWidth * 0.6}
+                    height={window.innerHeight * 0.6}
                     data={chartData}
                     margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                 >
