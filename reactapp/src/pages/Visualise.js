@@ -14,7 +14,9 @@ export default function Visualise() {
             <div id="vis-above">
                 <h1>Визуелизација на податоци</h1>
             </div>
-            <div id="vis-bellow" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+            <div id="vis-bellow"
+                 style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                <h1>Графички приказ на податоци за издавачи</h1>
                 <TimeSeriesContainer/>
             </div>
             <Footer/>
