@@ -1,110 +1,194 @@
-/* General container styles */
-#container {
-    background-color: transparent;
-    margin-left: 3%;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Root styles for consistent design */
+:root {
+    --primary-color: #1c2d70; /* Main theme color */
+    --secondary-color: #5b9bd5; /* Accent color */
+    --neutral-gray: #f4f4f4; /* Background gray */
+    --error-color: #f44336; /* Error red */
+    --success-color: #4CAF50; /* Success green */
+    --font-family: 'Jost', sans-serif;
 }
 
-/* Header styles for the front section */
-#container #front {
-    margin-top: 9%;
+/* Container Styles */
+#tech-container {
+    margin-top: 20vh;
+    font-family: var(--font-family);
+}
+
+#tech-container #tech-front {
+    padding-left: 4rem;
+    margin-bottom: 2rem;
     color: white;
-    font-size: 3rem;
-    text-align: center;
-}
-
-/* Paragraph styles */
-#container p {
-    margin-top: 3%;
-    color: black;
-    width: 86%;
     font-size: 2rem;
 }
 
-/* General header styles */
-h1 {
+h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 20px 0;
     text-align: center;
-    color: #333;
 }
 
-/* Dropdown select styles */
+/* Dropdown Styles */
 select {
-    display: block;
-    margin: 20px auto;
     padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Error Message */
+.error-message {
+    color: var(--error-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Timeframe Buttons */
+.timeframe-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.timeframe-buttons h3 {
+    margin-bottom: 10px;
+}
+
+.timeframe-buttons .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.timeframe-buttons button {
+    padding: 10px 20px;
+    background-color: var(--neutral-gray);
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    width: 100%;
-}
-
-/* Error message styles */
-.error-message {
-    color: red;
-    text-align: center;
-    font-weight: bold;
+    cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Table container styles */
+.timeframe-buttons button.active {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.timeframe-buttons button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Chart and Data Section */
 .table-container {
-    margin: 20px 0;
+    margin-top: 20px;
+    width: 100%;
     overflow-x: auto;
-    text-align: center;
 }
 
-/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 10px;
+th,
+td {
+    padding: 12px;
     text-align: center;
-    font-size: 0.9rem;
+    border: 1px solid #ddd;
 }
 
-table th {
-    background-color: #f4f4f4;
+th {
+    background-color: var(--neutral-gray);
+    color: var(--primary-color);
     font-weight: bold;
-    color: #333;
 }
 
-table tr:nth-child(even) {
+td {
+    color: #555;
+}
+
+td:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Sentiment data styles */
+/* Sentiment Data */
 .sentiment-data {
     margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
     text-align: center;
-    background-color: #eaf4f9;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .sentiment-data p {
-    font-size: 16px;
-    color: #333;
+    margin: 5px 0;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    select {
-        width: 100%;
-    }
+.sentiment-data strong {
+    font-weight: bold;
+}
 
-    table th, table td {
-        font-size: 14px;
-        padding: 8px;
-    }
+/* Sentiment Value Color Styling */
+.sentiment-positive {
+    color: var(--success-color);
+}
+
+.sentiment-negative {
+    color: var(--error-color);
+}
+
+.sentiment-neutral {
+    color: #9E9E9E;
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 90%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar.positive {
+    background-color: var(--success-color);
+}
+
+.progress-bar.negative {
+    background-color: var(--error-color);
+}
+
+.progress-bar.neutral {
+    background-color: gray;
+}
+
+/* Chart Section */
+.LSTMChart {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
