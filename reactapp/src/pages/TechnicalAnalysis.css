@@ -1,4 +1,3 @@
-/* Root styles for consistent design */
 :root {
     --primary-color: #1c2d70; /* Main theme color */
     --secondary-color: #5b9bd5; /* Accent color */
@@ -6,51 +5,72 @@
     --error-color: #f44336; /* Error red */
     --success-color: #4CAF50; /* Success green */
     --font-family: 'Jost', sans-serif;
+    --base-font-size: 1rem; /* 16px */
 }
 
 /* Container Styles */
 #tech-container {
     margin-top: 20vh;
-    font-family: var(--font-family);
+    font-family: var(--font-family), serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #tech-container #tech-front {
     padding-left: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4vh;
     color: white;
     font-size: 2rem;
 }
 
+#tech-button {
+    margin-left: 4rem;
+}
+
+#tech-button select {
+    font-size: 1.5rem; /* Same size as the select dropdown */
+    font-family: Jost, sans-serif;
+    background-color: rgba(224, 170, 255, 0.7);
+    color: black;
+}
+
+#tech-button select option {
+    font-size: 1.5rem; /* Same size as the select dropdown */
+    font-family: Jost, sans-serif;
+}
+
+
 h2 {
-    font-size: 1.6rem;
-    color: var(--primary-color);
-    margin: 20px 0;
-    text-align: center;
+    font-size: 2rem;
+    color: #3c096c;
+    margin: 4vh 4rem;
 }
 
 /* Dropdown Styles */
 select {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+    padding: 1.5rem;
+    font-size: var(--base-font-size);
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
+    margin-bottom: 3vh;
     width: 90%;
-    max-width: 400px;
+    max-width: 30rem;
 }
 
 select:focus {
     outline: none;
     border-color: var(--secondary-color);
-    box-shadow: 0 0 5px var(--secondary-color);
+    box-shadow: 0 0 0.5rem var(--secondary-color);
 }
 
 /* Error Message */
 .error-message {
     color: var(--error-color);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 2vh;
     text-align: center;
 }
 
@@ -59,29 +79,30 @@ select:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 1.5rem;
+    margin-top: 5vh;
 }
 
 .timeframe-buttons h3 {
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
 }
 
 .timeframe-buttons .button-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 2vh;
     flex-wrap: wrap;
 }
 
 .timeframe-buttons button {
-    padding: 10px 20px;
+    padding: 1.2rem 2rem;
     background-color: var(--neutral-gray);
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: var(--base-font-size);
     transition: background-color 0.3s, color 0.3s;
+    margin-left: 1rem; /* Added margin to the left */
 }
 
 .timeframe-buttons button.active {
@@ -96,23 +117,24 @@ select:focus {
 
 /* Chart and Data Section */
 .table-container {
-    margin-top: 20px;
-    width: 100%;
+    margin-top: 5vh;
+    width: 87vw; /* Changed width */
+    margin: 0 auto; /* Centered the tables */
     overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4vh;
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
 }
 
 th,
 td {
-    padding: 12px;
+    padding: 1.5rem;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 0.1rem solid #ddd;
 }
 
 th {
@@ -131,14 +153,14 @@ td:nth-child(even) {
 
 /* Sentiment Data */
 .sentiment-data {
-    margin-top: 20px;
-    font-size: 1.2rem;
+    margin-top: 3vh;
+    font-size: 1.8rem;
     color: var(--primary-color);
     text-align: center;
 }
 
 .sentiment-data p {
-    margin: 5px 0;
+    margin: 1vh 0;
 }
 
 .sentiment-data strong {
@@ -160,17 +182,17 @@ td:nth-child(even) {
 
 /* Progress bar container */
 .progress-container {
-    width: 90%;
-    height: 20px;
+    width: 87vw; /* Changed width */
+    height: 3vh;
     background-color: #e0e0e0;
-    border-radius: 10px;
-    margin: 20px auto;
+    border-radius: 1vh;
+    margin: 4vh auto;
     position: relative;
 }
 
 .progress-bar {
     height: 100%;
-    border-radius: 10px;
+    border-radius: 1vh;
     transition: width 0.3s ease-in-out;
 }
 
@@ -188,7 +210,13 @@ td:nth-child(even) {
 
 /* Chart Section */
 .LSTMChart {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    width: 87vw; /* Changed width */
+    max-width: 60rem;
+    margin: 0 auto; /* Centered the chart */
+}
+
+/* Footer fix to stay at the bottom */
+footer {
+    margin-top: auto; /* Makes sure the footer stays at the bottom */
+    width: 100%;
 }

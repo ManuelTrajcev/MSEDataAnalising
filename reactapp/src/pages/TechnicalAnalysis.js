@@ -113,89 +113,56 @@ export default function TechnicalAnalysis() {
     };
 
     const renderTable = (data, headers) => (
-        <div className="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        {headers.map((header, index) => (
-                            <th key={index}>{header}</th>
+    <div className="table-container">
+        <table>
+            <thead>
+                <tr>
+                    {headers.map((header, index) => (
+                        <th key={index}>{header}</th>
+                    ))}
+                </tr>
+            </thead>
+            <tbody>
+                {data.map((row, rowIndex) => (
+                    <tr key={rowIndex}>
+                        {headers.map((header, colIndex) => (
+                            <td key={colIndex}>{row[header] || "N/A"}</td>
                         ))}
                     </tr>
-                </thead>
-                <tbody>
-                    {data.map((row, rowIndex) => (
-                        <tr key={rowIndex}>
-                            {headers.map((header, colIndex) => (
-                                <td key={colIndex}>{row[header] || "N/A"}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
+                ))}
+            </tbody>
+        </table>
+    </div>
+);
 
-    const renderOscillators = (oscillators) => {
-        const timeframeData = oscillators[selectedTimeframe] || [];
-        const data = timeframeData.map((oscillator) => ({
-            RSI: oscillator.RSI,
-            Signal_RSI: oscillator.Signal_RSI,
-            Stochastic_K: oscillator.stoch_k,
-            Signal_Stochastic_K: oscillator.Signal_stoch_k,
-            CCI: oscillator.cci,
-            Signal_CCI: oscillator.Signal_cci,
-            MACD: oscillator.macd,
-            Signal_MACD: oscillator.Signal_macd,
-            ADX: oscillator.adx,
-            Signal_ADX: oscillator.Signal_adx,
-        }));
+const renderOscillators = (oscillators) => {
+    const timeframeData = oscillators[selectedTimeframe] || [];
+    const data = [
+        { Oscillator: "RSI", Value: timeframeData[0]?.RSI, Signal: timeframeData[0]?.Signal_RSI },
+        { Oscillator: "Stochastic_K", Value: timeframeData[0]?.stoch_k, Signal: timeframeData[0]?.Signal_stoch_k },
+        { Oscillator: "CCI", Value: timeframeData[0]?.cci, Signal: timeframeData[0]?.Signal_cci },
+        { Oscillator: "MACD", Value: timeframeData[0]?.macd, Signal: timeframeData[0]?.Signal_macd },
+        { Oscillator: "ADX", Value: timeframeData[0]?.adx, Signal: timeframeData[0]?.Signal_adx },
+    ];
 
-        const headers = [
-            "RSI",
-            "Signal_RSI",
-            "Stochastic_K",
-            "Signal_Stochastic_K",
-            "CCI",
-            "Signal_CCI",
-            "MACD",
-            "Signal_MACD",
-            "ADX",
-            "Signal_ADX",
-        ];
+    const headers = ["Oscillator", "Value", "Signal"];
+    return renderTable(data, headers);
+};
 
-        return renderTable(data, headers);
-    };
+const renderMovingAverages = (movingAverages) => {
+    const timeframeData = movingAverages[selectedTimeframe] || [];
+    const data = [
+        { Average: "SMA_50", Value: timeframeData[0]?.["SMA(50)"], Signal: timeframeData[0]?.["Signal_SMA(50)"] },
+        { Average: "SMA_200", Value: timeframeData[0]?.["SMA(200)"], Signal: timeframeData[0]?.["Signal_SMA(200)"] },
+        { Average: "EMA_50", Value: timeframeData[0]?.["EMA(50)"], Signal: timeframeData[0]?.["Signal_EMA(50)"] },
+        { Average: "EMA_200", Value: timeframeData[0]?.["EMA(200)"], Signal: timeframeData[0]?.["Signal_EMA(200)"] },
+        { Average: "Ichimoku_Baseline", Value: timeframeData[0]?.Ichimoku_Baseline, Signal: timeframeData[0]?.Signal_Ichimoku_Baseline },
+    ];
 
-    const renderMovingAverages = (movingAverages) => {
-        const timeframeData = movingAverages[selectedTimeframe] || [];
-        const data = timeframeData.map((ma) => ({
-            SMA_50: ma["SMA(50)"],
-            Signal_SMA_50: ma['Signal_SMA(50)'],
-            SMA_200: ma["SMA(200)"],
-            Signal_SMA_200: ma['Signal_SMA(200)'],
-            EMA_50: ma["EMA(50)"],
-            Signal_EMA_50: ma['Signal_EMA(50)'],
-            EMA_200: ma["EMA(200)"],
-            Signal_EMA_200: ma['Signal_EMA(200)'],
-            Ichimoku_Baseline: ma.Ichimoku_Baseline,
-            Signal_Ichimoku_Baseline: ma.Signal_Ichimoku_Baseline,
-        }));
+    const headers = ["Average", "Value", "Signal"];
+    return renderTable(data, headers);
+};
 
-        const headers = [
-            "SMA_50",
-            "Signal_SMA_50",
-            "SMA_200",
-            "Signal_SMA_200",
-            "EMA_50",
-            "Signal_EMA_50",
-            "EMA_200",
-            "Signal_EMA_200",
-            "Ichimoku_Baseline",
-            "Signal_Ichimoku_Baseline",
-        ];
-
-        return renderTable(data, headers);
-    };
 
     return ( <div id="tech-container">
             <TechnicalAnalysisBackground />
@@ -203,9 +170,9 @@ export default function TechnicalAnalysis() {
                 <h1>Техничка анализа на податоци</h1>
             </div>
 
-            <div>
+            <div id="tech-button">
                 <select onChange={handleCompanySelect} value={selectedCompanyCode}>
-                    <option value="">Select Company</option>
+                    <option value="">Избери компанија</option>
                     {companyCodes.map((company, index) => (
                         <option key={index} value={company.code}>
                             {company.name}
