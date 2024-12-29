@@ -3,6 +3,7 @@ import "./News.css";
 
 export default function News() {
     const [data, setData] = useState([]);
+    const [selectedNews, setSelectedNews] = useState(null);
 
     useEffect(() => {
         const fetchCompanyPredictions = async () => {
@@ -25,6 +26,14 @@ export default function News() {
         return content.length > maxLength ? content.substring(0, maxLength) + "..." : content;
     };
 
+    const openModal = (news) => {
+        setSelectedNews(news);
+    };
+
+    const closeModal = () => {
+        setSelectedNews(null);
+    };
+
     return (
         <div id="news">
             <h2>Последно на маркетот</h2>
@@ -32,7 +41,11 @@ export default function News() {
             {data.length > 0 ? (
                 <div className="news-cards">
                     {data.map((entry, index) => (
-                        <div className="news-card" key={index}>
+                        <div
+                            className="news-card"
+                            key={index}
+                            onClick={() => openModal(entry)}
+                        >
                             <h3>{entry.company_name || "Наслов"}</h3>
                             <p>{truncateContent(entry.content)}</p>
                             <p><strong>Датум:</strong> {entry.date || "N/A"}</p>
@@ -41,6 +54,17 @@ export default function News() {
                 </div>
             ) : (
                 <div className="no-data">No data available.</div>
+            )}
+
+            {selectedNews && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <h3>{selectedNews.company_name || "Наслов"}</h3>
+                        <p>{selectedNews.content || "Опис на новоста"}</p>
+                        <p><strong>Датум:</strong> {selectedNews.date || "N/A"}</p>
+                        <button onClick={closeModal}>Затвори</button>
+                    </div>
+                </div>
             )}
         </div>
     );
