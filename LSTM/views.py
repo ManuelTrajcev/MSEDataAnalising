@@ -130,7 +130,8 @@ def time_series_analysis(request):
     response_data = {
         'trend': trend,
         'seasonal': seasonal,
-        'residual': residual
+        'residual': residual,
+        'timestamp': df.index
     }
 
     return Response(response_data)

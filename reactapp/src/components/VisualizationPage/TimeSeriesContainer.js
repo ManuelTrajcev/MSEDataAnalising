@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import TimeSeriesChart from "./TimeSeriesChart";
 import DataSelectionInput from "./DataSelectionInput";
 import './TimeSeriesContainer.css'
@@ -11,6 +11,9 @@ const TimeSeriesContainer = () => {
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
     const [companyCodes, setCompanyCodes] = useState([]);
+    const [trendChartData, setTrendChartData] = useState([]);
+    const [seasonalChartData, setSeasonalChartData] = useState([]);
+    const [residChartData, setResidChartData] = useState([]);
 
     useEffect(() => {
         const fetchCompanyCodes = async () => {
@@ -62,6 +65,57 @@ const TimeSeriesContainer = () => {
         }
     }, [selectedCompanyCode, startDate, endDate]);
 
+    useEffect(() => {
+        if (selectedCompanyCode && startDate && endDate) {
+            const fetchTimeSeriesData = async () => {
+                try {
+                    const response = await fetch(
+                        `http://localhost:8000/lstm/api/time_series_analysis/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
+                    );
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch data");
+                    }
+                    const data_time_series = await response.json();
+                    console.log("Raw API response:", data_time_series);
+
+                    const formattedTrendData = data_time_series.trend.map((trendValue, index) => ({
+                        timestamp: data_time_series.timestamp[index],
+                        value: trendValue,
+                    }));
+
+                    const formattedSeasonalData = data_time_series.seasonal.map((seasonalValue, index) => ({
+                        timestamp: data_time_series.timestamp[index],
+                        value: seasonalValue,
+                    }));
+
+                    const formattedResidualData = data_time_series.residual.map((residualValue, index) => ({
+                        timestamp: data_time_series.timestamp[index],
+                        value: residualValue,
+                    }));
+                    console.log(formattedResidualData)
+                    console.log(formattedSeasonalData)
+                    console.log(formattedTrendData)
+
+                    setTrendChartData(formattedTrendData);
+                    setSeasonalChartData(formattedSeasonalData);
+                    setResidChartData(formattedResidualData);
+                    setMessage("");
+                } catch (error) {
+                    console.error("Error fetching time series data:", error);
+                    setTrendChartData([]);
+                    setSeasonalChartData([]);
+                    setResidChartData([]);
+                    setMessage("Error fetching time series data. Please try again.");
+                }
+            };
+            fetchTimeSeriesData();
+        } else {
+            setTrendChartData([]);
+            setSeasonalChartData([]);
+            setResidChartData([]);
+            setMessage("Select input data to view the chart.");
+        }
+    }, [selectedCompanyCode, startDate, endDate]);
     const handleInputChange = (field, value) => {
         if (field === "selectedCompanyCode") setSelectedCompanyCode(value);
         if (field === "startDate") setStartDate(value);
@@ -78,7 +132,10 @@ const TimeSeriesContainer = () => {
                 onInputChange={handleInputChange}
             />
             {message && <p>{message}</p>}
-            <TimeSeriesChart chartData={chartData} />
+            <TimeSeriesChart chartData={chartData}/>
+            <TimeSeriesChart chartData={trendChartData}/>
+            <TimeSeriesChart chartData={seasonalChartData}/>
+            <TimeSeriesChart chartData={residChartData}/>
         </div>
     );
 };
