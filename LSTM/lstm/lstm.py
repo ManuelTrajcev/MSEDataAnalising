@@ -15,6 +15,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from keras import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Input
+import torch
 
 
 def create_combined_csv(script_dir):
@@ -152,7 +153,7 @@ def predictions(data, company_code, encoder, model, scaler, window_size=3, predi
     data['date'] = pd.to_datetime(data['date'], errors='coerce')
     data['company_code_encoded'] = encoder.transform(data['company_code'].values.reshape(-1, 1))
     data.set_index(keys=["date"], inplace=True)
-
+    model
     encoded_company_code = encoder.transform([company_code])[0]
     company_data = data[data['company_code_encoded'] == encoded_company_code]
 

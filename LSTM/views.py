@@ -18,6 +18,7 @@ from datascraper.models import *
 from statsmodels.tsa.seasonal import seasonal_decompose
 from datetime import datetime
 
+
 @api_view(['GET'])
 def get_prediction_data(request):
     company_code = request.query_params.get('company_code')
