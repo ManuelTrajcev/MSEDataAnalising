@@ -9,7 +9,7 @@ import sb from '../../images/sb.png'
 
 const Companies = () => {
     return (
-        <div className="company-container">
+        <div id="company-container">
             <div className="cmp">
                 <div className="company-text">
                     <h1>Берза користена од над <span>150+</span> издавачи</h1>

@@ -39,15 +39,18 @@ const Ticker = () => {
                         <div key={index} className="ticker-item">
                             <div className="company-code">{item.company_code}</div>
                             <div className="transaction-details">
+                                <span className="transaction-price">
+                                    {item.last_transaction_price.toLocaleString('mk-MK')}
+                                </span>
                                 <span
-                                    className="transaction-price">{item.last_transaction_price.toLocaleString('mk-MK')}</span>
-                                <span className={`percentage ${
-                                    parseFloat(item.percentage.replace(',', '.')) > 0
-                                        ? 'up'
-                                        : parseFloat(item.percentage.replace(',', '.')) < 0
+                                    className={`percentage ${
+                                        parseFloat(item.percentage.replace(',', '.')) > 0
+                                            ? 'up'
+                                            : parseFloat(item.percentage.replace(',', '.')) < 0
                                             ? 'down'
-                                            : 'neutral' /* Handle 0% change (no movement) */
-                                }`}>
+                                            : 'neutral' // Handle 0% change (no movement)
+                                    }`}
+                                >
                                     {item.percentage}%
                                 </span>
                             </div>
