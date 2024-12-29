@@ -1,28 +1,32 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    box-sizing: border-box;
+#static {
+    background-color: white;
+    padding: 1%;
 }
 
 .content {
-    margin: 10%;
+    margin: 2% 10%;
     display: flex;
     max-width: 1200px;
     width: 100%;
-    gap: 40px;
     align-items: center;
-
+    background-image: url("../../images/success.jpg");
+    background-attachment: fixed;
+    background-size: cover; /* This ensures the image covers the whole div */
+    background-position: center; /* Adjusts the position of the image */
+    justify-content: center; /* Horizontally center the content */
+    height: 50vh; /* Full viewport height, adjust as needed */
+    border-radius: 10px;
 }
 
 .text {
-    flex: 1; /* Allow text to take 50% of the space */
+    width: 40%; /* Set the width to 40% of the parent container */
     background-color: #f8f9fc; /* Light background for the text section */
     padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin-left: 0; /* Align to the left */
+    text-align: left; /* Align text to the left */
 }
 
 .text h1 {

@@ -5,6 +5,8 @@ import play_icon from '../../images/play-btn.png';
 import pause_icon from '../../images/stop-btn.png';
 import { NavLink } from 'react-router-dom';
 import { BsMouse } from 'react-icons/bs';
+import { Link } from "react-scroll"; // Import Link from react-scroll
+
 
 const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) => {
   // Automatically change the hero count every 5 seconds
@@ -23,10 +25,10 @@ const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) 
         <p>{heroData.text2}</p>
       </div>
       <div className="hero-explore">
-        <p>За Берзата</p>
-        <NavLink to="/about">
-          <img src={arrow_btn} alt="" />
-        </NavLink>
+        <p>Новости</p>
+        <Link to="news" smooth={true} duration={500}>
+            <img src={arrow_btn} alt="Scroll to News" />
+        </Link>
       </div>
       <div className="hero-dot-play">
         <ul className="hero-dots">
