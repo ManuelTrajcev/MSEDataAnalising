@@ -9,7 +9,7 @@ export default function TechnicalAnalysis() {
     const [chartData, setChartData] = useState([]);
     const [selectedCompanyCode, setSelectedCompanyCode] = useState("");
     const [technicalAnalysisData, setTechnicalAnalysisData] = useState({});
-    const [message, setMessage] = useState("Please select a company to view the technical analysis.");
+    const [message, setMessage] = useState("Изберете компанија која ќе подлежи на техничка анализа.");
     const [sentimentData, setSentimentData] = useState("");
     const [selectedTimeframe, setSelectedTimeframe] = useState("1D");
 
@@ -104,7 +104,7 @@ export default function TechnicalAnalysis() {
 
             fetchTechnicalAnalysisData();
         } else {
-            setMessage("Please select a company to view the technical analysis.");
+            setMessage("Изберете компанија која ќе подлежи на техничка анализа.");
         }
     }, [selectedCompanyCode]);
 
@@ -184,11 +184,12 @@ const renderMovingAverages = (movingAverages) => {
             {/* Display message if no company is selected */}
             {!selectedCompanyCode && <p className="error-message">{message}</p>}
 
+            <div className="calculations">
             {/* Render only after a company is selected */}
             {selectedCompanyCode && (
                 <>
                     <div className="timeframe-buttons">
-                        <h3>Select Timeframe for Oscillators and Moving Averages</h3>
+                        <h3>Избери временска рамка за пресметка на Осцилатори и Moving Averages</h3>
                         <div className="button-container">
                             {["1D", "1W", "1ME"].map((timeframe) => (
                                 <button
@@ -205,7 +206,7 @@ const renderMovingAverages = (movingAverages) => {
                     {/* Display Oscillators */}
                     {technicalAnalysisData.oscillators && (
                         <div>
-                            <h2>Oscillator Signals</h2>
+                            <h2>Осцилатори</h2>
                             {renderOscillators(technicalAnalysisData.oscillators)}
                         </div>
                     )}
@@ -213,7 +214,7 @@ const renderMovingAverages = (movingAverages) => {
                     {/* Display Moving Averages */}
                     {technicalAnalysisData.movingAverages && (
                         <div>
-                            <h2>Moving Average Signals</h2>
+                            <h2>Moving Averages</h2>
                             {renderMovingAverages(technicalAnalysisData.movingAverages)}
                         </div>
                     )}
@@ -221,7 +222,7 @@ const renderMovingAverages = (movingAverages) => {
                     {/* Display technical analysis data */}
                     {technicalAnalysisData.predictions && (
                         <div className="chart-container">
-                            <h2>LSTM Predictions</h2>
+                            <h2>LSTM Модел</h2>
                             <LSTMChart chartData={chartData} />
                         </div>
                     )}
@@ -254,6 +255,7 @@ const renderMovingAverages = (movingAverages) => {
                     )}
                 </>
             )}
+            </div>
             <Footer/>
         </div>
     );
