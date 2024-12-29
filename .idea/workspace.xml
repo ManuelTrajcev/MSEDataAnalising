@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="" />
+    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/reactapp/src/components/Newscard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/AboutPage/AboutBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/AboutPage/AboutBackground.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/AnalysisPage/TechnicalAnalysisBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/AnalysisPage/TechnicalAnalysisBackground.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Background.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Background.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Features.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Features.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Hero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/IssuersBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/IssuersBackground.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/LatestNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/LatestNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/VisualizeBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/VisualizeBackground.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +84,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE_LAST\MSEDataAnalising\reactapp\src\components" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MSEDataAnalising" type="Python.DjangoServer" factoryName="Django server">
       <module name="MSEDataAnalising" />
@@ -119,6 +138,8 @@
       <workItem from="1735397485114" duration="25000" />
       <workItem from="1735454188787" duration="2491000" />
       <workItem from="1735461348070" duration="1388000" />
+      <workItem from="1735498370243" duration="134000" />
+      <workItem from="1735498597282" duration="570000" />
     </task>
     <servers />
   </component>

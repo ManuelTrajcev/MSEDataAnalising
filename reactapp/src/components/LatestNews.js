@@ -1,15 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import "./Newscard.css";
 
-export default function LatestNews() {
+export default function News() {
     const [data, setData] = useState([]);
+    const [selectedNews, setSelectedNews] = useState(null);
 
     useEffect(() => {
         const fetchCompanyPredictions = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8000/nlp/api/get-latest-newss/`);
+                    `http://localhost:8000/nlp/api/get-latest-newss/`
+                );
                 const data = await response.json();
-                setData(data);
+                setData(data.slice(0, 3)); // Only get the first 3 latest news
             } catch (error) {
                 console.error("Error fetching company predictions:", error);
             }
@@ -17,94 +20,52 @@ export default function LatestNews() {
         fetchCompanyPredictions();
     }, []);
 
+    const truncateContent = (content) => {
+        if (!content) return "Опис на новоста";
+        const maxLength = 200; // Show more content
+        return content.length > maxLength ? content.substring(0, maxLength) + "..." : content;
+    };
+
+    const openModal = (news) => {
+        setSelectedNews(news);
+    };
+
+    const closeModal = () => {
+        setSelectedNews(null);
+    };
 
     return (
-        <div
-            className="news"
-            style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "20px",
-                justifyContent: "center",
-                padding: "20px",
-                backgroundColor: "#f9f9f9",
-            }}
-        >
+        <div id="news">
+            <h2>Последно на маркетот</h2>
+            <p className="p">Биди во тек со последните актуелни новости на полето на Македонската берза</p>
             {data.length > 0 ? (
-                <div className="news-cards"
-                     style={{
-                         display: "flex",
-                         flexWrap: "wrap",
-                         gap: "20px",
-                         justifyContent: "center",
-                     }}
-                >
+                <div className="news-cards">
                     {data.map((entry, index) => (
-                        <div className="news-card" key={index}
-                             style={{
-                                 border: "1px solid #ddd",
-                                 borderRadius: "8px",
-                                 width: "250px", /* Adjust the size as needed */
-                                 height: "250px",/* Ensures square shape */
-                                 padding: "20px",
-                                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                                 display: "flex",
-                                 flexDirection: "column",
-                                 justifyContent: "space-between",
-                                 textAlign: "center",
-                             }}
+                        <div
+                            className="news-card"
+                            key={index}
+                            onClick={() => openModal(entry)}
                         >
-                            <div className="news-card-item"
-                                 style={{
-                                     margin: "10px 0",
-                                     fontSize: "14px",
-                                     color: "#333"
-                                 }}
-                            >
-                                <strong>Company Code:</strong> {entry.company_code || "N/A"}
-                            </div>
-                            <div className="news-card-item"
-                                 style={{
-                                     margin: "10px 0",
-                                     fontSize: "14px",
-                                     color: "#333"
-                                 }}
-                            >
-                                <strong>Company Name:</strong> {entry.company_name || "N/A"}
-                            </div>
-                            <div className="news-card-item"
-                                 style={{
-                                     margin: "10px 0",
-                                     fontSize: "14px",
-                                     color: "#333",
-                                     overflow: "hidden",
-                                     textOverflow: "ellipsis",
-                                     whiteSpace: "nowrap",
-                                 }}
-                            >
-                                <strong>Content:</strong> {entry.content || "N/A"}
-                            </div>
-                            <div className="news-card-item"
-                                 style={{
-                                     margin: "10px 0",
-                                     fontSize: "14px",
-                                     color: "#333"
-                                 }}
-                            >
-                                <strong>Date:</strong> {entry.date || "N/A"}
-                            </div>
+                            <h3>{entry.company_name || "Наслов"}</h3>
+                            <p>{truncateContent(entry.content)}</p>
+                            <p><strong>Датум:</strong> {entry.date || "N/A"}</p>
                         </div>
                     ))}
                 </div>
             ) : (
-                <div className="no-data"
-                     style={{
-                         fontSize: "16px",
-                         color: "#666",
-                         textAlign: "center",
-                         padding: "20px",
-                     }}
-                >No data available.</div>
+                <div className="no-data">No data available.</div>
+            )}
+
+            {selectedNews && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <h3>{selectedNews.company_name || "Наслов"}</h3>
+                        <p>{selectedNews.content || "Опис на новоста"}</p>
+                        <p><strong>dasds:</strong> {selectedNews.date || "N/A"}</p>
+                        <p><strong>Датум:</strong> {selectedNews.date || "N/A"}</p>
+                        <button onClick={closeModal}>Затвори</button>
+                    </div>
+                </div>
             )}
         </div>
     );
