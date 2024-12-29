@@ -1,11 +1,8 @@
-from django.shortcuts import render
-
 # Create your views here.
 # views.py (Django)
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import status
 import os
 import joblib
 import pandas as pd
