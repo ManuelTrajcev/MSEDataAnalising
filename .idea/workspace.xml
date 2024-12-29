@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reactapp/src/components/Newscard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/AboutPage/AboutBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/AboutPage/AboutBackground.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/AnalysisPage/TechnicalAnalysisBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/AnalysisPage/TechnicalAnalysisBackground.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Background.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Background.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/Background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Features.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Features.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.css" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/IssuersBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/IssuersBackground.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/LatestNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/LatestNews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/VisualizeBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/VisualizeBackground.js" afterDir="false" />
-    </list>
+    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Teona" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,8 +106,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
-        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
