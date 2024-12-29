@@ -3,7 +3,7 @@
 import React from "react";
 import VisualizeBackground from "../components/VisualizeBackground";
 import './Visualise.css'
-import TimeSeriesContainer from "../components/TimeSeriesContainer";
+import TimeSeriesContainer from "../components/VisualizationPage/TimeSeriesContainer";
 
 export default function Visualise() {
     return (

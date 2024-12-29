@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import TimeSeriesChart from "../TimeSeriesChart";
 import './DataTable.css'
 
 export default function DataTable() {
@@ -8,7 +7,7 @@ export default function DataTable() {
     const [selectedCompanyCode, setSelectedCompanyCode] = useState("");
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
-    const [message, setMessage] = useState("Please select a company.");
+    const [message, setMessage] = useState("Молиме изберете компанија.");
     const [chartData, setChartData] = useState([]);
 
     // Fetch all company codes on component mount
@@ -19,7 +18,7 @@ export default function DataTable() {
                 const companyCodes = await response.json();
                 setCompanyCodes(companyCodes);
             } catch (error) {
-                console.error("Error fetching company codes:", error);
+                console.error("Грешка при вчитување на кодови на компании:", error);
             }
         };
 
@@ -29,9 +28,9 @@ export default function DataTable() {
     // Update the message based on the selected company and dates
     useEffect(() => {
         if (!selectedCompanyCode) {
-            setMessage("Please select a company.");
+            setMessage("Изберете компанија.");
         } else if (!startDate || !endDate) {
-            setMessage("Please select Date From and Date To.");
+            setMessage("Изберете Датум од и Датум до.");
         } else {
             setMessage(""); // Clear the message when all required inputs are selected
         }
@@ -53,11 +52,11 @@ export default function DataTable() {
                         value: parseFloat(entry.total_profit.replace('.', '').replace(',', '.')),
                     }));
 
-                    console.log("Formatted Chart Data:", formattedData);
+                    console.log("Форматирани податоци за график:", formattedData);
                     setChartData(formattedData);
                 } catch (error) {
-                    console.error("Error fetching data:", error);
-                    setMessage("Error fetching data. Please try again.");
+                    console.error("Грешка при вчитување на податоци:", error);
+                    setMessage("Грешка при вчитување на податоци. Молиме обидете се повторно.");
                 }
             };
 
@@ -84,13 +83,13 @@ export default function DataTable() {
             <div>
                 <span>
                     {/* Dropdown menu for selecting a company */}
-                    <label htmlFor="companyCode">Select Company: </label>
+                    <label htmlFor="companyCode">Изберете компанија: </label>
                     <select
                         id="companyCode"
                         value={selectedCompanyCode}
                         onChange={handleCompanyCodeChange}
                     >
-                        <option value="">--Select Company--</option>
+                        <option value="">--Изберете Компанија--</option>
                         {companyCodes.map((company, index) => (
                             <option key={index} value={company.code}>
                                 {company.name}
@@ -101,7 +100,7 @@ export default function DataTable() {
 
                 <span>
                     {/* Date range pickers */}
-                    <label htmlFor="startDate">Date From: </label>
+                    <label htmlFor="startDate">Датум од: </label>
                     <input
                         type="date"
                         id="startDate"
@@ -111,7 +110,7 @@ export default function DataTable() {
                 </span>
 
                 <span>
-                    <label htmlFor="endDate">Date To: </label>
+                    <label htmlFor="endDate">Датум до: </label>
                     <input
                         type="date"
                         id="endDate"
@@ -127,42 +126,41 @@ export default function DataTable() {
             <table border="1">
                 <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Last Transaction Price</th>
-                    <th>Max Price</th>
-                    <th>Min Price</th>
-                    <th>Avg Price</th>
-                    <th>Percentage</th>
-                    <th>Profit</th>
-                    <th>Total Profit</th>
-                    <th>Company Code</th>
+                    <th>Датум</th>
+                    <th>Цена на последна трансакција</th>
+                    <th>Макс.</th>
+                    <th>Мин.</th>
+                    <th>Просечна цена</th>
+                    <th>% пром.</th>
+                    <th>Количина</th>
+                    <th>Промет во БЕСТ</th>
+                    <th>Издавач</th>
                 </tr>
                 </thead>
                 <tbody>
                 {data.length > 0 ? (
                     data.map((entry, index) => (
                         <tr key={index}>
-                            <td>{entry.date_string || "N/A"}</td>
-                            <td>{entry.last_transaction_price || "N/A"}</td>
-                            <td>{entry.max_price || "N/A"}</td>
-                            <td>{entry.min_price || "N/A"}</td>
-                            <td>{entry.avg_price || "N/A"}</td>
-                            <td>{entry.percentage || "N/A"}</td>
-                            <td>{entry.profit || "N/A"}</td>
-                            <td>{entry.total_profit || "N/A"}</td>
-                            <td>{entry.company_code || "N/A"}</td>
+                            <td>{entry.date_string || "Н/А"}</td>
+                            <td>{entry.last_transaction_price || "Н/А"}</td>
+                            <td>{entry.max_price || "Н/А"}</td>
+                            <td>{entry.min_price || "Н/А"}</td>
+                            <td>{entry.avg_price || "Н/А"}</td>
+                            <td>{entry.percentage || "Н/А"}</td>
+                            <td>{entry.profit || "Н/А"}</td>
+                            <td>{entry.total_profit || "Н/А"}</td>
+                            <td>{entry.company_code || "Н/А"}</td>
                         </tr>
                     ))
                 ) : (
                     <tr>
                         <td colSpan="9" style={{textAlign: "center"}}>
-                            No data available.
+                            Нема податоци достапни.
                         </td>
                     </tr>
                 )}
                 </tbody>
             </table>
-            <TimeSeriesChart chartData={chartData}/>
         </div>
     );
 }

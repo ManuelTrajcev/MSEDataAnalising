@@ -2,15 +2,15 @@ import React from "react";
 
 const DataSelectionInput = ({ companyCodes, selectedCompanyCode, startDate, endDate, onInputChange }) => {
     return (
-        <div>
+        <div className="data-selection">
             <span>
-                <label htmlFor="companyCode">Select Company: </label>
+                <label htmlFor="companyCode">Избери компанија: </label>
                 <select
                     id="companyCode"
                     value={selectedCompanyCode}
                     onChange={(e) => onInputChange("selectedCompanyCode", e.target.value)}
                 >
-                    <option value="">--Select Company--</option>
+                    <option value="">--Избери компанија--</option>
                     {companyCodes.map((company, index) => (
                         <option key={index} value={company.code}>
                             {company.name}
@@ -20,7 +20,7 @@ const DataSelectionInput = ({ companyCodes, selectedCompanyCode, startDate, endD
             </span>
 
             <span>
-                <label htmlFor="startDate">Date From: </label>
+                <label htmlFor="startDate">Дата од: </label>
                 <input
                     type="date"
                     id="startDate"
@@ -30,7 +30,7 @@ const DataSelectionInput = ({ companyCodes, selectedCompanyCode, startDate, endD
             </span>
 
             <span>
-                <label htmlFor="endDate">Date To: </label>
+                <label htmlFor="endDate">Дата до: </label>
                 <input
                     type="date"
                     id="endDate"
