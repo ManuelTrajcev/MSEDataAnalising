@@ -1,21 +1,24 @@
+/* Container for the time series */
 .time-series-container {
-    margin: 20px auto; /* Center the container horizontally */
+    margin: 20px auto;
     padding: 20px;
-    width: 86%; /* Occupy 86% of the page width */
-    background-color: #f9f9f9; /* Light background for contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    font-family: Arial, sans-serif;
+    width: 86%;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Jost, sans-serif;
 }
 
+/* Title styling */
 .time-series-container h1 {
-    text-align: left; /* Align title to the left */
-    font-size: 24px; /* Slightly larger font for the title */
-    margin-bottom: 20px; /* Space between title and chart */
-    color: #1c2d70; /* Dark blue color */
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1c2d70;
     font-weight: bold;
 }
 
+/* Message styling */
 .time-series-container p {
     margin: 10px 0;
     font-size: 16px;
@@ -24,49 +27,61 @@
     text-align: center;
 }
 
+/* Data selection container */
 .time-series-container .data-selection {
     margin: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center all items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add space between elements */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
+/* Label and input alignment */
+.time-series-container .data-selection span {
+    display: flex;
+    flex-direction: row; /* Keep label and input on the same line */
+    align-items: center; /* Align label and input vertically */
+    gap: 10px; /* Add space between label and input */
+}
+
+/* Label styling */
 .time-series-container .data-selection label {
     font-weight: bold;
     margin-right: 5px;
     font-size: 14px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
+/* Input and select styling */
 .time-series-container .data-selection input[type="date"],
 .time-series-container .data-selection select {
     padding: 8px;
-    margin: 0 10px;
+    margin: 0;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
+    width: 200px; /* Consistent width for inputs */
 }
 
+/* Input and select focus styles */
 .time-series-container .data-selection input[type="date"]:focus,
 .time-series-container .data-selection select:focus {
     outline: none;
     border-color: #1c2d70;
-    box-shadow: 0 0 4px rgba(28, 45, 112, 0.5); /* Subtle blue glow */
+    box-shadow: 0 0 4px rgba(28, 45, 112, 0.5);
 }
 
-.time-series-container .data-selection span {
-    margin: 10px 0;
-    display: inline-block;
-}
-
+/* Tooltip and Legend adjustments for the chart */
 .time-series-container .time-series-chart {
     margin-top: 20px; /* Add extra spacing for visual clarity */
 }
 
+/* Prevent canvas stretch */
 .time-series-container .time-series-chart canvas {
     width: 100%;
     height: auto;
 }
-
-/* New Additions */
 
 /* Smooth transitions for hover effects (optional) */
 .time-series-container .data-selection select:hover {
@@ -75,11 +90,6 @@
 
 /* Style for select dropdown and translate labels */
 .time-series-container .data-selection select {
-    padding: 8px;
-    margin: 0 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
     background-color: #fff;
     color: #333;
 }
@@ -94,24 +104,4 @@
 .time-series-container .data-selection select:focus {
     border-color: #1c2d70;
     box-shadow: 0 0 4px rgba(28, 45, 112, 0.5);
-}
-
-/* Add translations for dropdown labels */
-.time-series-container .data-selection label {
-    font-weight: bold;
-    margin-right: 5px;
-    font-size: 14px;
-}
-
-/* Apply specific translation for "Select Company" and date labels */
-.time-series-container .data-selection label[for="companyCode"] {
-    content: "Избери компанија:"; /* Macedonian translation */
-}
-
-.time-series-container .data-selection label[for="startDate"] {
-    content: "Дата од:"; /* Macedonian translation */
-}
-
-.time-series-container .data-selection label[for="endDate"] {
-    content: "Дата до:"; /* Macedonian translation */
 }

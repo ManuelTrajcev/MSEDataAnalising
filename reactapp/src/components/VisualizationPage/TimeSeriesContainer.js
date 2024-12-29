@@ -6,7 +6,7 @@ import './TimeSeriesContainer.css'
 const TimeSeriesContainer = () => {
     const [rawData, setRawData] = useState([]);
     const [chartData, setChartData] = useState([]);
-    const [message, setMessage] = useState("Please select inputs to view the chart.");
+    const [message, setMessage] = useState("Ве молиме изберете влезни податоци за да го видите графиконот.");
     const [selectedCompanyCode, setSelectedCompanyCode] = useState("");
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
@@ -19,7 +19,7 @@ const TimeSeriesContainer = () => {
                 const companyCodes = await response.json();
                 setCompanyCodes(companyCodes);
             } catch (error) {
-                console.error("Error fetching company codes:", error);
+                console.error("Грешка при преземање на кодовите на компании:", error);
             }
         };
 
@@ -34,31 +34,31 @@ const TimeSeriesContainer = () => {
                         `http://localhost:8000/api/get-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
                     );
                     if (!response.ok) {
-                        throw new Error("Failed to fetch data");
+                        throw new Error("Не успеа да се преземат податоците");
                     }
                     const data = await response.json();
-                    console.log("Raw API Response:", data);
-                    setRawData(data)
+                    console.log("Сиров API одговор:", data);
+                    setRawData(data);
 
                     const formattedData = data.map((entry) => ({
                         timestamp: entry.date,
                         value: parseFloat(entry.total_profit.replace('.', '').replace(',', '.')),
                     }));
 
-                    console.log("Formatted Chart Data:", formattedData);
+                    console.log("Форматирани податоци за графикон:", formattedData);
                     setChartData(formattedData);
                     setMessage("");
                 } catch (error) {
-                    console.error("Error fetching time series data:", error);
+                    console.error("Грешка при преземање на временски податоци:", error);
                     setChartData([]);
-                    setMessage("Error fetching time series data. Please try again.");
+                    setMessage("Грешка при преземање на временски податоци. Обидете се повторно.");
                 }
             };
 
             fetchTimeSeriesData();
         } else {
             setChartData([]);
-            setMessage("Please select inputs to view the chart.");
+            setMessage("Изберете влезни податоци за да го видите графиконот.");
         }
     }, [selectedCompanyCode, startDate, endDate]);
 
@@ -78,9 +78,8 @@ const TimeSeriesContainer = () => {
                 onInputChange={handleInputChange}
             />
             {message && <p>{message}</p>}
-            <TimeSeriesChart chartData={chartData}/>
+            <TimeSeriesChart chartData={chartData} />
         </div>
-
     );
 };
 
