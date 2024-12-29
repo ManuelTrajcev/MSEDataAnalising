@@ -1,0 +1,196 @@
+/* Container Styles */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#front {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #444;
+    margin: 20px 0;
+}
+
+/* Dropdown Styles */
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #5b9bd5;
+}
+
+/* Error Message */
+.error-message {
+    color: #f44336;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Timeframe Buttons */
+
+.timeframe-buttons {
+    display: flex;
+    flex-direction: column;  /* Stack the heading and buttons vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    gap: 10px;               /* Space between the heading and buttons */
+    margin-top: 20px;        /* Optional: space above the container */
+}
+
+.timeframe-buttons h3 {
+    text-align: center;
+    margin-bottom: 10px; /* Add spacing below the h3 */
+    width: 100%; /* Ensure the h3 takes up full width */
+}
+
+.timeframe-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.timeframe-buttons .button-container {
+    display: flex;           /* Align buttons next to each other horizontally */
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.timeframe-buttons button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.timeframe-buttons button:hover {
+    background-color: #ddd;
+}
+
+/* Chart and Data Section */
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Table Styles */
+.table-container {
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    color: #555;
+}
+
+td:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Sentiment Data */
+.sentiment-data {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+.sentiment-data p {
+    margin: 5px 0;
+}
+
+.sentiment-data strong {
+    font-weight: bold;
+}
+
+/* Sentiment Value Color Styling */
+.sentiment-positive {
+    color: #4CAF50; /* Green for positive */
+}
+
+.sentiment-negative {
+    color: #F44336; /* Red for negative */
+}
+
+.sentiment-neutral {
+    color: #9E9E9E; /* Gray for neutral */
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;  /* Light gray background */
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Progress bar itself */
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Dynamic coloring based on sentiment */
+.progress-bar.positive {
+    background-color: green;
+}
+
+.progress-bar.negative {
+    background-color: red;
+}
+
+.progress-bar.neutral {
+    background-color: gray;
+}
+
+/* LSTM Chart Container */
+.LSTMChart {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
