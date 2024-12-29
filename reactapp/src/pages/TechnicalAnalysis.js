@@ -12,6 +12,7 @@ export default function TechnicalAnalysis() {
     const [message, setMessage] = useState("Изберете компанија која ќе подлежи на техничка анализа.");
     const [sentimentData, setSentimentData] = useState("");
     const [selectedTimeframe, setSelectedTimeframe] = useState("1D");
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchCompanyCodes = async () => {
@@ -31,6 +32,7 @@ export default function TechnicalAnalysis() {
         if (selectedCompanyCode) {
             const fetchTechnicalAnalysisData = async () => {
                 try {
+                    setLoading(true);
                     const response = await fetch(
                         `http://localhost:8000/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`
                     );
@@ -87,6 +89,8 @@ export default function TechnicalAnalysis() {
                             sentiment: sentiment.max_sentiment,
                             sentiment_value: sentiment.max_sentiment_value,
                         });
+                    } else {
+                        setSentimentData("");
                     }
 
                     setChartData(filteredData);
@@ -99,6 +103,8 @@ export default function TechnicalAnalysis() {
                 } catch (error) {
                     console.error("Error fetching technical analysis data:", error);
                     setMessage("Error fetching technical analysis data. Please try again.");
+                }  finally {
+                    setLoading(false); // End loading
                 }
             };
 
@@ -125,9 +131,22 @@ export default function TechnicalAnalysis() {
             <tbody>
                 {data.map((row, rowIndex) => (
                     <tr key={rowIndex}>
-                        {headers.map((header, colIndex) => (
-                            <td key={colIndex}>{row[header] || "N/A"}</td>
-                        ))}
+                        {headers.map((header, colIndex) => {
+                            const cellValue = row[header] || "N/A";
+                            let cellClass = ""; // Default class for styling
+
+                            if (header === "Signal") {
+                                if (cellValue === "Buy") cellClass = "signal-buy";
+                                else if (cellValue === "Sell") cellClass = "signal-sell";
+                                else if (cellValue === "Hold") cellClass = "signal-hold";
+                            }
+
+                            return (
+                                <td key={colIndex} className={cellClass}>
+                                    {cellValue}
+                                </td>
+                            );
+                        })}
                     </tr>
                 ))}
             </tbody>
@@ -184,61 +203,93 @@ const renderMovingAverages = (movingAverages) => {
             {/* Display message if no company is selected */}
             {!selectedCompanyCode && <p className="error-message">{message}</p>}
 
+            {/* Loading screen */}
+            {loading && (
+                <div className="loading-screen">
+                    <div className="spinner"></div>
+                    <div className="loading-text">Се вчитува<span className="dots">...</span></div>
+                    <p className="loading-message">
+                        Ве молиме почекајте да се направи анализата врз податоците.
+                    </p>
+                </div>
+            )}
+
             <div className="calculations">
             {/* Render only after a company is selected */}
-            {selectedCompanyCode && (
+            {!loading && selectedCompanyCode && (
                 <>
                     <div className="timeframe-buttons">
                         <h3>Избери временска рамка за пресметка на Осцилатори и Moving Averages</h3>
                         <div className="button-container">
-                            {["1D", "1W", "1ME"].map((timeframe) => (
+                            {[
+                                { display: "1 day", value: "1D" },
+                                { display: "1 week", value: "1W" },
+                                { display: "1 month", value: "1ME" },
+                            ].map(({ display, value }) => (
                                 <button
-                                    key={timeframe}
-                                    className={timeframe === selectedTimeframe ? "active" : ""}
-                                    onClick={() => setSelectedTimeframe(timeframe)}
+                                    key={value}
+                                    className={value === selectedTimeframe ? "active" : ""}
+                                    onClick={() => setSelectedTimeframe(value)}
                                 >
-                                    {timeframe}
+                                    {display}
                                 </button>
                             ))}
                         </div>
+
                     </div>
 
                     {/* Display Oscillators */}
-                    {technicalAnalysisData.oscillators && (
+                    {technicalAnalysisData.oscillators ? (
                         <div>
                             <h2>Осцилатори</h2>
                             {renderOscillators(technicalAnalysisData.oscillators)}
                         </div>
+                    ) : (
+                        <div className='sentiment-data'>
+                            <h2>Осцилатори</h2>
+                            <p className='no-data-message'>Нема доволно податоци за осцилатор во овој момент.</p>
+                        </div>
                     )}
 
                     {/* Display Moving Averages */}
-                    {technicalAnalysisData.movingAverages && (
+                    {technicalAnalysisData.movingAverages ? (
                         <div>
                             <h2>Moving Averages</h2>
                             {renderMovingAverages(technicalAnalysisData.movingAverages)}
                         </div>
+                    ) : (
+                        <div className="sentiment-data">
+                            <h2>Moving averages</h2>
+                            <p className="no-data-message">Нема доволно податоци за moving averages во овој момент.</p>
+                        </div>
                     )}
 
+
                     {/* Display technical analysis data */}
-                    {technicalAnalysisData.predictions && (
+                    {technicalAnalysisData.predictions ? (
                         <div className="chart-container">
                             <h2>LSTM Модел</h2>
                             <LSTMChart chartData={chartData} />
+                        </div>
+                    ) : (
+                        <div className="sentiment-data">
+                            <h2>LSTM предикции</h2>
+                            <p className="no-data-message">Нема доволно податоци за LSTM во овој момент.</p>
                         </div>
                     )}
 
                     {/* Display Sentiment Data */}
                     {sentimentData ? (
                         <div className="sentiment-data">
-                            <h2>Sentiment Analysis</h2>
-                            <p>Sentiment:
+                            <h2>Анализа на сентимент</h2>
+                            <p>Сентимент:
                                 <strong className={sentimentData.sentiment === "positive" ? "sentiment-positive" :
                                     sentimentData.sentiment === "negative" ? "sentiment-negative" : "sentiment-neutral"}>
                                     {sentimentData.sentiment}
                                 </strong>
                             </p>
 
-                            <p>Sentiment Value:
+                            <p>Вредност на сентимент:
                                 <strong className={sentimentData.sentiment === "positive" ? "sentiment-positive" :
                                     sentimentData.sentiment === "negative" ? "sentiment-negative" : "sentiment-neutral"}>
                                     {sentimentData.sentiment_value.toFixed(2)}
@@ -251,7 +302,10 @@ const renderMovingAverages = (movingAverages) => {
                             </div>
                         </div>
                     ) : (
-                        <p>No sentiment data available</p>
+                        <div className='sentiment-data'>
+                            <h2>Анализа на сентимент</h2>
+                            <p class="no-data-message">Нема достапни податоци за компанијата.</p>
+                        </div>
                     )}
                 </>
             )}

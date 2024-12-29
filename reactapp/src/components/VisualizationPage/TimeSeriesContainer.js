@@ -105,7 +105,7 @@ const TimeSeriesContainer = () => {
                     setTrendChartData([]);
                     setSeasonalChartData([]);
                     setResidChartData([]);
-                    setMessage("Error fetching time series data. Please try again.");
+                    setMessage("Нема доволно достапни податоци за избраната компанија.");
                 }
             };
             fetchTimeSeriesData();
@@ -113,7 +113,7 @@ const TimeSeriesContainer = () => {
             setTrendChartData([]);
             setSeasonalChartData([]);
             setResidChartData([]);
-            setMessage("Select input data to view the chart.");
+            setMessage("Изберете влезни податоци.");
         }
     }, [selectedCompanyCode, startDate, endDate]);
     const handleInputChange = (field, value) => {
@@ -132,9 +132,13 @@ const TimeSeriesContainer = () => {
                 onInputChange={handleInputChange}
             />
             {message && <p>{message}</p>}
+            <h1>Реални податоци</h1>
             <TimeSeriesChart chartData={chartData}/>
+            <h1>Тренд</h1>
             <TimeSeriesChart chartData={trendChartData}/>
+            <h1>Сезоналност</h1>
             <TimeSeriesChart chartData={seasonalChartData}/>
+            <h1>Грешка</h1>
             <TimeSeriesChart chartData={residChartData}/>
         </div>
     );
