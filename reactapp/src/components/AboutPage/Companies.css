@@ -1,0 +1,45 @@
+.company-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    background-color: #D8E3E7;
+    height: 35vh;
+    padding-bottom: 2%;
+}
+
+.company-text h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1c2d70; /* Dark blue */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.company-text span {
+    font-size: 3.5rem;
+    color: deeppink;
+    font-style: italic;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five columns */
+    gap: 50px; /* Space between images */
+    justify-items: center; /* Horizontally center images */
+    align-items: center; /* Vertically center images */
+    width: 100%;
+    max-width: 1000px; /* Max width */
+}
+
+.images img {
+    width: 140px; /* Image size */
+    height: auto;
+    object-fit: contain; /* Preserve aspect ratio */
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.images img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}

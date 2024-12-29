@@ -28,6 +28,7 @@ const Home = () => {
             />
             <Features/>
             <StaticContent/>
+            <Companies/>
             <News/>
             <Footer/>
         </div>

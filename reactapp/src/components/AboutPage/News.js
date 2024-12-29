@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import "./News.css";
 
-export default function LatestNews() {
+export default function News() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -20,87 +21,26 @@ export default function LatestNews() {
 
     const truncateContent = (content) => {
         if (!content) return "Опис на новоста";
-        const maxLength = 100; // Set a max length for the content
+        const maxLength = 200; // Show more content
         return content.length > maxLength ? content.substring(0, maxLength) + "..." : content;
     };
 
     return (
-        <div
-            className="news"
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                padding: "20px",
-                backgroundColor: "#ffffff",
-                fontFamily: "Jost, Arial, sans-serif", // Update font here
-            }}
-        >
-            <h2 style={{
-                fontSize: "24px",
-                fontWeight: "bold",
-                marginBottom: "20px",
-                color: "#1a1a75",
-            }}>Последно на маркетот</h2>
-            <p style={{
-                fontSize: "16px",
-                color: "#333",
-                marginBottom: "40px",
-                textAlign: "center",
-            }}>Биди во тек со последните актуелни новости на полето на Македонската берза</p>
+        <div id="news">
+            <h2>Последно на маркетот</h2>
+            <p className="p">Биди во тек со последните актуелни новости на полето на Македонската берза</p>
             {data.length > 0 ? (
-                <div
-                    className="news-cards"
-                    style={{
-                        display: "flex",
-                        gap: "20px",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                    }}
-                >
+                <div className="news-cards">
                     {data.map((entry, index) => (
-                        <div
-                            className="news-card"
-                            key={index}
-                            style={{
-                                border: "1px solid #ddd",
-                                borderRadius: "8px",
-                                width: "300px",
-                                padding: "20px",
-                                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                                display: "flex",
-                                flexDirection: "column",
-                                backgroundColor: "#f9f9f9",
-                            }}
-                        >
-                            <h3 style={{
-                                fontSize: "18px",
-                                color: "#1a1a75",
-                                marginBottom: "10px",
-                            }}>{entry.company_name || "Наслов"}</h3>
-                            <p style={{
-                                fontSize: "14px",
-                                color: "#555",
-                                marginBottom: "10px",
-                                lineHeight: "1.5",
-                            }}>{truncateContent(entry.content)}</p>
-                            <p style={{
-                                fontSize: "12px",
-                                color: "#999",
-                            }}><strong>Датум:</strong> {entry.date || "N/A"}</p>
+                        <div className="news-card" key={index}>
+                            <h3>{entry.company_name || "Наслов"}</h3>
+                            <p>{truncateContent(entry.content)}</p>
+                            <p><strong>Датум:</strong> {entry.date || "N/A"}</p>
                         </div>
                     ))}
                 </div>
             ) : (
-                <div
-                    className="no-data"
-                    style={{
-                        fontSize: "16px",
-                        color: "#666",
-                        textAlign: "center",
-                        padding: "20px",
-                    }}
-                >No data available.</div>
+                <div className="no-data">No data available.</div>
             )}
         </div>
     );

@@ -1,54 +1,88 @@
 footer {
-    background: white;
-    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent black overlay */
+    color: #f9f9f9; /* Light text color */
+    padding: 3vh 0; /* Added padding for spacing */
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align content to the top vertically */
+    max-width: 120rem; /* Maximum width for the footer */
+    margin: 0 auto; /* Center the container */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    width: 100%; /* Ensure full width for the container */
+    text-align: left; /* Align text inside each box to the left */
 }
 
 .footer-box {
     flex: 1;
-    margin: 0 20px;
+    min-width: 15rem; /* Minimum width for each box */
+    padding-top: 3rem;
+    text-align: left; /* Align text inside each box to the left */
+    display: flex;
+    flex-direction: column; /* Make sure the content inside each box is stacked */
+    align-items: center; /* Align content to the left inside each box */
+    margin-bottom: 1rem;
 }
 
+/* Logo styling */
 .footer-box img {
-    display: block;
-    margin: 0 auto 10px;
+    max-width: 100%;
+    height: 170px; /* Set fixed height for the image, preventing elongation */
+    object-fit: contain; /* Ensure image aspect ratio is maintained */
+    margin-bottom: 1.5rem; /* Space below logo */
 }
 
+/* Heading styling */
 .footer-box h1 {
-    font-size: 18px;
-    color: #1c2d70; /* Dark blue color for headers */
-    margin-bottom: 15px;
+    margin-top: 1rem;
+    font-size: 2rem; /* Scalable font size */
+    margin-bottom: 2rem; /* Increase bottom margin for more spacing */
     font-weight: bold;
+    color: #f9f9f9;
 }
 
+/* Links container */
 .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Space between links */
 }
 
+/* Link styling */
 .footer-links a {
-    color: #333;
+    color: #a8a8a8; /* Light grey color for links */
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease; /* Smooth transition on hover */
 }
 
+/* Link hover effect */
 .footer-links a:hover {
+    color: #f9f9f9; /* Change link color on hover */
     text-decoration: underline;
 }
 
-footer .footer-box:first-child {
-    text-align: center;
+/* Bottom section for copyright */
+.footer-bottom {
+    text-align: center; /* Keep the copyright text centered */
+    margin-top: 2vh;
+    border-top: 2px solid #f9f9f9; /* Thin white border */
+    padding-top: 2vh;
+    font-size: 1rem;
+    color: #f9f9f9;
 }
 
-footer .footer-box:last-child {
-    margin-right: 0; /* Remove extra space on the far-right box */
+
+/* Responsive layout adjustments */
+@media (max-width: 48rem) {
+    .container {
+        flex-direction: column; /* Stack the footer boxes vertically */
+        align-items: center; /* Center align items when stacked */
+    }
+    .footer-box {
+        margin-bottom: 1vh; /* Add more space between stacked footer boxes */
+        text-align: left; /* Keep text aligned to the left */
+    }
 }
