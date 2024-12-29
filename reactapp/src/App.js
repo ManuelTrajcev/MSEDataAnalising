@@ -20,7 +20,7 @@ function App() {
                     <Route path="/show-data" element={<ShowData />} />
                     <Route path="/visualisation" element={<Visualise />} />
                     <Route path="/news" element={<Nlp_predictions />} />
-                    <Route path="/techical-analysis" element={<TechnicalAnalysis />} />
+                    <Route path="/technical-analysis" element={<TechnicalAnalysis />} />
                 </Routes>
             </div>
         </Router>

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Background from "../components/Background";
-import Hero from "../components/Hero";
-import LandingPageTable1 from "../components/LandingPageTable1";
+import Hero from "../components/AboutPage/Hero";
+import Companies from "../components/AboutPage/Companies";
+import Footer from "../components/Footer";
+import News from "../components/AboutPage/News";
+import Features from "../components/AboutPage/Feautres";
+import StaticContent from "../components/AboutPage/StaticContent";
 
 const Home = () => {
     const heroData = [
@@ -22,7 +26,11 @@ const Home = () => {
                 setHeroCount={setHeroCount}
                 playStatus={playStatus}
             />
-            <LandingPageTable1/>
+            <Features/>
+            <StaticContent/>
+            <Companies/>
+            <News/>
+            <Footer/>
         </div>
     );
 };

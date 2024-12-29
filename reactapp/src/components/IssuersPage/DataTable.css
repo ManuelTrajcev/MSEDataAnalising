@@ -1,0 +1,109 @@
+.data-table {
+    margin: 20px auto; /* Center the table container horizontally */
+    padding: 20px;
+    width: 86%; /* Occupy 86% of the page width */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+}
+
+.data-table h1 {
+    text-align: left; /* Align title to the left */
+    font-size: 24px; /* Slightly larger font for the title */
+    margin-bottom: 20px; /* Space between title and table */
+    color: #1c2d70; /* Dark blue color */
+    font-weight: bold;
+}
+
+.data-table table {
+    width: 100%; /* Table takes the full width of the container */
+    border-collapse: collapse; /* Remove gaps between table borders */
+    margin-top: 10px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd; /* Light gray borders */
+    padding: 12px 8px; /* Comfortable spacing */
+    text-align: center; /* Center-align text within the table cells */
+    font-size: 14px; /* Readable font size */
+}
+
+.data-table th {
+    background-color: #1c2d70; /* Dark blue background for headers */
+    color: #fff; /* White text for headers */
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternate rows */
+}
+
+.data-table tbody tr:hover {
+    background-color: #e9f5ff; /* Light blue on hover */
+    cursor: pointer; /* Add a pointer cursor for interactivity */
+}
+
+.data-table td {
+    color: #333; /* Dark gray for better readability */
+}
+
+.data-table p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.data-table input[type="date"],
+.data-table select {
+    padding: 8px;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.data-table input[type="date"]:focus,
+.data-table select:focus {
+    outline: none;
+    border-color: #1c2d70;
+    box-shadow: 0 0 4px rgba(28, 45, 112, 0.5); /* Subtle blue glow */
+}
+
+.data-table span {
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.data-table label {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* New Additions */
+
+/* Center the entire table container horizontally */
+.data-table {
+    text-align: center; /* Ensures any inline content is also centered */
+}
+
+/* Ensure the title h1 spans the entire width, but remains left-aligned */
+.data-table h1 {
+    text-align: left; /* Force left alignment */
+    width: 100%; /* Ensure it spans the container width */
+    margin-left: 0; /* Prevent extra indentation */
+}
+
+/* Add a smooth transition for hover effects */
+.data-table tbody tr:hover {
+    transition: background-color 0.3s ease-in-out; /* Smooth color change */
+}
+
+/* Add slight padding between the table and its container */
+.data-table table {
+    margin-top: 20px; /* Add extra spacing for visual clarity */
+}
