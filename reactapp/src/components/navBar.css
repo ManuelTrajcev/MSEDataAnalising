@@ -84,26 +84,3 @@ body {
     background-color: #e0aaff; /* Позадинска боја за активен линк */
     transition: background-color 0.3s ease; /* Лесен премин за позадинската боја */
 }
-
-.pages li:last-of-type {
-    box-sizing: border-box; /* Ова го прави границата дел од големината на елементот */
-    outline: 2px solid #742CD8; /* Почетна outline */
-    background-color: rgba(224, 170, 255, 0.7);
-}
-.pages li:last-of-type a {
-    color: #3c096c;
-}
-
-
-.pages li:last-of-type a:hover {
-    background-color: #742CD8;
-    transition: ease-in-out 200ms;
-    color: white;
-}
-
-.pages li:last-of-type a.active {
-    outline: 2px solid transparent; /* Почетна outline */
-    background-color: #742CD8; /* Позадинска боја за активен линк */
-    color: white
-}
-

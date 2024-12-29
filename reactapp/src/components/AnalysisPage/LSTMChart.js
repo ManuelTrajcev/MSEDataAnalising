@@ -25,8 +25,8 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
     // Custom legend function
     const customLegend = () => (
          <div style={{ fontSize: "18px" }}>
-            <span style={{ color: "#8884d8", marginRight: 10 }}>Normal Data</span>
-            <span style={{ color: "#ff7300" }}>Predictions</span>
+            <span style={{ color: "#8884d8", marginRight: 10 }}>Реални податоци</span>
+            <span style={{ color: "#ff7300" }}>Предикции</span>
         </div>
     );
 
@@ -34,8 +34,8 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
         <div>
             {chartData.length > 0 ? (
                 <LineChart
-                    width={800}
-                    height={400}
+                    width={window.innerWidth * 0.6}
+                    height={window.innerHeight * 0.6}
                     data={chartData}
                     margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                 >
@@ -43,15 +43,15 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
                     <XAxis
                         dataKey="timestamp"
                         tickFormatter={formatXAxis}
-                        label={{ value: "Date", position: "insideBottom", offset: 0 }}
+                        label={{ value: "Датум", position: "insideBottom", offset: 0 }}
                     />
                     <YAxis
                         tickFormatter={formatYAxis}
                         label={{
                             value: "Цена на последна трансакција (MKD)",
-                            angle: -45,
+                            angle: -90,
                             position: "insideLeft",
-                            offset: -20,
+                            offset: -8,
                         }}
                     />
                     <Tooltip />
@@ -77,7 +77,7 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
                     />
                 </LineChart>
             ) : (
-                <p>No data available for the selected inputs.</p>
+                <p>Нема достапни податоци за избраните параметри.</p>
             )}
         </div>
     );

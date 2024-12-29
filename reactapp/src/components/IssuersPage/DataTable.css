@@ -73,14 +73,17 @@
     box-shadow: 0 0 4px rgba(28, 45, 112, 0.5); /* Subtle blue glow */
 }
 
+.data-table select {
+    width: 200px;
+}
+
 .data-table span {
     margin: 10px 0;
-    display: inline-block;
 }
 
 .data-table label {
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 2px;
     font-size: 14px;
 }
 
