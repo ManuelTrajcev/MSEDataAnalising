@@ -1,11 +1,8 @@
-from django.shortcuts import render
-
 # Create your views here.
 # views.py (Django)
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import status
 import os
 import joblib
 import pandas as pd
@@ -129,7 +126,8 @@ def time_series_analysis(request):
     response_data = {
         'trend': trend,
         'seasonal': seasonal,
-        'residual': residual
+        'residual': residual,
+        'timestamp': df.index
     }
 
     return Response(response_data)

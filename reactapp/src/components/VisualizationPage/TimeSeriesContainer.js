@@ -48,11 +48,13 @@ const TimeSeriesContainer = () => {
                     console.log("Форматирани податоци за графикон:", formattedData);
                     setChartData(formattedData);
                     setMessage("");
+
                 } catch (error) {
                     console.error("Грешка при преземање на временски податоци:", error);
                     setChartData([]);
                     setMessage("Грешка при преземање на временски податоци. Обидете се повторно.");
                 }
+
             };
 
             fetchTimeSeriesData();
