@@ -1,0 +1,315 @@
+:root {
+    --primary-color: #1c2d70; /* Main theme color */
+    --secondary-color: #5b9bd5; /* Accent color */
+    --neutral-gray: #f4f4f4; /* Background gray */
+    --error-color: #f44336; /* Error red */
+    --success-color: #4CAF50; /* Success green */
+    --font-family: 'Jost', sans-serif;
+    --base-font-size: 1.5rem; /* 16px */
+}
+
+#tech-container {
+    margin-top: 20vh;
+}
+
+#tech-front {
+    padding-left: 4rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.calculations {
+    margin-top: 8vh;
+    font-family: var(--font-family), serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Center all elements horizontally */
+    text-align: left;
+}
+
+#tech-button {
+    margin: 4rem;
+}
+
+#tech-button select {
+    font-size: 1.5rem;
+    font-family: Jost, sans-serif;
+    background-color: #82004A;
+    color: white;
+    padding: 1rem;
+}
+
+#tech-container h2 {
+    font-size: 2rem;
+    color: #3c096c;
+    margin: 3rem auto;
+}
+
+select {
+    padding: 1.5rem;
+    font-size: var(--base-font-size);
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
+    width: 90%;
+    max-width: 30rem;
+    text-align: left; /* Align the text inside the dropdown */
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0.5rem var(--secondary-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-left: 4rem;
+}
+
+/* Timeframe Buttons */
+.timeframe-buttons {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.timeframe-buttons h3 {
+    margin-bottom: 2vh;
+}
+
+.timeframe-buttons .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    flex-wrap: wrap;
+}
+
+.timeframe-buttons button {
+    padding: 1.2rem 2rem;
+    background-color: var(--neutral-gray);
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: var(--base-font-size);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.timeframe-buttons button.active {
+    background-color: #82004A;
+    color: white;
+}
+
+.timeframe-buttons button:hover {
+    background-color: rgba(224, 170, 255, 0.7);
+    color: #82004A;
+}
+
+/* Chart and Data Section */
+.calculations .table-container {
+    margin-top: 2vh;
+    width: 87vw;
+    max-width: 60rem;
+    overflow-x: auto;
+}
+.calculations .chart-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center both h3 and chart horizontally */
+    margin: 5rem 0; /* Add some space above the container */
+}
+
+.calculations table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 4vh;
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+}
+
+.calculations th,
+.calculations td {
+    padding: 1.5rem;
+    text-align: left; /* Align text inside table cells to the left */
+    border: 0.1rem solid #ddd;
+}
+
+.calculations th {
+    background-color: var(--neutral-gray);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.calculations td {
+    color: #555;
+}
+
+.calculations td:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.signal-buy {
+    color: green !important;
+    font-weight: bold;
+}
+
+.signal-sell {
+    color: red !important;
+    font-weight: bold;
+}
+
+.signal-hold {
+    color: dodgerblue !important;
+    font-weight: bold;
+}
+
+/* Sentiment Data */
+.sentiment-data {
+    margin-top: 3vh;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.sentiment-data p {
+    margin: 1vh 0;
+}
+
+.sentiment-data strong {
+    font-weight: bold;
+}
+
+/* Sentiment Value Color Styling */
+.sentiment-positive {
+    color: var(--success-color);
+}
+
+.sentiment-negative {
+    color: var(--error-color);
+}
+
+.sentiment-neutral {
+    color: dodgerblue;
+}
+
+
+
+/* Progress bar container */
+.progress-container {
+    width: 87vw;
+    max-width: 60rem;
+    height: 3vh;
+    background-color: #e0e0e0;
+    border-radius: 1vh;
+    margin: 4vh auto;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 1vh;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar.positive {
+    background-color: var(--success-color);
+}
+
+.progress-bar.negative {
+    background-color: var(--error-color);
+}
+
+.progress-bar.neutral {
+    background-color: dodgerblue;
+}
+
+/* Chart Section */
+.LSTMChart {
+    width: 87vw;
+    max-width: 60rem;
+    margin: 2rem auto; /* Centered the chart and added spacing */
+}
+
+/* Footer fix to stay at the bottom */
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Loading screen */
+/* Loading Screen Styles */
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+    color: white;
+    font-family: "Arial", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.spinner {
+    border: 6px solid rgba(255, 255, 255, 0.3); /* Light translucent border */
+    border-top: 6px solid #ffffff; /* Bright top border */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    animation: blink 1.5s step-end infinite;
+}
+
+/* Blinking animation for dots */
+@keyframes blink {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+    100% { content: ""; }
+}
+
+.loading-message {
+    font-size: 1rem;
+    margin-top: 10px;
+    opacity: 0.8;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Fade in animation for the screen */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.no-data-message {
+    font-family: 'Jost', sans-serif; /* Use the Jost font */
+    font-size: 1.8rem; /* Set the font size */
+    color: red; /* Set the text color to red */
+    padding-bottom: 3rem;
+}
+

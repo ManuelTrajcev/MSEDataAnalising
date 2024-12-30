@@ -1,0 +1,18 @@
+#issuers-container {
+    margin-top: 20vh;
+}
+
+#issuers-container #above {
+    padding-left: 4rem;
+    margin-bottom: 4rem;
+    color: white;
+    font-size: 2rem;
+}
+
+#bellow {
+    color: black;
+    width: 86%;
+    font-size: 1rem;
+    text-align: center; /* Center-align content within the container */
+    margin: 2rem auto 6rem;
+}

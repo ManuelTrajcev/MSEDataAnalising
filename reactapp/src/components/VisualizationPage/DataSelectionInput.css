@@ -1,0 +1,53 @@
+/* Container for the data selection inputs */
+.time-series-container .data-selection {
+    margin: 20px auto; /* Center the container horizontally */
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    gap: 20px; /* Space between inputs */
+    flex-wrap: nowrap; /* Prevent wrapping of elements */
+    text-align: center; /* Ensure everything inside the div is centered */
+    font-family: Jost, sans-serif;
+}
+
+/* Label styling for the inputs */
+.time-series-container .data-selection label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent label text from wrapping */
+}
+
+/* Styling for the select and date inputs */
+.time-series-container .data-selection select,
+.time-series-container .data-selection input[type="date"] {
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 180px; /* Consistent width for inputs */
+    box-sizing: border-box; /* Prevent overflow due to padding */
+}
+
+/* Focus styles for inputs */
+.time-series-container .data-selection select:focus,
+.time-series-container .data-selection input[type="date"]:focus {
+    outline: none;
+    border-color: #1c2d70; /* Blue border on focus */
+    box-shadow: 0 0 4px rgba(28, 45, 112, 0.5); /* Subtle blue glow */
+}
+
+/* Styling for the select dropdown */
+.time-series-container .data-selection select {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Flex container for input field and label */
+.time-series-container .data-selection span {
+    display: flex;
+    align-items: center; /* Align label and input vertically */
+    justify-content: center; /* Keep label and input centered together */
+    gap: 5px; /* Space between label and input */
+}

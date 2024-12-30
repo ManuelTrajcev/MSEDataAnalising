@@ -21,3 +21,12 @@
 .fade-in {
     animation: fadeIn 500ms ease-in-out;
 }
+.video {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.video.show {
+    opacity: 1;
+}
+
