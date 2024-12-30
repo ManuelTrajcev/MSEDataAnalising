@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="" />
+=======
+>>>>>>> origin/Microservices
     <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/DOMASHNA_3/LSTM/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_3/WEB_APP/LSTM/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOMASHNA_3/LSTM/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_3/WEB_APP/LSTM/admin.py" afterDir="false" />
@@ -1289,9 +1294,13 @@
       <change beforePath="$PROJECT_DIR$/DOMASHNA_3/reactapp/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_3/WEB_APP/reactapp/src/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOMASHNA_3/reactapp/src/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_3/WEB_APP/reactapp/src/webpack.config.js" afterDir="false" />
     </list>
+<<<<<<< HEAD
 =======
     <list default="true" id="ac832f5f-9d7b-4891-8634-0297280cad76" name="Changes" comment="" />
 >>>>>>> 7608e75b (Domasna 3)
+=======
+>>>>>>> origin
+>>>>>>> origin/Microservices
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -1353,8 +1362,13 @@
     "Django Server.Unnamed.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "04f4c0a6",
     "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/PROGRAMIRANJE NA VIDEO IGRI/PNVI",
+=======
+    "git-widget-placeholder": "ef35f43e",
+    "last_opened_file_path": "C:/Users/Manuel/Desktop/New folder/MSEDataAnalising",
+>>>>>>> origin/Microservices
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
