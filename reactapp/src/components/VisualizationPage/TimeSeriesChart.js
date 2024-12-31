@@ -36,11 +36,11 @@ const TimeSeriesChart = ({ chartData }) => {
                     <XAxis
                         dataKey="timestamp"
                         tickFormatter={formatXAxis}
-                        label={{ value: "Датум", position: "insideBottom", offset: 0 }}
+                        label={{ value: "Датум", position: "insideBottom", offset: 0, dy: 10}}
                     />
                     <YAxis
                         tickFormatter={formatYAxis}
-                        label={{ value: "Цена (МКД)", angle: -45, position: "insideLeft", offset: -20 }}
+                        label={{ value: "Цена (МКД)", angle: -55, position: "insideLeft", offset: -10, dy: -15}}
                     />
                     <Tooltip />
                     <Legend />

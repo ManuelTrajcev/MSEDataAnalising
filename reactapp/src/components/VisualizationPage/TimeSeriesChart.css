@@ -85,9 +85,10 @@
 
 .recharts-legend-wrapper {
     padding: 10px;
-    background: rgba(255, 255, 255, 0.9); /* Slight transparent background for the legend */
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
 }
 
 /* Optional: Adding animation for line drawing */
