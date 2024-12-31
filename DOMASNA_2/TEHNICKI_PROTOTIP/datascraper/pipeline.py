@@ -1,7 +1,5 @@
-from datascraper.filters import filter_1, filter_2, filter_3
-import os
-import sys
-from django.core.management import execute_from_command_line
+from services.datascraper.filters import filter_1, filter_2, filter_3
+
 
 def process_data(input_data):
     # data = filter_1(input_data)

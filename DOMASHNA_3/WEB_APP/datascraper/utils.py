@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import DayEntry, DayEntryAsString, Company
+from services.datascraper import DayEntryAsString, Company
 
 
 def save_company(company_code):

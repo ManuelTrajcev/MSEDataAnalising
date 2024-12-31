@@ -4,7 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import DayEntry, DayEntryAsString
+from services.datascraper import DayEntry, DayEntryAsString
 
 
 def get_last_date(company_code):

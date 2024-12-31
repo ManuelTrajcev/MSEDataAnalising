@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'datascraper.apps.DatascraperConfig',
+    'services.datascraper.apps.DatascraperConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'LSTM',
-    'NLP',
+    'services.LSTM',
+    'services.NLP',
 ]
 
 MIDDLEWARE = [

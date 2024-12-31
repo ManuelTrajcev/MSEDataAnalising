@@ -1,9 +1,7 @@
 from datetime import datetime
-from datascraper.models import *
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from .serializers import DayEntryAsStringSerializer, CompanySerializer, TimeSeriesDataSerializer
+from .serializers import CompanySerializer
 
 
 def my_function(request):
