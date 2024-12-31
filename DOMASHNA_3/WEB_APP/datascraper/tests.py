@@ -3,8 +3,7 @@ import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
-from django.test import TestCase
-from datascraper.models import DayEntryAsString, Company
+from services.datascraper import DayEntryAsString, Company
 
 # Create your tests here.
 

@@ -7,8 +7,7 @@ import ta
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import *
-from datascraper.serializers import DayEntryAsStringSerializer
+from services.datascraper.serializers import DayEntryAsStringSerializer
 
 
 def process_company_data(company_code, indicators=['RSI', 'stoch_k', 'cci', 'macd', 'adx'], freqs=['1D', '1W', '1ME'],

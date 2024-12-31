@@ -10,8 +10,7 @@ import tensorflow as tf
 from .lstm.lstm import predictions
 from .oscillators.oscilators import process_company_data, clean_data
 from .moving_averages.moving_avgs import process_company_data2
-from datascraper.serializers import DayEntryAsStringSerializer
-from datascraper.models import *
+from services.datascraper.serializers import DayEntryAsStringSerializer
 from statsmodels.tsa.seasonal import seasonal_decompose
 from datetime import datetime
 

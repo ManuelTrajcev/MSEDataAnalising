@@ -4,8 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import *
-from datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
+from services.datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -15,7 +14,6 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from keras import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Input
-import torch
 
 
 def create_combined_csv(script_dir):

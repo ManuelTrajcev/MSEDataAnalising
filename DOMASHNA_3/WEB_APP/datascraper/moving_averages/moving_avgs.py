@@ -6,8 +6,7 @@ import pandas as pd
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.MSEDataAnalising.settings')
 django.setup()
 
-from datascraper.models import *
-from datascraper.serializers import DayEntryAsStringSerializer
+from services.datascraper.serializers import DayEntryAsStringSerializer
 
 
 def clean_data(data):
