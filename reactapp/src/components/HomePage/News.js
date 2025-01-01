@@ -9,7 +9,7 @@ export default function News() {
         const fetchCompanyPredictions = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8000/nlp/api/get-latest-newss/`
+                    `http://localhost:8002/nlp/api/get-latest-newss/`
                 );
                 const data = await response.json();
                 setData(data.slice(0, 3)); // Only get the first 3 latest news
