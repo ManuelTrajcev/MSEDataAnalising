@@ -17,7 +17,7 @@ export default function TechnicalAnalysis() {
     useEffect(() => {
         const fetchCompanyCodes = async () => {
             try {
-                const response = await fetch("http://localhost:8000/api/get-company-codes/");
+                const response = await fetch("http://localhost:8000/datascraper/api/get-company-codes/");
                 const data = await response.json();
                 setCompanyCodes(data);
             } catch (error) {
@@ -34,7 +34,7 @@ export default function TechnicalAnalysis() {
                 try {
                     setLoading(true);
                     const response = await fetch(
-                        `http://localhost:8000/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`
+                        `http://localhost:8001/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`
                     );
                     const predictionsData = await response.json();
 
@@ -67,18 +67,18 @@ export default function TechnicalAnalysis() {
 
                     // Fetch oscillator signals
                     const responseOscillators = await fetch(
-                        `http://localhost:8000/lstm/api/oscillator_signals/?company_code=${selectedCompanyCode}`
+                        `http://localhost:8001/lstm/api/oscillator_signals/?company_code=${selectedCompanyCode}`
                     );
                     const oscillatorData = await responseOscillators.json();
 
                     // Fetch moving average signals
                     const responseMovingAvg = await fetch(
-                        `http://localhost:8000/lstm/api/moving_average_signals/?company_code=${selectedCompanyCode}`
+                        `http://localhost:8001/lstm/api/moving_average_signals/?company_code=${selectedCompanyCode}`
                     );
                     const movingAvgData = await responseMovingAvg.json();
 
                     const nlp_response = await fetch(
-                        `http://localhost:8000/nlp/api/get-company-predictions/`
+                        `http://localhost:8002/nlp/api/get-company-predictions/`
                     );
                     const nlp_data = await nlp_response.json();
 
