@@ -43,5 +43,5 @@ services:
     volumes:
       - ./reactapp/src:/app/src
       - ./reactapp/package.json:/app/package.json
-#    environment:     #better performances, debuginh disabled
-#      - NODE_ENV=production
+    environment:     #better performances, debuging disabled
+      - NODE_ENV=production
