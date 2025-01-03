@@ -4,8 +4,8 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from services.datascraper.models import *
-from services.datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
+from MSEDataAnalising.services.datascraper.models import *
+from MSEDataAnalising.services.datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -146,57 +146,3 @@ def create_model(combined_data, encoder):
     )
 
     model.save("my_model.keras")
-
-
-def predictions(data, company_code, encoder, model, scaler, window_size=3, prediction_steps=10):
-    data['date'] = pd.to_datetime(data['date'], errors='coerce')
-    data['company_code_encoded'] = encoder.transform(data['company_code'].values.reshape(-1, 1))
-    data.set_index(keys=["date"], inplace=True)
-    model
-    encoded_company_code = encoder.transform([company_code])[0]
-    company_data = data[data['company_code_encoded'] == encoded_company_code]
-
-    if len(company_data) < 2 * window_size:
-        raise ValueError(f"Not enough data for company {company_code}. Requires at least {window_size} rows.")
-
-    X = company_data.iloc[-window_size:][['company_code_encoded', 'scaled']].copy()
-    X['company_code_encoded'] = encoded_company_code
-    X = X.values.reshape(1, window_size, X.shape[1])
-
-    predictions = []
-
-    for _ in range(prediction_steps):
-        next_pred_scaled = model.predict(X)[0, 0]
-        predictions.append(next_pred_scaled)
-
-        next_row = [encoded_company_code, next_pred_scaled]
-        X = np.append(X[:, 1:, :], [[next_row]], axis=1)
-
-    predictions = scaler.inverse_transform(np.array(predictions).reshape(-1, 1)).reshape(1, -1)[0]
-    last_date = pd.to_datetime(company_data.index[-1])
-    prediction_dates = [last_date + pd.Timedelta(days=i + 1) for i in range(len(predictions))]
-
-    return predictions, prediction_dates, company_data
-
-
-if __name__ == '__main__':
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-
-    combined_data_path = os.path.join(script_dir, "combined_company_data.csv")
-    combined_data = pd.read_csv(combined_data_path)
-
-    encoder_path = os.path.join(script_dir, "label_encoder.joblib")
-    encoder = joblib.load(encoder_path)
-
-    scaler_path = os.path.join(script_dir, "global_scaler.joblib")
-    scaler = joblib.load(scaler_path)
-
-    model_path = os.path.join(script_dir, "my_model.keras")
-    model = tf.keras.models.load_model(model_path)
-
-    # example usage of predictions
-    try:
-        predictions, pd, cd = predictions(combined_data, 'ALK', encoder, model, scaler)
-        print(predictions)
-    except ValueError as e:
-        print(f"Error: {e}")
