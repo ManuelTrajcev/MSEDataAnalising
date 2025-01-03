@@ -4,8 +4,8 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from MSEDataAnalising.services.datascraper.models import *
-from MSEDataAnalising.services.datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
+from services.datascraper.models import *
+from services.datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
