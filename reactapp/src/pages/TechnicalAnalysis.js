@@ -67,13 +67,13 @@ export default function TechnicalAnalysis() {
 
                     // Fetch oscillator signals
                     const responseOscillators = await fetch(
-                        `http://localhost:8001/lstm/api/oscillator_signals/?company_code=${selectedCompanyCode}`
+                        `http://localhost:8001/lstm/api/oscillator-signals/?company_code=${selectedCompanyCode}`
                     );
                     const oscillatorData = await responseOscillators.json();
 
                     // Fetch moving average signals
                     const responseMovingAvg = await fetch(
-                        `http://localhost:8001/lstm/api/moving_average_signals/?company_code=${selectedCompanyCode}`
+                        `http://localhost:8001/lstm/api/moving-average-signals/?company_code=${selectedCompanyCode}`
                     );
                     const movingAvgData = await responseMovingAvg.json();
 

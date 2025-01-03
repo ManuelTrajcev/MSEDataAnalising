@@ -70,7 +70,7 @@ const TimeSeriesContainer = () => {
             const fetchTimeSeriesData = async () => {
                 try {
                     const response = await fetch(
-                        `http://localhost:8001/lstm/api/time_series_analysis/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
+                        `http://localhost:8001/lstm/api/time-series-analysis/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
                     );
                     if (!response.ok) {
                         throw new Error("Failed to fetch data");
