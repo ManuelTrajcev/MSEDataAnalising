@@ -40,31 +40,18 @@ def get_lstm_predictions(company_code, window_size=3, prediction_steps=10):
     model_path = os.path.join(lstm_dir, "my_model.keras")
     model = tf.keras.models.load_model(model_path)
 
-    # not returning scaled data
-    # df = fetch_and_clean_data(company_code)
-
-    # REFACTOR THIS
-    combined_data_path = os.path.join(lstm_dir, "combined_company_data.csv")
-    df = pd.read_csv(combined_data_path)
-
-    df['date'] = pd.to_datetime(df['date'], errors='coerce')
-    df.set_index(keys=["date"], inplace=True)
+    df = fetch_and_clean_data(company_code)
 
     df['company_code_encoded'] = encoder.transform(df['company_code'].values.reshape(-1, 1))
 
     encoded_company_code = encoder.transform([company_code])[0]
-    cf = df[df['company_code_encoded'] == encoded_company_code]
-    ######
 
-    # df['company_code_encoded'] = encoder.transform(cf['company_code'].values.reshape(-1, 1))
-
-    if len(cf) < 2 * window_size:
+    if len(df) < 2 * window_size:
         raise ValueError(f"Not enough data for company {company_code}. Requires at least {window_size} rows.")
 
-    # encoded_company_code = encoder.transform([company_code])[0]
-    # cf['scaled'] = scaler.fit_transform(cf['last_transaction_price'].values.reshape(-1, 1))
+    df['scaled'] = scaler.transform(df['last_transaction_price'].values.reshape(-1, 1))
 
-    X = cf.iloc[-window_size:][['company_code_encoded', 'scaled']].copy()
+    X = df.iloc[-window_size:][['company_code_encoded', 'scaled']].copy()
     X['company_code_encoded'] = encoded_company_code
     X = X.values.reshape(1, window_size, X.shape[1])
 
@@ -78,20 +65,18 @@ def get_lstm_predictions(company_code, window_size=3, prediction_steps=10):
         X = np.append(X[:, 1:, :], [[next_row]], axis=1)
 
     predictions = scaler.inverse_transform(np.array(predictions).reshape(-1, 1)).reshape(1, -1)[0]
-    last_date = pd.to_datetime(cf.index[-1])
+    last_date = pd.to_datetime(df.index[-1])
     prediction_dates = [last_date + pd.Timedelta(days=i + 1) for i in range(len(predictions))]
 
     # print(predictions)
     # print(prediction_dates)
     # print(cf)
 
-    if np.isnan(cf['last_transaction_price']).any() or np.isinf(cf['last_transaction_price']).any():
-        raise ValueError("Data contains NaN or infinite values.")
     # Prepare the response data
     response_data = {
         "predictions": predictions.tolist(),
         "prediction_dates": [str(date) for date in prediction_dates],
-        "company_data": cf.to_dict(orient="records")
+        "company_data": df.to_dict(orient="records")
     }
 
     return response_data
