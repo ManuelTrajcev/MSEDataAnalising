@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="" />
+    <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/services/datascraper/middleware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/query_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSEDataAnalising/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +33,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ManuelTrajcev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ManuelTrajcev/MSEDataAnalising",
+    "accountId": "b1618747-589a-4a06-9cd6-81bacd85cb31"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -36,16 +56,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "microservices",
+    "git-widget-placeholder": "DatascraperRefactor",
     "last_opened_file_path": "/home/draganapetrova/my_files/university/treta_godina/dians/new_project",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
       </set>
     </attachedChunks>
   </component>
@@ -57,8 +83,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735821232716</updated>
+      <workItem from="1736020394477" duration="1056000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
