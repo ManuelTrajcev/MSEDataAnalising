@@ -5,11 +5,6 @@ from rest_framework.decorators import api_view
 from .serializers import CompanySerializer
 
 
-def my_function(request):
-    if request.method == 'GET':
-        return JsonResponse({'message': 'Function called successfully!'})
-
-
 @api_view(['GET'])
 def get_data(request):
     company_code = request.query_params.get('company_code')

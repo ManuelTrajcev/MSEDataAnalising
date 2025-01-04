@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/services/LSTM/lstm/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/lstm/lstm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LSTM/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LSTM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,9 +25,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2r4bKFoasn2HStBdLpEMtQJHyml" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,8 +37,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "RefactorLSTM&&Datascraper",
-    "last_opened_file_path": "/home/draganapetrova/my_files/university/treta_godina/dians/new_project"
+    "git-widget-placeholder": "microservices",
+    "last_opened_file_path": "/home/draganapetrova/my_files/university/treta_godina/dians/new_project",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="SharedIndexes">
