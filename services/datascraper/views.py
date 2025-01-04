@@ -1,17 +1,10 @@
-from datetime import datetime
-from services.datascraper.models import *
-from django.http import JsonResponse
-from rest_framework.decorators import api_view
 from .serializers import CompanySerializer
-import logging
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import DayEntryAsString
 from .serializers import DayEntryAsStringSerializer
 from .services import get_day_entries, get_companies, get_last_day_entries
 from .validators import RequestValidator
 
-logger = logging.getLogger(__name__)
 
 @api_view(['GET'])
 def get_data(request):
