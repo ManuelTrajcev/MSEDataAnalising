@@ -1,23 +1,23 @@
-import DataTable from "../components/IssuersPage/DataTable";
 import React from "react";
-import IssuersBackground from "../components/IssuersPage/IssuersBackground";
+import DataTable from "../components/IssuersPage/DataTable";
 import './ShowData.css'
-import AboutBackground from "../components/AboutPage/AboutBackground";
+import Background from "../components/Background";
+import image1 from "../images/issuers.jpg";
 import Footer from "../components/Footer";
+
 
 export default function ShowData() {
     return (
         <div id='issuers-container'>
-            <IssuersBackground/>
-            <div id='above'>
+            <Background imageSrc={image1} altText="Image for Page 3" />
+            <div id='issuers-above'>
                 <h1>Берзански издавачи</h1>
             </div>
-            <div id='bellow'>
+            <div id='issuers-bellow'>
                 <h1>Историски податоци за издавачи</h1>
                 <DataTable companyCode="KMB"/>
             </div>
             <Footer/>
         </div>
     )
-
 }

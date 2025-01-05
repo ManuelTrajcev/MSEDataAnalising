@@ -1,10 +1,12 @@
 #about-container {
     margin-top: 20vh;
 }
+
 #about-content {
     padding-left: 4rem;
     margin-bottom: 4rem;
 }
+
 #about-content h1 {
     font-size: 4rem;
     color: white;
@@ -14,17 +16,13 @@
     padding: 5vh 2rem;
     width: 150vh;
     font-size: 2rem;
+    color: black;
 }
 
 #about-content p:nth-of-type(2) {
-    background-image: url("../images/handshake.jpg");
-    background-attachment: fixed;
-    background-size: cover; /* This ensures the image covers the whole div */
-    background-position: center; /* Adjusts the position of the image */
+    background: url("../images/handshake.jpg") center / cover fixed;
     justify-content: center;
     border-radius: 10px;
     padding: 3vh 2rem;
-    width: 150vh;
-    font-size: 2rem;
     color: white;
 }

@@ -6,8 +6,6 @@ import Visualise from "./pages/Visualise";
 import ShowData from "./pages/ShowData";
 import TechnicalAnalysis from "./pages/TechnicalAnalysis"
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Nlp_predictions from "./pages/nlp_predictions";
 
 function App() {
     return (
@@ -19,7 +17,6 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/show-data" element={<ShowData />} />
                     <Route path="/visualisation" element={<Visualise />} />
-                    <Route path="/news" element={<Nlp_predictions />} />
                     <Route path="/technical-analysis" element={<TechnicalAnalysis />} />
                 </Routes>
             </div>
