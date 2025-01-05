@@ -5,6 +5,8 @@ import django
 from concurrent.futures import ThreadPoolExecutor
 import time
 
+from services.NLP.models import News, Company
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
@@ -90,10 +92,6 @@ if __name__ == "__main__":
 
     for result in results:
         print(f"Company Code: {result['company_code']}, Average Sentiment: {result['average_sentiment']}")
-    # for c in company_codes:
-    #     company_news = News.objects.filter(company_code=c).order_by('-date')[:1]
-    #     Company.objects.filter(company_code=c).update(company_name=company_news[0].company_name)
-    #
 
     end_time = time.time()
     print(f"Total execution time: {end_time - start_time:.2f} seconds")

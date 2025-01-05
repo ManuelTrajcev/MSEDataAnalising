@@ -6,16 +6,13 @@ from tqdm import tqdm
 import os
 import django
 
-# Django setup
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 from services.NLP.models import News
 
-# Device configuration
 device = "cuda" if torch.cuda.is_available() else "cpu"
 torch.cuda.empty_cache()
 
-# Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained("AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis")
 model = AutoModelForSequenceClassification.from_pretrained(
     "AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis",
@@ -41,27 +38,22 @@ class NewsDataset(Dataset):
         inputs = self.tokenizer(content, truncation=True, padding="max_length", max_length=128)
         return {**inputs, "labels": torch.tensor(label)}
 
-# Fetch data from the database
 all_news_entries = list(News.objects.all())
 train_size = int(0.8 * len(all_news_entries))
 train_news_entries = all_news_entries[:train_size]
 valid_news_entries = all_news_entries[train_size:]
 
-# Create datasets
 train_dataset = NewsDataset(train_news_entries, tokenizer, label_map)
 valid_dataset = NewsDataset(valid_news_entries, tokenizer, label_map)
 
-# Data loaders
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 train_loader = DataLoader(train_dataset, shuffle=True, batch_size=16, collate_fn=data_collator)
 valid_loader = DataLoader(valid_dataset, batch_size=16, collate_fn=data_collator)
 
-# Optimizer and scheduler
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5)
-num_training_steps = 5 * len(train_loader)  # 3 epochs
+num_training_steps = 3 * len(train_loader)  # 3 epochs
 lr_scheduler = get_scheduler("linear", optimizer=optimizer, num_warmup_steps=0, num_training_steps=num_training_steps)
 
-# Training loop
 model.train()
 epochs = 3
 
@@ -81,7 +73,6 @@ for epoch in range(epochs):
         loop.set_description(f"Epoch {epoch}")
         loop.set_postfix(loss=loss.item())
 
-# Evaluation
 model.eval()
 predictions, true_labels = [], []
 
@@ -93,7 +84,6 @@ with torch.no_grad():
         predictions.extend(torch.argmax(logits, axis=1).cpu().numpy())
         true_labels.extend(batch["labels"].cpu().numpy())
 
-# Classification report
 print(classification_report(true_labels, predictions, target_names=["negative", "positive", "neutral"]))
 
 # Save the fine-tuned model
