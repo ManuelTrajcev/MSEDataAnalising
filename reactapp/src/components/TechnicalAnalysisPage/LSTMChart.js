@@ -9,7 +9,7 @@ import {
     Legend,
 } from "recharts";
 
-const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последна трансакција (MKD)" }) => {
+const LSTMChart = ({ chartData, yAxisLabel = "Цена на последна трансакција (MKD)" }) => {
     const formatXAxis = (tick) => {
         const date = new Date(tick);
         return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
@@ -22,7 +22,7 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
         }).format(tick)} МКД`;
     };
 
-    // Custom legend function
+
     const customLegend = () => (
          <div style={{ fontSize: "18px" }}>
             <span style={{ color: "#8884d8", marginRight: 10 }}>Реални податоци</span>
@@ -64,13 +64,14 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
                         stroke="#8884d8"
                         dot={(props) => {
                             const { cx, cy, index } = props;
-                            const isLast10 = index >= chartData.length - 10; // Check if the point is in the last 10
+                            const isLast10 = index >= chartData.length - 10;
                             return (
                                 <circle
                                     cx={cx}
                                     cy={cy}
                                     r={2}
-                                    fill={isLast10 ? "#ff7300" : "#8884d8"} // Different color for the last 10 points
+                                    fill={isLast10 ? "#ff7300" : "#8884d8"}
+                                    key={`circle-${index}`}
                                 />
                             );
                         }}
@@ -83,4 +84,4 @@ const TimeSeriesChart = ({ chartData, yAxisLabel = "Цена на последн
     );
 };
 
-export default TimeSeriesChart;
+export default LSTMChart;
