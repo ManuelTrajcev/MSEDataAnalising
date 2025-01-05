@@ -15,9 +15,13 @@ export default function TechnicalAnalysis() {
     const [companyCodes, setCompanyCodes] = useState([]);
     const [chartData, setChartData] = useState([]);
     const [selectedCompanyCode, setSelectedCompanyCode] = useState("");
-    const [technicalAnalysisData, setTechnicalAnalysisData] = useState({});
+    const [technicalAnalysisData, setTechnicalAnalysisData] = useState({
+        predictions: null,
+        oscillators: null,
+        movingAverages: null,
+    });
     const [message, setMessage] = useState("Изберете компанија која ќе подлежи на техничка анализа.");
-    const [sentimentData, setSentimentData] = useState("");
+    const [sentimentData, setSentimentData] = useState(null);
     const [selectedTimeframe, setSelectedTimeframe] = useState("1D");
     const [loading, setLoading] = useState(false);
 
@@ -26,101 +30,102 @@ export default function TechnicalAnalysis() {
         const fetchCompanyCodes = async () => {
             try {
                 const response = await fetch("http://localhost:8000/datascraper/api/get-company-codes/");
+                if (!response.ok) throw new Error("Failed to fetch company codes");
                 const data = await response.json();
                 setCompanyCodes(data);
             } catch (error) {
                 console.error("Error fetching company codes:", error);
             }
         };
-
         fetchCompanyCodes();
     }, []);
 
     // Fetch technical analysis data
     useEffect(() => {
-        if (selectedCompanyCode) {
-            const fetchTechnicalAnalysisData = async () => {
-                try {
-                    setLoading(true);
-
-                    // Fetch LSTM predictions
-                    const response = await fetch(
-                        `http://localhost:8001/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`
-                    );
-                    const predictionsData = await response.json();
-
-                    const formattedCompanyData = predictionsData.company_data.map((companyDatum) => {
-                        const date = new Date(companyDatum.date_string.split('.').reverse().join('-'));
-                        return {
-                            timestamp: date.toISOString(),
-                            value: companyDatum.last_transaction_price,
-                        };
-                    });
-
-                    const formattedPredictionData = predictionsData.predictions.map((prediction, index) => {
-                        const predictionDate = new Date(predictionsData.prediction_dates[index]);
-                        return {
-                            timestamp: predictionDate.toISOString(),
-                            value: prediction,
-                        };
-                    });
-
-                    const combinedData = [...formattedCompanyData, ...formattedPredictionData].sort(
-                        (a, b) => new Date(a.timestamp) - new Date(b.timestamp)
-                    );
-
-                    const lastYearDate = new Date();
-                    lastYearDate.setFullYear(lastYearDate.getFullYear() - 1);
-                    const filteredData = combinedData.filter((dataPoint) => {
-                        return new Date(dataPoint.timestamp) >= lastYearDate;
-                    });
-
-                    // Fetch oscillator signals
-                    const responseOscillators = await fetch(
-                        `http://localhost:8001/lstm/api/oscillator-signals/?company_code=${selectedCompanyCode}`
-                    );
-                    const oscillatorData = await responseOscillators.json();
-
-                    // Fetch moving average signals
-                    const responseMovingAvg = await fetch(
-                        `http://localhost:8001/lstm/api/moving-average-signals/?company_code=${selectedCompanyCode}`
-                    );
-                    const movingAvgData = await responseMovingAvg.json();
-
-                    // Fetch sentiment analysis data
-                    const nlpResponse = await fetch(`http://localhost:8002/nlp/api/get-company-predictions/`);
-                    const nlpData = await nlpResponse.json();
-
-                    const sentiment = nlpData.find((item) => item.company_code === selectedCompanyCode);
-                    if (sentiment) {
-                        setSentimentData({
-                            sentiment: sentiment.max_sentiment,
-                            sentiment_value: sentiment.max_sentiment_value,
-                        });
-                    } else {
-                        setSentimentData("");
-                    }
-
-                    setChartData(filteredData);
-                    setTechnicalAnalysisData({
-                        predictions: predictionsData,
-                        oscillators: oscillatorData,
-                        movingAverages: movingAvgData,
-                    });
-                    setMessage("");
-                } catch (error) {
-                    console.error("Error fetching technical analysis data:", error);
-                    setMessage("Error fetching technical analysis data. Please try again.");
-                } finally {
-                    setLoading(false);
-                }
-            };
-
-            fetchTechnicalAnalysisData();
-        } else {
+        if (!selectedCompanyCode) {
             setMessage("Изберете компанија која ќе подлежи на техничка анализа.");
+            return;
         }
+
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                setMessage("");
+
+                // Fetch LSTM predictions
+                const predictionsData = await fetchAPI(
+                    `http://localhost:8001/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`,
+                    "LSTM predictions"
+                );
+                const formattedData = formatLSTMData(predictionsData);
+
+                // Fetch oscillator signals
+                const oscillatorData = await fetchAPI(
+                    `http://localhost:8001/lstm/api/oscillator-signals/?company_code=${selectedCompanyCode}`,
+                    "oscillator signals"
+                );
+
+                // Fetch moving average signals
+                const movingAvgData = await fetchAPI(
+                    `http://localhost:8001/lstm/api/moving-average-signals/?company_code=${selectedCompanyCode}`,
+                    "moving average signals"
+                );
+
+                // Fetch sentiment analysis data
+                const nlpData = await fetchAPI(
+                    `http://localhost:8002/nlp/api/get-prediction-for-company/?company_code=${selectedCompanyCode}`,
+                    "sentiment analysis"
+                );
+                const sentiment = nlpData[0];
+                setSentimentData(sentiment
+                    ? { sentiment: sentiment.max_sentiment, sentiment_value: sentiment.max_sentiment_value }
+                    : null);
+
+                setChartData(formattedData.filteredData);
+                setTechnicalAnalysisData({
+                    predictions: predictionsData,
+                    oscillators: oscillatorData,
+                    movingAverages: movingAvgData,
+                });
+            } catch (error) {
+                console.error(error.message);
+                setMessage("Error fetching technical analysis data. Please try again.");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
     }, [selectedCompanyCode]);
+
+    const fetchAPI = async (url, description) => {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Failed to fetch ${description}`);
+        return await response.json();
+    };
+
+    // Helper function to format LSTM data
+    const formatLSTMData = (predictionsData) => {
+        const formattedCompanyData = predictionsData.company_data.map((companyDatum) => ({
+            timestamp: new Date(companyDatum.date_string.split('.').reverse().join('-')).toISOString(),
+            value: companyDatum.last_transaction_price,
+        }));
+
+        const formattedPredictionData = predictionsData.predictions.map((prediction, index) => ({
+            timestamp: new Date(predictionsData.prediction_dates[index]).toISOString(),
+            value: prediction,
+        }));
+
+        const combinedData = [...formattedCompanyData, ...formattedPredictionData].sort(
+            (a, b) => new Date(a.timestamp) - new Date(b.timestamp)
+        );
+
+        const lastYearDate = new Date();
+        lastYearDate.setFullYear(lastYearDate.getFullYear() - 1);
+        const filteredData = combinedData.filter((dataPoint) => new Date(dataPoint.timestamp) >= lastYearDate);
+
+        return { filteredData };
+    };
 
     const renderTable = (data, headers) => (
         <div className="table-container">
@@ -171,7 +176,7 @@ export default function TechnicalAnalysis() {
                 onChange={(e) => setSelectedCompanyCode(e.target.value)}
             />
 
-            {!selectedCompanyCode && <p className="error-message">{message}</p>}
+            {message && <p className="error-message">{message}</p>}
 
             {loading ? (
                 <LoadingSpinner />
@@ -182,21 +187,17 @@ export default function TechnicalAnalysis() {
                             selectedTimeframe={selectedTimeframe}
                             onSelect={setSelectedTimeframe}
                         />
-
                         <OscillatorsTable
                             oscillators={technicalAnalysisData.oscillators}
                             selectedTimeframe={selectedTimeframe}
                             renderTable={renderTable}
                         />
-
                         <MovingAveragesTable
                             movingAverages={technicalAnalysisData.movingAverages}
                             selectedTimeframe={selectedTimeframe}
                             renderTable={renderTable}
                         />
-
                         <LSTMChartContainer chartData={chartData} />
-
                         <SentimentAnalysis sentimentData={sentimentData} />
                     </div>
                 )

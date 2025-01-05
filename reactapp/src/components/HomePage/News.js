@@ -10,10 +10,11 @@ export default function News() {
     useEffect(() => {
         const fetchCompanyPredictions = async () => {
             try {
-                const response = await fetch(`http://localhost:8002/nlp/api/get-latest-newss/`);
+                const number_of_news = 3
+                const response = await fetch(`http://localhost:8002/nlp/api/get-latest-newss/?number_of_news=${number_of_news}`);
                 if (!response.ok) throw new Error("Network response was not ok");
                 const data = await response.json();
-                setData(data.slice(0, 3)); // Only get the first 3 latest news
+                setData(data);
             } catch (error) {
                 console.error("Error fetching company predictions:", error);
                 setError("Failed to load news. Please try again later.");
