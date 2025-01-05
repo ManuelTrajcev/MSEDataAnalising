@@ -56,7 +56,7 @@ export default function DataTable() {
             setData(data);
 
             const formattedData = formatChartData(data);
-            console.log("Форматирани податоци за график:", formattedData);
+            // console.log("Форматирани податоци за график:", formattedData);
             setChartData(formattedData);
         } catch (error) {
             console.error("Грешка при вчитување на податоци:", error);

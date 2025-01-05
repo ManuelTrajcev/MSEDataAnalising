@@ -21,7 +21,6 @@ const MovingAverages = ({ movingAverages, selectedTimeframe, renderTable }) => {
     ];
 
     const headers = ["Average", "Value", "Signal"];
-    console.log(data)
     return (
         <div>
             <h2>Moving Averages</h2>

@@ -11,7 +11,7 @@ const fetchTimeSeriesData = async (url, setChartData, setMessage) => {
             throw new Error("Failed to fetch data");
         }
         const data = await response.json();
-        console.log("Raw API response:", data);
+        // console.log("Raw API response:", data);
         setChartData(data);
         setMessage("");
     } catch (error) {
