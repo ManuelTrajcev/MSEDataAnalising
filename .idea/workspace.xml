@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/NLP/services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/NLP_model/trained_models/models.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/finbert.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/finbert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/nlp_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/nlp_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/scraper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/scraper_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/scraper_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +49,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.filters (1).executor": "Run",
-    "Python.filters.executor": "Run",
-    "Python.pipeline (1).executor": "Run",
-    "Python.pipeline.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "NLPRefactor",
-    "last_opened_file_path": "/home/draganapetrova/my_files/university/treta_godina/dians/new_project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.filters (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.filters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.pipeline.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NLPRefactor&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/draganapetrova/my_files/university/treta_godina/dians/new_project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\NLP\NLP_model" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper\scraping" />
     </key>
   </component>
@@ -220,7 +216,8 @@
       <option name="presentableId" value="Default" />
       <updated>1735821232716</updated>
       <workItem from="1736020394477" duration="5174000" />
-      <workItem from="1736058057163" duration="1376000" />
+      <workItem from="1736058057163" duration="1803000" />
+      <workItem from="1736060076564" duration="64000" />
     </task>
     <servers />
   </component>
