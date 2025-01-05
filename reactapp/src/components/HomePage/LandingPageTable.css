@@ -11,7 +11,7 @@
 }
 
 .market-table th, .risers-fallers-table th {
-    background-color: #001064; /* Dark blue header */
+    background-color: #001064;
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
@@ -24,17 +24,17 @@
 .table-container {
     display: flex;
     justify-content: center;
-    gap: 1%; /* Space between the tables */
-    width: 89%; /* Total width of both tables */
-    margin: 0 auto; /* Center the tables */
+    gap: 1%;
+    width: 89%;
+    margin: 0 auto;
 }
 
 .table-1, .table-2 {
-    width: 48%; /* Both tables take up 48% of the container width */
-    background-color: #f8f9fa; /* Light background */
+    width: 48%;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align to the top */
+    justify-content: flex-start;
 }
 
 .table-1 > h1, .table-2 > h1 {
@@ -113,7 +113,6 @@
     border: none;
 }
 
-/* Make it responsive on smaller screens */
 @media screen and (max-width: 768px) {
     .table-container {
         flex-direction: column;

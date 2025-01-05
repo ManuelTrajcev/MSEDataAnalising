@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import '../AboutPage/AboutBackground.css';
 import image1 from '../../images/issuers.jpg';
 
 const IssuersBackground = () => {
@@ -16,7 +15,7 @@ const IssuersBackground = () => {
     return (
         <>
             {isImageLoaded ? (
-                <img src={image1} className="about-background" alt="Issuers Background" />
+                <img src={image1} className="about-background" alt="Issuers HomeBg" />
             ) : (
                 <div className="placeholder">Loading...</div> // Optional placeholder
             )}

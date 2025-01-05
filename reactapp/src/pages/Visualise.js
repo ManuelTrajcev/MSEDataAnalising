@@ -1,16 +1,14 @@
-// import TimeSeriesGraph from "../components/TimeSeriesChart";
-// import TimeSeriesContainer from "../components/TimeSeriesContainer";
 import React from "react";
-import VisualizeBackground from "../components/VisualizationPage/VisualizeBackground";
 import './Visualise.css'
 import TimeSeriesContainer from "../components/VisualizationPage/TimeSeriesContainer";
-import AboutBackground from "../components/AboutPage/AboutBackground";
 import Footer from "../components/Footer";
+import Background from "../components/Background";
+import image1 from "../images/visualise.jpg";
 
 export default function Visualise() {
     return (
         <div id="vis-container">
-            <VisualizeBackground/>
+            <Background imageSrc={image1} altText="Image for Page 4" />
             <div id="vis-above">
                 <h1>Визуелизација на податоци</h1>
             </div>
@@ -22,6 +20,4 @@ export default function Visualise() {
             <Footer/>
         </div>
     )
-
-
 }

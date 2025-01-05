@@ -2,17 +2,17 @@
     margin-top: 20vh;
 }
 
-#issuers-container #above {
+#issuers-above {
     padding-left: 4rem;
     margin-bottom: 4rem;
     color: white;
     font-size: 2rem;
 }
 
-#bellow {
+#issuers-bellow {
     color: black;
     width: 86%;
     font-size: 1rem;
-    text-align: center; /* Center-align content within the container */
+    text-align: center;
     margin: 2rem auto 6rem;
 }

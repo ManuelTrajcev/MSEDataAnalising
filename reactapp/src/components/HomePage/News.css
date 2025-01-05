@@ -1,58 +1,52 @@
-/* Add a transparent black overlay background */
 #news {
-    height: 100vh; /* Set the height to 60% of the viewport height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: Jost, Arial, sans-serif;
     width: 100%;
 }
 
-/* H2 styling */
 #news h2 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
     color: #D8E3E7;
-    text-align: left; /* Align h2 to the left */
-    width: 100%; /* Take up full width */
-    max-width: 1200px; /* Match the site width */
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
 }
 
 #news .p {
     color: #D8E3E7;
     margin-bottom: 40px;
     font-size: 2rem;
-
 }
 
-/* Paragraph styling */
 #news p {
     font-size: 1.5rem;
     color: black;
-    text-align: left; /* Align paragraph to the left */
+    text-align: left;
     width: 100%;
-    max-width: 1200px; /* Ensure paragraph stays within site width */
+    max-width: 1200px;
 }
 
-/* News cards container */
 .news-cards {
     display: flex;
     gap: 20px;
-    justify-content: space-between; /* Distribute cards evenly */
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1200px; /* Limit to the site's general width */
+    max-width: 1200px;
 }
 
-/* Individual news card styling */
 .news-card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    flex: 1; /* Allow cards to take up available space */
-    max-width: 350px; /* Set a max width so cards don’t get too wide */
+    flex: 1;
+    max-width: 350px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -62,14 +56,12 @@
     transition: transform 0.2s ease-in-out;
 }
 
-/* Headline (H3) inside news card */
 .news-card h3 {
     font-size: 18px;
     color: #1a1a75;
     margin-bottom: 10px;
 }
 
-/* Content inside news card */
 .news-card p {
     font-size: 14px;
     color: #555;
@@ -77,13 +69,11 @@
     line-height: 1.5;
 }
 
-/* Date and other small text */
 .news-card p strong {
     font-size: 12px;
     color: #999;
 }
 
-/* No data available message */
 .no-data {
     font-size: 16px;
     color: #fff;
@@ -91,8 +81,6 @@
     padding: 20px;
 }
 
-
-/* Modal overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -106,7 +94,6 @@
     z-index: 1000;
 }
 
-/* Modal content */
 .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -117,14 +104,12 @@
     text-align: center;
 }
 
-/* Modal content headline */
 .modal-content h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #1a1a75;
 }
 
-/* Modal content body */
 .modal-content p {
     font-size: 16px;
     color: #333;
@@ -133,7 +118,6 @@
     overflow-y: auto;
 }
 
-/* Close button */
 .modal-content button {
     background-color: #1a1a75;
     color: #fff;
@@ -149,5 +133,5 @@
 }
 
 .news-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    transform: scale(1.05);
 }

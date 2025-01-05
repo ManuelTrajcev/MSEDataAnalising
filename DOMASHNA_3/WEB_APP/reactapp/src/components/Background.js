@@ -5,7 +5,7 @@ import image1 from '../images/finance_1.jpg';
 import image2 from '../images/finance.jpg';
 import image3 from '../images/finance_2.jpg';
 
-const Background = ({ playStatus, heroCount }) => {
+const HomeBg = ({ playStatus, heroCount }) => {
     const [isVideoReady, setIsVideoReady] = useState(false);
     const [showVideo, setShowVideo] = useState(false); // Controls when to show the video
     const [currentImage, setCurrentImage] = useState(null);
@@ -50,7 +50,7 @@ const Background = ({ playStatus, heroCount }) => {
                 <img
                     src={currentImage || image1}
                     className="background"
-                    alt="Background Placeholder"
+                    alt="HomeBg Placeholder"
                 />
             </div>
         );

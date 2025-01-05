@@ -1,7 +1,7 @@
 :root {
     --primary-color: #1c2d70; /* Main theme color */
     --secondary-color: #5b9bd5; /* Accent color */
-    --neutral-gray: #f4f4f4; /* Background gray */
+    --neutral-gray: #f4f4f4; /* HomeBg gray */
     --error-color: #f44336; /* Error red */
     --success-color: #4CAF50; /* Success green */
     --font-family: 'Jost', sans-serif;

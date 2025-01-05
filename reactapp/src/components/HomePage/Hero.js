@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './Hero.css';
 import arrow_btn from '../../images/button.png';
 import play_icon from '../../images/play-btn.png';
 import pause_icon from '../../images/stop-btn.png';
-import { NavLink } from 'react-router-dom';
 import { BsMouse } from 'react-icons/bs';
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import { Link } from "react-scroll";
 
 
 const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) => {

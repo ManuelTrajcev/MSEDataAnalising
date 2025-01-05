@@ -2,7 +2,7 @@
     height: 86vh;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end; /* Aligns the text at the bottom */
+    align-items: flex-end;
     text-align: left;
     padding: 0 2%;
     position: relative;
@@ -25,7 +25,7 @@
     position: relative;
     background-color: transparent;
     margin-left: 0;
-    padding: 3% 0; /* Add padding to give some space from the bottom */
+    padding: 3% 0;
 }
 
 .home-text h1, .home-text p {
@@ -47,9 +47,8 @@
 
 .home-text h1 span {
     font-family: 'Jost', serif;
-    border-bottom: 5px solid #C2EDCE; /* Adds underline with specified color */
+    border-bottom: 5px solid #C2EDCE;
     display: inline;
     padding-bottom: 5px;
-    background-color: transparent; /* Ensures the background is fully transparent */
+    background-color: transparent;
 }
-

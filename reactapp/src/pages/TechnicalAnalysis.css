@@ -1,7 +1,7 @@
 :root {
     --primary-color: #1c2d70; /* Main theme color */
     --secondary-color: #5b9bd5; /* Accent color */
-    --neutral-gray: #f4f4f4; /* Background gray */
+    --neutral-gray: #f4f4f4; /* HomeBg gray */
     --error-color: #f44336; /* Error red */
     --success-color: #4CAF50; /* Success green */
     --font-family: 'Jost', sans-serif;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center all elements horizontally */
+    align-items: center;
     text-align: left;
 }
 
@@ -35,7 +35,7 @@
 
 #tech-button select {
     font-size: 1.5rem;
-    font-family: Jost, sans-serif;
+    font-family: var(--font-family), serif;
     background-color: #82004A;
     color: white;
     padding: 1rem;
@@ -54,7 +54,7 @@ select {
     border: 0.1rem solid #ccc;
     width: 90%;
     max-width: 30rem;
-    text-align: left; /* Align the text inside the dropdown */
+    text-align: left;
 }
 
 select:focus {
@@ -118,11 +118,12 @@ select:focus {
     max-width: 60rem;
     overflow-x: auto;
 }
+
 .calculations .chart-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center both h3 and chart horizontally */
-    margin: 5rem 0; /* Add some space above the container */
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
 }
 
 .calculations table {
@@ -136,7 +137,7 @@ select:focus {
 .calculations th,
 .calculations td {
     padding: 1.5rem;
-    text-align: left; /* Align text inside table cells to the left */
+    text-align: left;
     border: 0.1rem solid #ddd;
 }
 
@@ -155,12 +156,12 @@ select:focus {
 }
 
 .signal-buy {
-    color: green !important;
+    color: var(--success-color) !important;
     font-weight: bold;
 }
 
 .signal-sell {
-    color: red !important;
+    color: var(--error-color) !important;
     font-weight: bold;
 }
 
@@ -185,7 +186,6 @@ select:focus {
     font-weight: bold;
 }
 
-/* Sentiment Value Color Styling */
 .sentiment-positive {
     color: var(--success-color);
 }
@@ -198,9 +198,7 @@ select:focus {
     color: dodgerblue;
 }
 
-
-
-/* Progress bar container */
+/* Progress Bar */
 .progress-container {
     width: 87vw;
     max-width: 60rem;
@@ -229,28 +227,27 @@ select:focus {
     background-color: dodgerblue;
 }
 
-/* Chart Section */
+/* LSTM Chart */
 .LSTMChart {
     width: 87vw;
     max-width: 60rem;
-    margin: 2rem auto; /* Centered the chart and added spacing */
+    margin: 2rem auto;
 }
 
-/* Footer fix to stay at the bottom */
+/* Footer */
 footer {
     margin-top: auto;
     width: 100%;
 }
 
-/* Loading screen */
-/* Loading Screen Styles */
+/* Loading Screen */
 .loading-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
     font-family: "Arial", sans-serif;
     position: fixed;
@@ -262,8 +259,8 @@ footer {
 }
 
 .spinner {
-    border: 6px solid rgba(255, 255, 255, 0.3); /* Light translucent border */
-    border-top: 6px solid #ffffff; /* Bright top border */
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #ffffff;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -283,7 +280,6 @@ footer {
     animation: blink 1.5s step-end infinite;
 }
 
-/* Blinking animation for dots */
 @keyframes blink {
     0% { content: "."; }
     33% { content: ".."; }
@@ -299,17 +295,15 @@ footer {
     max-width: 80%;
 }
 
-/* Fade in animation for the screen */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-
+/* No Data Message */
 .no-data-message {
-    font-family: 'Jost', sans-serif; /* Use the Jost font */
-    font-size: 1.8rem; /* Set the font size */
-    color: red; /* Set the text color to red */
+    font-family: var(--font-family), serif;
+    font-size: 1.8rem;
+    color: var(--error-color);
     padding-bottom: 3rem;
 }
-

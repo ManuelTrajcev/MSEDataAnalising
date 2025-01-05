@@ -16,7 +16,7 @@ const TechnicalAnalysisBackground = () => {
     return (
         <>
             {isImageLoaded ? (
-                <img src={image1} className="about-background" alt="Technical Analysis Background" />
+                <img src={image1} className="about-background" alt="Technical Analysis HomeBg" />
             ) : (
                 <div className="placeholder">Loading...</div> // Optional placeholder
             )}

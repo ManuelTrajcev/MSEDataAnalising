@@ -16,7 +16,7 @@ const AboutBackground = () => {
     return (
         <>
             {isImageLoaded ? (
-                <img src={image1} className="about-background" alt="About Background" />
+                <img src={image1} className="about-background" alt="About HomeBg" />
             ) : (
                 <div className="placeholder">Loading...</div> // Optional placeholder
             )}

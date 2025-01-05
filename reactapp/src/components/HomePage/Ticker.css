@@ -1,29 +1,29 @@
 .ticker-wrapper {
-    width: 86.1%; /* 86% width */
-    margin: 0 auto; /* Center the ticker within the page */
+    width: 86.1%;
+    margin: 0 auto;
     overflow: hidden;
-    background-color: transparent; /* Make background transparent */
-    color: #333; /* Darker text color */
+    background-color: transparent;
+    color: #333;
     padding: 1.5% 0;
-    border-left: 2px solid #ddd; /* Add left border to the ticker */
-    border-right: 2px solid #ddd; /* Add right border to the ticker */
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
 }
 
 .ticker-content {
     display: flex;
     white-space: nowrap;
-    animation: ticker-scroll 60s linear infinite; /* Slower speed */
+    animation: ticker-scroll 60s linear infinite;
 }
 
 .ticker-item {
     display: inline-block;
-    text-align: left; /* Align text to the left */
-    margin-right: 80px; /* Increase spacing between items */
+    text-align: left;
+    margin-right: 80px;
     font-weight: bold;
     font-size: 1.2rem;
-    line-height: 1.5; /* Adjust line-height for better spacing */
+    line-height: 1.5;
     position: relative;
-    padding-right: 20px; /* Add some padding to the right for line spacing */
+    padding-right: 20px;
 }
 
 .ticker-item::after {
@@ -33,20 +33,20 @@
     right: 0;
     transform: translateY(-50%);
     width: 2px;
-    height: 50%; /* Line height */
-    background-color: #ddd; /* Line color */
+    height: 50%;
+    background-color: #ddd;
 }
 
 .company-code {
-    font-size: 1.5rem; /* Make company code smaller */
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 3px;
 }
 
 .transaction-details {
     display: flex;
-    justify-content: left; /* Align content to the left */
-    gap: 10px; /* Add gap between price and percentage */
+    justify-content: left;
+    gap: 10px;
 }
 
 .transaction-price {
@@ -58,7 +58,7 @@
 }
 
 .percentage.neutral {
-    color: blue; /* Blue color for 0% change */
+    color: blue;
 }
 
 .percentage.down {

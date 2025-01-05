@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import './About.css';
-import AboutBackground from "../components/AboutPage/AboutBackground";
+import React from "react";
+import '../components/Background.css';
+import Background from "../components/Background";
+import image1 from '../images/about.jpg';
+import './About.css'
 import Footer from "../components/Footer";
-import img from '../images/finance.jpg'
 
 const About = () => {
-    const heroData = [
-        { text1: "Мисија и визија", text2: "на тимот" },
-    ];
-
     return (
         <div id='about-container'>
-            <AboutBackground/>
+            <Background imageSrc={image1} altText="Image for Page 2" />
             <div id='about-content'>
                 <h1 className="heading">Мисија и визија на тимот</h1>
                 <p>

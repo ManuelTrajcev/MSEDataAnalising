@@ -11,28 +11,28 @@
     align-items: center;
     background-image: url("../../images/success.jpg");
     background-attachment: fixed;
-    background-size: cover; /* This ensures the image covers the whole div */
-    background-position: center; /* Adjusts the position of the image */
-    justify-content: center; /* Horizontally center the content */
-    height: 50vh; /* Full viewport height, adjust as needed */
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    height: 50vh;
     border-radius: 10px;
 }
 
 .text {
-    width: 40%; /* Set the width to 40% of the parent container */
-    background-color: #f8f9fc; /* Light background for the text section */
+    width: 40%;
+    background-color: #f8f9fc;
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    margin-left: 0; /* Align to the left */
-    text-align: left; /* Align text to the left */
+    margin-left: 0;
+    text-align: left;
 }
 
 .text h1 {
     font-size: 28px;
     font-weight: bold;
-    color: #001064; /* Deep blue color for the heading */
+    color: #001064;
     margin-bottom: 15px;
 }
 
@@ -40,11 +40,11 @@
     font-size: 16px;
     line-height: 1.8;
     color: #333333;
-    white-space: pre-wrap; /* Retain line breaks */
+    white-space: pre-wrap;
 }
 
 .text::after {
-    content: '↗'; /* Add an arrow icon */
+    content: '↗';
     font-size: 24px;
     color: #001064;
     position: absolute;
@@ -53,7 +53,7 @@
 }
 
 .image {
-    flex: 1; /* Allow the image to take 50% of the space */
+    flex: 1;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
@@ -63,6 +63,6 @@
 .image img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure the image scales properly */
+    object-fit: cover;
     border-radius: 10px;
 }

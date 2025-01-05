@@ -16,7 +16,7 @@ const IssuersBackground = () => {
     return (
         <>
             {isImageLoaded ? (
-                <img src={image1} className="about-background" alt="Issuers Background" />
+                <img src={image1} className="about-background" alt="Issuers HomeBg" />
             ) : (
                 <div className="placeholder">Loading...</div> // Optional placeholder
             )}

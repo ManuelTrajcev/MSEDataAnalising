@@ -16,7 +16,7 @@ const VisualizeBackground = () => {
     return (
         <>
             {isImageLoaded ? (
-                <img src={image1} className="about-background" alt="Visualize Background" />
+                <img src={image1} className="about-background" alt="Visualize HomeBg" />
             ) : (
                 <div className="placeholder">Loading...</div> // Optional placeholder
             )}

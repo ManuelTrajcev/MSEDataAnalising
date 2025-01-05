@@ -1,4 +1,3 @@
-/* Container for the time series */
 .time-series-container {
     margin: 20px auto;
     padding: 20px;
@@ -9,7 +8,6 @@
     font-family: Jost, sans-serif;
 }
 
-/* Title styling */
 .time-series-container h1 {
     text-align: left;
     font-size: 24px;
@@ -18,7 +16,6 @@
     font-weight: bold;
 }
 
-/* Message styling */
 .time-series-container p {
     margin: 10px 0;
     font-size: 16px;
@@ -27,33 +24,29 @@
     text-align: center;
 }
 
-/* Data selection container */
 .time-series-container .data-selection {
     margin: 20px 0;
     display: flex;
-    justify-content: center; /* Center all items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Add space between elements */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Label and input alignment */
 .time-series-container .data-selection span {
     display: flex;
-    flex-direction: row; /* Keep label and input on the same line */
-    align-items: center; /* Align label and input vertically */
-    gap: 10px; /* Add space between label and input */
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Label styling */
 .time-series-container .data-selection label {
     font-weight: bold;
     margin-right: 5px;
     font-size: 14px;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
 }
 
-/* Input and select styling */
 .time-series-container .data-selection input[type="date"],
 .time-series-container .data-selection select {
     padding: 8px;
@@ -61,10 +54,9 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    width: 200px; /* Consistent width for inputs */
+    width: 200px;
 }
 
-/* Input and select focus styles */
 .time-series-container .data-selection input[type="date"]:focus,
 .time-series-container .data-selection select:focus {
     outline: none;
@@ -72,35 +64,29 @@
     box-shadow: 0 0 4px rgba(28, 45, 112, 0.5);
 }
 
-/* Tooltip and Legend adjustments for the chart */
 .time-series-container .time-series-chart {
-    margin-top: 20px; /* Add extra spacing for visual clarity */
+    margin-top: 20px;
 }
 
-/* Prevent canvas stretch */
 .time-series-container .time-series-chart canvas {
     width: 100%;
     height: auto;
 }
 
-/* Smooth transitions for hover effects (optional) */
 .time-series-container .data-selection select:hover {
     transition: background-color 0.3s ease-in-out;
 }
 
-/* Style for select dropdown and translate labels */
 .time-series-container .data-selection select {
     background-color: #fff;
     color: #333;
 }
 
-/* Add translated labels for selection inputs */
 .time-series-container .data-selection select option {
     font-size: 14px;
     padding: 8px;
 }
 
-/* Prevent outlines when focus occurs on the select elements */
 .time-series-container .data-selection select:focus {
     border-color: #1c2d70;
     box-shadow: 0 0 4px rgba(28, 45, 112, 0.5);
