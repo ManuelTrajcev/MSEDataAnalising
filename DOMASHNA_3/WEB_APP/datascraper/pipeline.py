@@ -1,4 +1,4 @@
-from services.datascraper.filters import filter_1, filter_2, filter_3
+from services.datascraper.scraping.filters import filter_1, filter_2, filter_3
 
 
 def process_data(input_data):
