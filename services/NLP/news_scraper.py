@@ -126,7 +126,6 @@ if __name__ == "__main__":
 
     fetch_pages_multiprocessing(total_pages, num_processes)
 
-
     end_time = time.time()
     execution_time = end_time - start_time
     print(f"Total execution time: {execution_time:.2f} seconds")
