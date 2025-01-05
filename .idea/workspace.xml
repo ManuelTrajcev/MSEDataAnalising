@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +33,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ManuelTrajcev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ManuelTrajcev&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ManuelTrajcev/MSEDataAnalising",
-    "accountId": "b1618747-589a-4a06-9cd6-81bacd85cb31"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ManuelTrajcev/MSEDataAnalising&quot;,
+    &quot;accountId&quot;: &quot;b1618747-589a-4a06-9cd6-81bacd85cb31&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -51,9 +57,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "NLPRefactor",
     "last_opened_file_path": "/home/draganapetrova/my_files/university/treta_godina/dians/new_project",
+    "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
