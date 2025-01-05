@@ -184,12 +184,14 @@ export default function TechnicalAnalysis() {
                         />
 
                         <OscillatorsTable
-                            oscillators={technicalAnalysisData.oscillators?.[selectedTimeframe]}
+                            oscillators={technicalAnalysisData.oscillators}
+                            selectedTimeframe={selectedTimeframe}
                             renderTable={renderTable}
                         />
 
                         <MovingAveragesTable
-                            movingAverages={technicalAnalysisData.movingAverages?.[selectedTimeframe]}
+                            movingAverages={technicalAnalysisData.movingAverages}
+                            selectedTimeframe={selectedTimeframe}
                             renderTable={renderTable}
                         />
 
