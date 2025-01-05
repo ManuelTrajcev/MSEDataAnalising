@@ -1,59 +1,37 @@
-import './navBar.css';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 import logo from '../images/white-logo.png';
-import React from 'react'
-
-
 
 export default function Navbar() {
+    const navItems = [
+        { path: '/about', label: 'За Берзата' },
+        { path: '/show-data', label: 'Издавачи' },
+        { path: '/visualisation', label: 'Визуелизација' },
+        { path: '/technical-analysis', label: 'Техничка Анализа' },
+    ];
+
     return (
         <nav className="nav">
             <div className="logo">
-                <ul id="logo">
-                    <li>
-                        <NavLink to="/">
-                            <img src={logo} alt="logo" width="280" height="66"/>
-                        </NavLink>
-                    </li>
-                </ul>
+                <NavLink to="/">
+                    <img src={logo} alt="logo" width="280" height="66" />
+                </NavLink>
             </div>
             <div className="nav-links">
                 <ul className="pages">
-                    <li>
-                        <NavLink
-                            to="/about"
-                            className={({isActive}) => (isActive ? 'active' : '')}
-                        >
-                            За Берзата
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/show-data"
-                            className={({isActive}) => (isActive ? 'active' : '')}
-                        >
-                            Издавачи
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/visualisation"
-                            className={({isActive}) => (isActive ? 'active' : '')}
-                        >
-                            Визуелизација
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/technical-analysis"
-                            className={({isActive}) => (isActive ? 'active' : '')}
-                        >
-                            Техничка Анализа
-                        </NavLink>
-                    </li>
+                    {navItems.map((item) => (
+                        <li key={item.path}>
+                            <NavLink
+                                to={item.path}
+                                className={({ isActive }) => (isActive ? 'active' : '')}
+                            >
+                                {item.label}
+                            </NavLink>
+                        </li>
+                    ))}
                 </ul>
             </div>
-
         </nav>
     );
 }

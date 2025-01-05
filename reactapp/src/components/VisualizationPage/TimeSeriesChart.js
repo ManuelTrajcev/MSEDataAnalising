@@ -8,7 +8,7 @@ import {
     Tooltip,
     Legend,
 } from "recharts";
-import './TimeSeriesChart.css'; // Import the CSS file for styling
+import './TimeSeriesChart.css';
 
 const TimeSeriesChart = ({ chartData }) => {
     const formatXAxis = (tick) => {
