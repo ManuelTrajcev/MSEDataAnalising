@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Background from "../components/Background";
+import HomeBg from "../components/HomePage/HomeBg";
 import Hero from "../components/HomePage/Hero";
 import Companies from "../components/HomePage/Companies";
 import Footer from "../components/Footer";
@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         <div>
-            <Background playStatus={playStatus} heroCount={heroCount} />
+            <HomeBg playStatus={playStatus} heroCount={heroCount} />
             <Hero
                 setPlayStatus={setPlayStatus}
                 heroData={heroData[heroCount]}
