@@ -7,7 +7,6 @@
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/LSTM/views_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/views_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/datascraper/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
       <updated>1735821232716</updated>
       <workItem from="1736436263439" duration="227000" />
       <workItem from="1736450616214" duration="2746000" />
-      <workItem from="1736698684345" duration="1224000" />
+      <workItem from="1736698684345" duration="4537000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@ from services.datascraper.serializers import DayEntryAsStringSerializer
 
 
 def fetch_and_clean_data(company_code, start_date=None, end_date=None):
-    base_url = 'http://localhost:8000/datascraper/api/get-data/'
+    base_url = 'http://datascraper:8000/datascraper/api/get-data/'
     params = {'company_code': company_code}
 
     if start_date:
@@ -40,12 +40,6 @@ def fetch_and_clean_data(company_code, start_date=None, end_date=None):
     #
     # serializer = DayEntryAsStringSerializer(entries, many=True)
     # data = serializer.data
-    #
-    # if (data == data_api):
-    #     print("correct")
-    # else:
-    #     print("wrong")
-    #
     #
     # df = pd.DataFrame(data)
     # df = clean_data(df)
