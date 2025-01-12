@@ -8,13 +8,6 @@
     --base-font-size: 1.5rem; /* 16px */
 }
 
-#tech-container {
-    margin-top: 20vh;
-}
-
-.contain {
-    margin-top: 12%;
-}
 
 .calculations {
     margin-top: 8vh;
@@ -28,7 +21,7 @@
 }
 
 #tech-button {
-    margin: 4rem;
+    margin: 2vh 4rem;
 }
 
 #tech-button select {

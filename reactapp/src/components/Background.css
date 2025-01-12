@@ -1,10 +1,11 @@
 .background-container {
-    position: absolute;
+    position: relative;
     height: 35vh;
     top: 0;
+    margin-top: -7%;
     left: 0;
     width: 100%;
-    z-index: -1; /* За позадинска поставеност */
+    z-index: -1;
 }
 
 .about-background {
