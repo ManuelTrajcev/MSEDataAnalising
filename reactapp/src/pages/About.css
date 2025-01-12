@@ -1,5 +1,4 @@
 #about-content {
-    margin-top: 11%;
     padding-left: 4rem;
     margin-bottom: 4rem;
 }
@@ -12,7 +11,7 @@
 #about-content p {
     padding: 2vh 2rem;
     width: 150vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
 }
 
