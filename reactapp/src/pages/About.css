@@ -1,8 +1,5 @@
-#about-container {
-    margin-top: 20vh;
-}
-
 #about-content {
+    margin-top: 11%;
     padding-left: 4rem;
     margin-bottom: 4rem;
 }
@@ -13,7 +10,7 @@
 }
 
 #about-content p {
-    padding: 5vh 2rem;
+    padding: 2vh 2rem;
     width: 150vh;
     font-size: 2rem;
     color: black;

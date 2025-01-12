@@ -1,9 +1,23 @@
-.about-background {
-    width: 100%;
-    height: 40vh;
+.background-container {
     position: absolute;
+    height: 35vh;
     top: 0;
     left: 0;
-    object-fit: cover;
+    width: 100%;
     z-index: -1; /* За позадинска поставеност */
+}
+
+.about-background {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.background-heading {
+    position: relative;
+    padding-left: 4vh;
+    bottom: 8vh;
+    color: white;
+    font-size: 5vh;
+    z-index: 1; /* За позадинска поставеност */
 }

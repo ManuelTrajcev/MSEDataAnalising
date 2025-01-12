@@ -12,10 +12,8 @@
     margin-top: 20vh;
 }
 
-#tech-front {
-    padding-left: 4rem;
-    color: white;
-    font-size: 2rem;
+.contain {
+    margin-top: 12%;
 }
 
 .calculations {
@@ -69,6 +67,7 @@ select:focus {
     font-weight: bold;
     margin-top: 2vh;
     margin-left: 4rem;
+    margin-bottom: 2vh;
 }
 
 /* Timeframe Buttons */
