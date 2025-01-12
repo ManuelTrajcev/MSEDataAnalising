@@ -5,6 +5,7 @@ import tensorflow as tf
 from statsmodels.tsa.seasonal import seasonal_decompose
 from datetime import datetime
 import numpy as np
+import requests
 
 from .utils import DataProcessor, clean_data
 
@@ -13,18 +14,43 @@ from services.datascraper.serializers import DayEntryAsStringSerializer
 
 
 def fetch_and_clean_data(company_code, start_date=None, end_date=None):
-    if start_date and end_date:
-        entries = DayEntryAsString.objects.filter(company_code=company_code, date__range=[start_date, end_date])
+    base_url = 'http://localhost:8000/datascraper/api/get-data/'
+    params = {'company_code': company_code}
+
+    if start_date:
+        params['start_date'] = start_date
+        print(start_date)
+    if end_date:
+        params['end_date'] = end_date
+        print(end_date)
+
+    response = requests.get(base_url, params=params)
+    if response.status_code == 200:
+        data_api = response.json()
+        df = pd.DataFrame(data_api)
+        df = clean_data(df)
+        return df
     else:
-        entries = DayEntryAsString.objects.filter(company_code=company_code)
+        raise Exception(f"Failed to fetch data: {response.status_code}, {response.text}")
 
-    serializer = DayEntryAsStringSerializer(entries, many=True)
-    data = serializer.data
-
-    df = pd.DataFrame(data)
-    df = clean_data(df)
-
-    return df
+    # if start_date and end_date:
+    #     entries = DayEntryAsString.objects.filter(company_code=company_code, date__range=[start_date, end_date])
+    # else:
+    #     entries = DayEntryAsString.objects.filter(company_code=company_code)
+    #
+    # serializer = DayEntryAsStringSerializer(entries, many=True)
+    # data = serializer.data
+    #
+    # if (data == data_api):
+    #     print("correct")
+    # else:
+    #     print("wrong")
+    #
+    #
+    # df = pd.DataFrame(data)
+    # df = clean_data(df)
+    #
+    # return df
 
 
 def get_lstm_predictions(company_code, window_size=3, prediction_steps=10):
