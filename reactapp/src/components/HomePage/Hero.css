@@ -7,17 +7,17 @@
     color: white;
     font-size: 15vh;
     font-weight: 500;
-    line-height: 70px;
+    line-height: 9vh;
 }
 
 /* Styles for the explore button in the hero section */
 .hero-explore {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5vh;
     width: fit-content;
-    margin-top: 50px;
-    padding: 0.5rem 1.5rem;
+    margin-top: 7vh;
+    padding: 0.5vh 1.5vh;
     border-radius: 75px;
     box-sizing: border-box;
     outline: 2px solid #742CD8;
@@ -27,12 +27,13 @@
 
 .hero-explore p {
     color: #3c096c;
-    font-size: 1.7rem;
+    font-size: 2.5vh;
 }
 
 .hero-explore img {
-    width: 3rem;
-    height: 3rem;
+    padding-top: 0.7vh;
+    width: 3vh;
+    height: 3vh;
 }
 
 /* Container for dots and play button */
@@ -51,8 +52,8 @@
 }
 
 .hero-dot {
-    width: 10px;
-    height: 10px;
+    width: 1.2vh;
+    height: 1.2vh;
     background: white;
     border-radius: 75px;
     cursor: pointer;
@@ -71,15 +72,15 @@
 }
 
 .hero-play img {
-    width: 48px;
-    height: 48px;
+    width: 5vh;
+    height: 5vh;
     cursor: pointer;
 }
 
 /* Floating icon style */
 .floating-icon {
-    width: 5rem;
-    height: 5rem;
+    width: 6vh;
+    height: 6vh;
     background: rgba(252, 206, 0, 0.8);
     border-radius: 50%;
     display: flex;
@@ -93,8 +94,6 @@
 }
 
 .floating-icon a {
-    width: 5rem;
-    height: 5rem;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -104,8 +103,9 @@
     align-items: center;
 }
 
-/* Animation for a bouncing effect */
 .mouse {
+    width: 3vh;
+    height: 3vh;
     transform: translateY(-25%);
     animation: bounce .8s ease infinite alternate;
 }

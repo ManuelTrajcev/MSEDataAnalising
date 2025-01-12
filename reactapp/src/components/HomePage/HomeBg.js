@@ -46,7 +46,7 @@ const HomeBg = ({ playStatus, heroCount }) => {
         );
     } else {
         return (
-            <div className="background-placeholder">
+            <div className="background_placeholder">
                 <img
                     src={currentImage || image1}
                     className="background"
