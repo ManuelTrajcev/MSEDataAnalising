@@ -9,10 +9,7 @@ import Footer from "../components/Footer";
 export default function ShowData() {
     return (
         <div id='issuers-container'>
-            <Background imageSrc={image1} altText="Image for Page 3" />
-            <div id='issuers-above'>
-                <h1>Берзански издавачи</h1>
-            </div>
+            <Background imageSrc={image1} headingText={"Берзански издавачи"} altText="Image for Page 3" />
             <div id='issuers-bellow'>
                 <h1>Историски податоци за издавачи</h1>
                 <DataTable companyCode="KMB"/>
