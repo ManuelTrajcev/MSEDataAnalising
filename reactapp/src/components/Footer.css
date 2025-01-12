@@ -87,3 +87,7 @@ footer {
         text-align: center; /* Center-align text for smaller devices */
     }
 }
+
+.footer-with-margin {
+    margin-top: 10%; /* Add your desired margin value */
+}
