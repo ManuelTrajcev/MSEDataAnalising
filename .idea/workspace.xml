@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/reactapp/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/LandingPageTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/LandingPageTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Ticker.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Ticker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/DataTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/DataTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
   "keyToString": {
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Deployment",
     "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/services/datascraper",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

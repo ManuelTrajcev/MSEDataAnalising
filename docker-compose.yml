@@ -40,6 +40,8 @@ services:
     build:
       context: ./reactapp
       dockerfile: Dockerfile
+    env_file:
+      - ./reactapp/.env
     command: [ "serve", "-s", "build" ]
     ports:
       - "3000:3000"

@@ -10,7 +10,7 @@ const LandingPageTable = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/datascraper/api/get-last-day-data/?company_codes=${selectedCompanyCode}`);
+                const response = await fetch(`${process.env.REACT_APP_BASE_URL}:8000/datascraper/api/get-last-day-data/?company_codes=${selectedCompanyCode}`);
                 const responseData = await response.json();
                 setData(responseData.map((entry) => ({
                     company_code: entry.company_code || "N/A",
