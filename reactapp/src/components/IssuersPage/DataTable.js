@@ -1,10 +1,11 @@
+// DataTable.js
 import React, { useEffect, useState } from "react";
 import './DataTable.css';
 import FilterSelect from './FilterSelect';
 import FilterDate from './FilterDate';
 import DataTableContent from './DataTableContent';
 
-export default function DataTable() {
+export default function DataTable({ onDataLoaded }) {
     const [data, setData] = useState([]);
     const [companyCodes, setCompanyCodes] = useState([]);
     const [selectedCompanyCode, setSelectedCompanyCode] = useState("");
@@ -54,9 +55,9 @@ export default function DataTable() {
             );
             const data = await response.json();
             setData(data);
+            onDataLoaded(data);  // Call the callback with the fetched data
 
             const formattedData = formatChartData(data);
-            // console.log("Форматирани податоци за график:", formattedData);
             setChartData(formattedData);
         } catch (error) {
             console.error("Грешка при вчитување на податоци:", error);

@@ -30,7 +30,7 @@ const Home = () => {
             <StaticContent/>
             <Companies/>
             <News/>
-            <Footer/>
+            <Footer margin={false}/>
         </div>
     );
 };

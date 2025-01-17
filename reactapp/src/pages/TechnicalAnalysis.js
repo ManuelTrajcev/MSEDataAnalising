@@ -165,12 +165,9 @@ export default function TechnicalAnalysis() {
 
     return (
         <div id="tech-container">
-            <Background imageSrc={image1} altText="Image for Page 4" />
-            <div id="tech-front">
-                <h1>Техничка анализа на податоци</h1>
-            </div>
-
-            <CompanySelector
+            <Background imageSrc={image1} headingText={"Техничка анализа на податоци"} altText="Image for Page 4" />
+            <div className="contain">
+                <CompanySelector
                 companyCodes={companyCodes}
                 selectedCompanyCode={selectedCompanyCode}
                 onChange={(e) => setSelectedCompanyCode(e.target.value)}
@@ -203,7 +200,8 @@ export default function TechnicalAnalysis() {
                 )
             )}
 
-            <Footer />
+            </div>
+            <Footer margin={!selectedCompanyCode}/>
         </div>
     );
 }

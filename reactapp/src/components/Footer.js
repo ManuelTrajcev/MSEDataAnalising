@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../images/logo-footer.jpg';
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({margin}) => {
     const navigate = useNavigate();
 
     const quickLinks = [
@@ -46,7 +46,7 @@ const Footer = () => {
     );
 
     return (
-        <footer>
+        <footer className={margin ? "footer footer-with-margin" : ""}>
             <div className="container">
                 <div className="footer-box">
                     <img src={logo} alt="Footer Logo" />

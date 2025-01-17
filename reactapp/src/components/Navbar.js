@@ -15,7 +15,7 @@ export default function Navbar() {
         <nav className="nav">
             <div className="logo">
                 <NavLink to="/">
-                    <img src={logo} alt="logo" width="280" height="66" />
+                    <img src={logo} alt="logo" width="40%" height="30%" />
                 </NavLink>
             </div>
             <div className="nav-links">
