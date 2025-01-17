@@ -2,7 +2,7 @@ version: '3.8'
 services:
   datascraper:
     build:
-      context: .
+      context: ./services/datascraper
       dockerfile: Dockerfile
     command: ["python", "manage.py", "runserver", "0.0.0.0:8000", "--app=datascraper"]
     ports:
@@ -16,7 +16,7 @@ services:
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
   lstm:
     build:
-      context: .
+      context: ./services/lstm
       dockerfile: Dockerfile
     command: ["python", "manage.py", "runserver", "0.0.0.0:8001", "--app=lstm"]
     ports:
@@ -27,7 +27,7 @@ services:
 
   nlp:
     build:
-      context: .
+      context: ./services/nlp
       dockerfile: Dockerfile
     command: ["python", "manage.py", "runserver", "0.0.0.0:8002", "--app=nlp"]
     ports:
