@@ -1,1 +1,0 @@
-This is the folder where the trained Model and Tokenizer are saved, can't be uploaded to Git because of the large size.
