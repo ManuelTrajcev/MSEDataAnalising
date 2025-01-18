@@ -1,5 +1,5 @@
-from .models import DayEntryAsString, Company
-from .query_factory import day_entry_query_factory
+from models import DayEntryAsString, Company
+from query_factory import day_entry_query_factory
 
 def get_day_entries(company_code=None, start_date=None, end_date=None):
     date_range = [start_date, end_date] if start_date and end_date else None

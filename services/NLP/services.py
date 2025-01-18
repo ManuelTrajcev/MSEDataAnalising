@@ -1,4 +1,4 @@
-from .models import News, Company
+from models import News, Company
 
 
 def get_all_predictions():

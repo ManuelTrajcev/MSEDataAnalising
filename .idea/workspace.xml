@@ -5,16 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reactapp/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/LSTM/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/NLP/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/datascraper/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/LandingPageTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/LandingPageTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Ticker.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Ticker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/DataTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/DataTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/services.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +99,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Deployment",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/services/datascraper",
+    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/services/NLP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,9 +111,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\LSTM" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\NLP" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\LSTM" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -121,6 +137,7 @@
       <workItem from="1736698684345" duration="4537000" />
       <workItem from="1736773471459" duration="31000" />
       <workItem from="1737119212634" duration="1392000" />
+      <workItem from="1737185880196" duration="10005000" />
     </task>
     <servers />
   </component>
