@@ -1,0 +1,47 @@
+.time-series-container .data-selection {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    text-align: center;
+    font-family: Jost, sans-serif;
+}
+
+.time-series-container .data-selection label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.time-series-container .data-selection select,
+.time-series-container .data-selection input[type="date"] {
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 180px;
+    box-sizing: border-box;
+}
+
+.time-series-container .data-selection select:focus,
+.time-series-container .data-selection input[type="date"]:focus {
+    outline: none;
+    border-color: #1c2d70;
+    box-shadow: 0 0 4px rgba(28, 45, 112, 0.5);
+}
+
+.time-series-container .data-selection select {
+    background-color: #fff;
+    color: #333;
+}
+
+.time-series-container .data-selection span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}

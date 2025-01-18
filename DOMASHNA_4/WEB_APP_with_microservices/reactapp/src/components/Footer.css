@@ -1,0 +1,93 @@
+footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent black overlay */
+    color: #f9f9f9; /* Light text color */
+    padding: 6vh 0; /* Added padding for spacing */
+}
+
+.container {
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between; /* Evenly distribute footer boxes */
+    align-items: flex-start; /* Align content to the top vertically */
+    max-width: 120rem; /* Maximum width for the footer */
+    margin: 0 auto; /* Center the container */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    width: 100%; /* Ensure full width for the container */
+    text-align: left; /* Align text inside each box to the left */
+    gap: 2rem; /* Add spacing between columns */
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 20rem; /* Slightly larger minimum width for consistency */
+    padding: 2rem; /* Uniform padding for better spacing */
+    display: flex;
+    flex-direction: column; /* Stack content inside each box */
+    align-items: flex-start; /* Align content to the top inside each box */
+    margin-bottom: 0.8rem; /* Add spacing between rows in mobile view */
+}
+
+/* Logo styling */
+.footer-box img {
+    max-width: 100%;
+    height: 170px; /* Set fixed height for the image */
+    object-fit: contain; /* Ensure image aspect ratio is maintained */
+    margin-bottom: 1.5rem; /* Space below logo */
+}
+
+/* Heading styling */
+.footer-box h1 {
+    margin-top: 1rem;
+    font-size: 2rem; /* Scalable font size */
+    margin-bottom: 1.5rem; /* Spacing below heading */
+    font-weight: bold;
+    color: #f9f9f9;
+}
+
+/* Links container */
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Space between links */
+}
+
+/* Link styling */
+.footer-links a {
+    color: #a8a8a8; /* Light grey color for links */
+    text-decoration: none;
+    font-size: 1.4rem; /* Adjust font size */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Link hover effect */
+.footer-links a:hover {
+    color: #f9f9f9; /* Change link color on hover */
+    text-decoration: underline;
+}
+
+/* Bottom section for copyright */
+.footer-bottom {
+    text-align: center; /* Keep the copyright text centered */
+    margin-top: 2vh;
+    border-top: 1px solid #f9f9f9; /* Thin white border */
+    padding-top: 2vh;
+    font-size: 1rem;
+    color: #f9f9f9;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 48rem) {
+    .container {
+        flex-direction: column; /* Stack the footer boxes vertically */
+        align-items: center; /* Center align items when stacked */
+        gap: 2rem; /* Add spacing between boxes */
+    }
+    .footer-box {
+        width: 90%; /* Take up most of the screen width on smaller screens */
+        text-align: center; /* Center-align text for smaller devices */
+    }
+}
+
+.footer-with-margin {
+    margin-top: 13%; /* Add your desired margin value */
+}
