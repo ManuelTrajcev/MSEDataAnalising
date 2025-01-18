@@ -1,0 +1,125 @@
+/* General styles for the hero section */
+.hero {
+    margin: 15% 120px 0;
+}
+
+.hero-text {
+    color: white;
+    font-size: 15vh;
+    font-weight: 500;
+    line-height: 9vh;
+}
+
+/* Styles for the explore button in the hero section */
+.hero-explore {
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+    width: fit-content;
+    margin-top: 7vh;
+    padding: 0.5vh 1.5vh;
+    border-radius: 75px;
+    box-sizing: border-box;
+    outline: 2px solid #742CD8;
+    background-color: rgba(224, 170, 255, 0.7);
+    cursor: pointer;
+}
+
+.hero-explore p {
+    color: #3c096c;
+    font-size: 2.5vh;
+}
+
+.hero-explore img {
+    padding-top: 0.7vh;
+    width: 3vh;
+    height: 3vh;
+}
+
+/* Container for dots and play button */
+.hero-dot-play {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for the navigation dots */
+.hero-dots {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.hero-dot {
+    width: 1.2vh;
+    height: 1.2vh;
+    background: white;
+    border-radius: 75px;
+    cursor: pointer;
+}
+
+.hero-dot.orange {
+    background-color: #FCCE00;
+}
+
+/* Styles for the play button */
+.hero-play {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+}
+
+.hero-play img {
+    width: 5vh;
+    height: 5vh;
+    cursor: pointer;
+}
+
+/* Floating icon style */
+.floating-icon {
+    width: 6vh;
+    height: 6vh;
+    background: rgba(252, 206, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.floating-icon a {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse {
+    width: 3vh;
+    height: 3vh;
+    transform: translateY(-25%);
+    animation: bounce .8s ease infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-25%);
+    }
+    100% {
+        transform: translateY(25%);
+    }
+}
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+.nav {
+    width: 86%;
+    margin: 2vh auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pages li {
+    margin-left: 1rem;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.pages a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.1vh;
+    transition: background-color 0.1s ease;
+    padding: 1vh 1.5vh;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.pages a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #742CD8;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.pages a:hover::after,
+.pages a.active::after {
+    transform: scaleX(1);
+}
+
+.pages a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.pages a.active {
+    color: #3c096c;
+    background-color: #e0aaff;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .pages {
+        justify-content: space-between;
+        overflow-x: auto;
+    }
+
+    .pages li {
+        margin-left: 0.5rem;
+    }
+
+    .pages a {
+        font-size: 1rem;
+        padding: 0.6em 0.8em;
+    }
+}
