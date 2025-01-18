@@ -1,0 +1,130 @@
+.market-table, .risers-fallers-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.market-table th, .market-table td,
+.risers-fallers-table th, .risers-fallers-table td {
+    padding: 1.5%;
+    text-align: left;
+    border-bottom: 1px solid rgb(224, 170, 255);
+}
+
+.market-table th, .risers-fallers-table th {
+    background-color: #001064;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.market-table tbody tr:hover, .risers-fallers-table tbody tr:hover {
+    background-color: rgba(224, 170, 255, 0.7);
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    width: 89%;
+    margin: 0 auto;
+}
+
+.table-1, .table-2 {
+    width: 48%;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.table-1 > h1, .table-2 > h1 {
+    color: #001064;
+    text-align: left;
+    margin-top: 1%;
+    margin-left: 1%;
+    font-size: 3rem;
+}
+
+.up {
+    color: green;
+    font-weight: bold;
+}
+
+.down {
+    color: red;
+    font-weight: bold;
+}
+
+.neutral {
+    color: blue;
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 1.7rem;
+    margin-right: 5%;
+}
+
+.arrow.up {
+    color: green;
+}
+
+.arrow.down {
+    color: red;
+}
+
+.arrow.neutral {
+    color: blue;
+}
+
+.view-toggle button.active {
+    background-color: rgba(224, 170, 255, 0.7);
+    color: #001064;
+}
+
+.view-toggle button:not(.active) {
+    background-color: #ADD8E6;
+}
+
+.view-toggle button {
+    cursor: pointer;
+}
+
+.market-table th, .market-table td {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.risers-fallers-table th, .risers-fallers-table td {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: left;
+}
+
+.view-toggle button {
+    font-size: 1.5rem;
+    font-family: Jost, serif;
+    padding: 1.4% 4%;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .table-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table-1, .table-2 {
+        width: 100%;
+    }
+
+    .view-toggle button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
