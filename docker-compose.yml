@@ -15,17 +15,17 @@ services:
 #      - DJANGO_SUPERUSER_USERNAME=admin
 #      - DJANGO_SUPERUSER_PASSWORD=admin
 #      - DJANGO_SUPERUSER_EMAIL=admin@example.com
-  lstm:
-    build:
-      context: .
-      dockerfile: ./services/LSTM/Dockerfile
-    ports:
-      - "8001:8001"
-    volumes:
-      - ./db.sqlite3:/app/db.sqlite3
-      - ./services:/app/services
-      - ./manage.py:/app/manage.py
-      - ./MSEDataAnalising:/app/MSEDataAnalising
+#  lstm:
+#    build:
+#      context: .
+#      dockerfile: ./services/LSTM/Dockerfile
+#    ports:
+#      - "8001:8001"
+#    volumes:
+#      - ./db.sqlite3:/app/db.sqlite3
+#      - ./services:/app/services
+#      - ./manage.py:/app/manage.py
+#      - ./MSEDataAnalising:/app/MSEDataAnalising
 #
 #  nlp:
 #    build:
@@ -39,17 +39,17 @@ services:
 #      - ./manage.py:/app/manage.py
 #      - ./MSEDataAnalising:/app/MSEDataAnalising
 #
-#  react-app:
-#    build:
-#      context: ./reactapp
-#      dockerfile: Dockerfile
-#    env_file:
-#      - ./reactapp/.env
-#    command: [ "serve", "-s", "build" ]
-#    ports:
-#      - "3000:3000"
-#    volumes:
-#      - ./reactapp/src:/app/src
-#      - ./reactapp/package.json:/app/package.json
-#    environment:     #better performances, debuging disabled
-#      - NODE_ENV=production
+  react-app:
+    build:
+      context: ./reactapp
+      dockerfile: Dockerfile
+    env_file:
+      - ./reactapp/.env
+    command: [ "serve", "-s", "build" ]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./reactapp/src:/app/src
+      - ./reactapp/package.json:/app/package.json
+    environment:     #better performances, debuging disabled
+      - NODE_ENV=production
