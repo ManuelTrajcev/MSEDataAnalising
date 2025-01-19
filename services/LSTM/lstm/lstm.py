@@ -4,8 +4,6 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-from services.datascraper.models import *
-from services.datascraper.serializers import DayEntryAsStringSerializer, CompanySerializer
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -15,24 +13,56 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from keras import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Input
+import requests
+def get_company_codes():
+    base_url = 'http://datascraper:8000/datascraper/api/get-company-codes/'
 
+    try:
+        response = requests.get(base_url)
+        if response.status_code == 200:
+            data_api = response.json()
+            codes = np.array([item['name'] for item in data_api])
+            return codes
+        else:
+            print(f"Failed to fetch company codes: {response.status_code}, {response.text}")
+            return
+    except Exception as e:
+        print(f"Error fetching company codes: {e}")
+        return
+
+def fetch_and_clean_data(company_code, start_date=None, end_date=None):
+    base_url = 'http://datascraper:8000/datascraper/api/get-data/'
+    params = {'company_code': company_code}
+
+    if start_date:
+        params['start_date'] = start_date
+        print(start_date)
+    if end_date:
+        params['end_date'] = end_date
+        print(end_date)
+
+    response = requests.get(base_url, params=params)
+    if response.status_code == 200:
+        data_api = response.json()
+        df = pd.DataFrame(data_api)
+        return df
+    else:
+        raise Exception(f"Failed to fetch data: {response.status_code}, {response.text}")
 
 def create_combined_csv(script_dir):
     scalers_dir = os.path.join(script_dir, "scalers")
-    company_data = Company.objects.all()
-    serializer = CompanySerializer(company_data, many=True)
+    company_data = get_company_codes()
 
     os.makedirs(scalers_dir, exist_ok=True)
 
     combined_data = []
 
-    for entry in serializer.data:
+    for entry in combined_data:
         code = entry['name']
 
-        entries = DayEntryAsString.objects.filter(company_code=code)
-        serializer = DayEntryAsStringSerializer(entries, many=True)
+        entries = fetch_and_clean_data(entry)
 
-        data = serializer.data
+        data = entries
         df = pd.DataFrame(data)
 
         if 'date' not in df.columns or 'last_transaction_price' not in df.columns:
@@ -69,9 +99,7 @@ def create_combined_csv(script_dir):
 
 
 def create_company_encoder(script_dir):
-    company_data = Company.objects.all()
-    serializer = CompanySerializer(company_data, many=True)
-    codes = np.array([item['name'] for item in serializer.data])
+    codes = get_company_codes()
     encoder = LabelEncoder()
     encoded = encoder.fit_transform(codes.reshape(-1, 1))
 

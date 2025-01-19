@@ -1,13 +1,15 @@
 FROM python:3.9
 ENV PYTHONUNBUFFERED 1
+ENV TF_ENABLE_ONEDNN_OPTS=0
 
 WORKDIR /app
 
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./services /app/services
+COPY ./MSEDataAnalising /app/MSEDataAnalising
+COPY ./manage.py /app/manage.py
 
-COPY . /app/
+RUN pip install --no-cache-dir -r /app/services/datascraper/requirements.txt
 
 EXPOSE 8001
 
-CMD ["python", "/app/manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8001"]

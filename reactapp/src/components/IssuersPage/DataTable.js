@@ -17,7 +17,7 @@ export default function DataTable({ onDataLoaded }) {
     useEffect(() => {
         const fetchCompanyCodes = async () => {
             try {
-                const response = await fetch(`${process.env.REACT_APP_BASE_URL}:8000/datascraper/api/get-company-codes/`);
+                const response = await fetch(`${process.env.REACT_APP_BASE_URL}/datascraper/api/get-company-codes/`);
                 const companyCodes = await response.json();
                 setCompanyCodes(companyCodes);
             } catch (error) {
@@ -51,7 +51,7 @@ export default function DataTable({ onDataLoaded }) {
     const fetchData = async () => {
         try {
             const response = await fetch(
-                `${process.env.REACT_APP_BASE_URL}:8000/datascraper/api/get-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
+                `${process.env.REACT_APP_BASE_URL}/datascraper/api/get-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
             );
             const data = await response.json();
             setData(data);

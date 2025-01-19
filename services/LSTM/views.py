@@ -3,7 +3,7 @@
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from views_utils import (get_lstm_predictions, get_oscillator_signals, get_moving_average_signals,
+from .views_utils import (get_lstm_predictions, get_oscillator_signals, get_moving_average_signals,
                          perform_time_series_analysis)
 
 

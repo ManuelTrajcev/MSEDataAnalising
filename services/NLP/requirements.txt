@@ -8,7 +8,7 @@ joblib
 ta
 statsmodels
 pandas==2.2.2
-tensorflow==2.18.0
+tensorflow-cpu==2.18.0
 scikit-learn==1.0.2
 matplotlib==3.4.3
 numpy==1.26.4

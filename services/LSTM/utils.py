@@ -6,8 +6,8 @@ import pandas as pd
 from statsmodels.tsa.seasonal import seasonal_decompose
 from datetime import datetime
 
-from oscillators.oscilators import RSIStrategy, StochKStrategy, CCIStrategy, MACDStrategy, ADXStrategy
-from moving_averages.moving_avgs import SMAStrategy, EMAStrategy, IchimokuBaselineStrategy
+from .oscillators.oscilators import RSIStrategy, StochKStrategy, CCIStrategy, MACDStrategy, ADXStrategy
+from .moving_averages.moving_avgs import SMAStrategy, EMAStrategy, IchimokuBaselineStrategy
 
 from services.datascraper.models import DayEntryAsString
 from services.datascraper.serializers import DayEntryAsStringSerializer
