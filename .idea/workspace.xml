@@ -5,42 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/LSTM/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/LSTM/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/LSTM/views_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/LSTM/views_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/NLP/NLP_model/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/NLP/NLP_model/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/NLP/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/NLP/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/datascraper/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/datascraper/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/LSTM/lstm/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/WEB_APP_with_microservices/services/LSTM/lstm/lstm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSEDataAnalising/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/.env" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/LandingPageTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/LandingPageTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/HomePage/Ticker.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/HomePage/Ticker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/DataTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/IssuersPage/DataTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/components/VisualizationPage/TimeSeriesContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/src/pages/TechnicalAnalysis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/LSTM/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/MSEDataAnalising/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LSTM/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/services/LSTM/lstm/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/lstm/lstm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LSTM/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LSTM/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/LSTM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/LSTM/views_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/LSTM/views_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/NLP/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/NLP_model/nlp_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/NLP_model/nlp_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/NLP_model/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/NLP_model/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/MSEDataAnalising/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/services/datascraper/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/datascraper/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/datascraper/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/datascraper/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/MSEDataAnalising/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/datascraper/db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +103,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Deployment",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/MSEDataAnalising",
+    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/services/datascraper/MSEDataAnalising",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -121,11 +115,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\NLP" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\LSTM" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper\MSEDataAnalising" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\NLP" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\LSTM" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\LSTM" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -153,7 +150,9 @@
       <workItem from="1737267937022" duration="5381000" />
       <workItem from="1737276414558" duration="3204000" />
       <workItem from="1737283539894" duration="3938000" />
-      <workItem from="1737289934942" duration="964000" />
+      <workItem from="1737289934942" duration="1052000" />
+      <workItem from="1737291249351" duration="8377000" />
+      <workItem from="1737301509069" duration="9987000" />
     </task>
     <servers />
   </component>
@@ -170,16 +169,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/services/datascraper/manage.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
