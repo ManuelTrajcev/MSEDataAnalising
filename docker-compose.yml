@@ -1,44 +1,44 @@
 version: '3.8'
 services:
-#  datascraper:
-#    build:
-#      context: .
-#      dockerfile: ./services/datascraper/Dockerfile
-#    ports:
-#      - "8000:8000"
-#    volumes:
-#      - ./db.sqlite3:/app/db.sqlite3
-#      - ./services:/app/services
-#      - ./manage.py:/app/manage.py
-#      - ./MSEDataAnalising:/app/MSEDataAnalising
-#    environment:
-#      - DJANGO_SUPERUSER_USERNAME=admin
-#      - DJANGO_SUPERUSER_PASSWORD=admin
-#      - DJANGO_SUPERUSER_EMAIL=admin@example.com
-#  lstm:
-#    build:
-#      context: .
-#      dockerfile: ./services/LSTM/Dockerfile
-#    ports:
-#      - "8001:8001"
-#    volumes:
-#      - ./db.sqlite3:/app/db.sqlite3
-#      - ./services:/app/services
-#      - ./manage.py:/app/manage.py
-#      - ./MSEDataAnalising:/app/MSEDataAnalising
-#
-#  nlp:
-#    build:
-#      context: .
-#      dockerfile: ./services/NLP/Dockerfile
-#    ports:
-#      - "8002:8002"
-#    volumes:
-#      - ./db.sqlite3:/app/db.sqlite3
-#      - ./services:/app/services
-#      - ./manage.py:/app/manage.py
-#      - ./MSEDataAnalising:/app/MSEDataAnalising
-#
+  datascraper:
+    build:
+      context: .
+      dockerfile: ./services/datascraper/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./services:/app/services
+      - ./manage.py:/app/manage.py
+      - ./MSEDataAnalising:/app/MSEDataAnalising
+    environment:
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_PASSWORD=admin
+      - DJANGO_SUPERUSER_EMAIL=admin@example.com
+  lstm:
+    build:
+      context: .
+      dockerfile: ./services/LSTM/Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./services:/app/services
+      - ./manage.py:/app/manage.py
+      - ./MSEDataAnalising:/app/MSEDataAnalising
+
+  nlp:
+    build:
+      context: .
+      dockerfile: ./services/NLP/Dockerfile
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./services:/app/services
+      - ./manage.py:/app/manage.py
+      - ./MSEDataAnalising:/app/MSEDataAnalising
+
   react-app:
     build:
       context: ./reactapp

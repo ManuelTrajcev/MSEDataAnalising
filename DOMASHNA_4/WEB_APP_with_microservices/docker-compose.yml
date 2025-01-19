@@ -2,44 +2,49 @@ version: '3.8'
 services:
   datascraper:
     build:
-      context: ./services/datascraper
-      dockerfile: Dockerfile
-    command: ["python", "manage.py", "runserver", "0.0.0.0:8000", "--app=datascraper"]
+      context: .
+      dockerfile: ./services/datascraper/Dockerfile
     ports:
       - "8000:8000"
     volumes:
-      - .:/app
       - ./db.sqlite3:/app/db.sqlite3
+      - ./services:/app/services
+      - ./manage.py:/app/manage.py
+      - ./MSEDataAnalising:/app/MSEDataAnalising
     environment:
       - DJANGO_SUPERUSER_USERNAME=admin
       - DJANGO_SUPERUSER_PASSWORD=admin
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
   lstm:
     build:
-      context: ./services/lstm
-      dockerfile: Dockerfile
-    command: ["python", "manage.py", "runserver", "0.0.0.0:8001", "--app=lstm"]
+      context: .
+      dockerfile: ./services/LSTM/Dockerfile
     ports:
       - "8001:8001"
     volumes:
-      - .:/app
       - ./db.sqlite3:/app/db.sqlite3
+      - ./services:/app/services
+      - ./manage.py:/app/manage.py
+      - ./MSEDataAnalising:/app/MSEDataAnalising
 
   nlp:
     build:
-      context: ./services/nlp
-      dockerfile: Dockerfile
-    command: ["python", "manage.py", "runserver", "0.0.0.0:8002", "--app=nlp"]
+      context: .
+      dockerfile: ./services/NLP/Dockerfile
     ports:
       - "8002:8002"
     volumes:
-      - .:/app
       - ./db.sqlite3:/app/db.sqlite3
+      - ./services:/app/services
+      - ./manage.py:/app/manage.py
+      - ./MSEDataAnalising:/app/MSEDataAnalising
 
   react-app:
     build:
       context: ./reactapp
       dockerfile: Dockerfile
+    env_file:
+      - ./reactapp/.env
     command: [ "serve", "-s", "build" ]
     ports:
       - "3000:3000"

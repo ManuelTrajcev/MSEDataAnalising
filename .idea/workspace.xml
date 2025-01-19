@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reactapp/public/mse-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactapp/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactapp/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOMASHNA_4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/NLP_model/nlp_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/NLP_model/nlp_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/NLP/NLP_model/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/NLP_model/predict.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Deployment",
-    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/reactapp/public",
+    "last_opened_file_path": "C:/MANUEL/FINKI/SEMESTAR V/DIZAJN I ARHITEKTURA NA SOFTVER/MSE/MSEDataAnalising/DOMASHNA_4/WEB_APP_with_microservices/reactapp/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,11 +89,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\DOMASHNA_4\WEB_APP_with_microservices\reactapp\public" />
+      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\DOMASHNA_4\WEB_APP_with_microservices\reactapp\src\images" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\reactapp\public" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper\MSEDataAnalising" />
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\datascraper" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\NLP" />
-      <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\services\LSTM" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MANUEL\FINKI\SEMESTAR V\DIZAJN I ARHITEKTURA NA SOFTVER\MSE\MSEDataAnalising\reactapp\public" />
@@ -129,7 +127,7 @@
       <workItem from="1737283539894" duration="3938000" />
       <workItem from="1737289934942" duration="1052000" />
       <workItem from="1737291249351" duration="8377000" />
-      <workItem from="1737301509069" duration="12610000" />
+      <workItem from="1737301509069" duration="17351000" />
     </task>
     <servers />
   </component>
