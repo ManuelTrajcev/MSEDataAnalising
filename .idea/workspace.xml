@@ -7,8 +7,6 @@
     <list default="true" id="41262242-3f80-4ba7-83bc-90363c476d0a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOMASHNA_4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOMASHNA_4/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/NLP_model/nlp_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/NLP_model/nlp_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/NLP/NLP_model/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/NLP/NLP_model/predict.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +125,7 @@
       <workItem from="1737283539894" duration="3938000" />
       <workItem from="1737289934942" duration="1052000" />
       <workItem from="1737291249351" duration="8377000" />
-      <workItem from="1737301509069" duration="17351000" />
+      <workItem from="1737301509069" duration="18040000" />
     </task>
     <servers />
   </component>
