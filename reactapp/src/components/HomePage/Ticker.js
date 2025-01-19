@@ -10,7 +10,7 @@ const Ticker = () => {
         const fetchData = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8000/datascraper/api/get-last-day-data/?company_codes=${selectedCompanyCode}`
+                    `${process.env.REACT_APP_BASE_URL}/datascraper/api/get-last-day-data/?company_codes=${selectedCompanyCode}`
                 );
                 const responseData = await response.json();
                 setData(

@@ -11,7 +11,7 @@ export default function News() {
         const fetchCompanyPredictions = async () => {
             try {
                 const number_of_news = 3
-                const response = await fetch(`http://localhost:8002/nlp/api/get-latest-newss/?number_of_news=${number_of_news}`);
+                const response = await fetch(`${process.env.REACT_APP_NLP_URL}/nlp/api/get-latest-newss/?number_of_news=${number_of_news}`);
                 if (!response.ok) throw new Error("Network response was not ok");
                 const data = await response.json();
                 setData(data);

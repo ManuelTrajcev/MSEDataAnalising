@@ -9,12 +9,8 @@ import requests
 
 from .utils import DataProcessor, clean_data
 
-from services.datascraper.models import DayEntryAsString
-from services.datascraper.serializers import DayEntryAsStringSerializer
-
-
 def fetch_and_clean_data(company_code, start_date=None, end_date=None):
-    base_url = 'http://datascraper:8000/datascraper/api/get-data/'
+    base_url = 'https://datascraper-f5h8a3ctfqhmc7a5.germanywestcentral-01.azurewebsites.net/datascraper/api/get-data/'
     params = {'company_code': company_code}
 
     if start_date:
@@ -32,19 +28,6 @@ def fetch_and_clean_data(company_code, start_date=None, end_date=None):
         return df
     else:
         raise Exception(f"Failed to fetch data: {response.status_code}, {response.text}")
-
-    # if start_date and end_date:
-    #     entries = DayEntryAsString.objects.filter(company_code=company_code, date__range=[start_date, end_date])
-    # else:
-    #     entries = DayEntryAsString.objects.filter(company_code=company_code)
-    #
-    # serializer = DayEntryAsStringSerializer(entries, many=True)
-    # data = serializer.data
-    #
-    # df = pd.DataFrame(data)
-    # df = clean_data(df)
-    #
-    # return df
 
 
 def get_lstm_predictions(company_code, window_size=3, prediction_steps=10):

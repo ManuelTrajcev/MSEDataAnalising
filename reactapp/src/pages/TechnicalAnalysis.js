@@ -29,7 +29,7 @@ export default function TechnicalAnalysis() {
     useEffect(() => {
         const fetchCompanyCodes = async () => {
             try {
-                const response = await fetch("http://localhost:8000/datascraper/api/get-company-codes/");
+                const response = await fetch(`${process.env.REACT_APP_BASE_URL}/datascraper/api/get-company-codes/`);
                 if (!response.ok) throw new Error("Failed to fetch company codes");
                 const data = await response.json();
                 setCompanyCodes(data);
@@ -54,26 +54,26 @@ export default function TechnicalAnalysis() {
 
                 // Fetch LSTM predictions
                 const predictionsData = await fetchAPI(
-                    `http://localhost:8001/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`,
+                    `${process.env.REACT_APP_LSTM_URL}/lstm/api/lstm-predictions/?company_code=${selectedCompanyCode}`,
                     "LSTM predictions"
                 );
                 const formattedData = formatLSTMData(predictionsData);
 
                 // Fetch oscillator signals
                 const oscillatorData = await fetchAPI(
-                    `http://localhost:8001/lstm/api/oscillator-signals/?company_code=${selectedCompanyCode}`,
+                    `${process.env.REACT_APP_LSTM_URL}/lstm/api/oscillator-signals/?company_code=${selectedCompanyCode}`,
                     "oscillator signals"
                 );
 
                 // Fetch moving average signals
                 const movingAvgData = await fetchAPI(
-                    `http://localhost:8001/lstm/api/moving-average-signals/?company_code=${selectedCompanyCode}`,
+                    `${process.env.REACT_APP_LSTM_URL}/lstm/api/moving-average-signals/?company_code=${selectedCompanyCode}`,
                     "moving average signals"
                 );
 
                 // Fetch sentiment analysis data
                 const nlpData = await fetchAPI(
-                    `http://localhost:8002/nlp/api/get-prediction-for-company/?company_code=${selectedCompanyCode}`,
+                    `${process.env.REACT_APP_NLP_URL}/nlp/api/get-prediction-for-company/?company_code=${selectedCompanyCode}`,
                     "sentiment analysis"
                 );
                 const sentiment = nlpData[0];

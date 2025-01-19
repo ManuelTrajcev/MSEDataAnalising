@@ -1,3 +1,7 @@
+import os
+import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
+django.setup()
 from .models import DayEntryAsString, Company
 from .query_factory import day_entry_query_factory
 

@@ -1,5 +1,9 @@
-from .models import News, Company
+import os
+import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
+django.setup()
 
+from .models import News, Company
 
 def get_all_predictions():
     data = Company.objects.all()

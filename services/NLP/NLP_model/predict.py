@@ -10,7 +10,7 @@ from services.NLP.models import News, Company
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cpu"
 
 model_path = "trained_models/fine_tuned_financial_sentiment_model_db_5"
 model = AutoModelForSequenceClassification.from_pretrained(model_path).to(device)

@@ -10,7 +10,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MSEDataAnalising.settings')
 django.setup()
 from services.NLP.models import News
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cpu"
 torch.cuda.empty_cache()
 
 tokenizer = AutoTokenizer.from_pretrained("AnkitAI/distilbert-base-uncased-financial-news-sentiment-analysis")

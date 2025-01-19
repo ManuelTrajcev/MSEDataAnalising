@@ -18,7 +18,8 @@ const TimeSeriesContainer = () => {
     useEffect(() => {
         const fetchCompanyCodes = async () => {
             try {
-                const response = await fetch("http://localhost:8000/datascraper/api/get-company-codes/");
+                console.log(process.env.REACT_APP_BASE_UR)
+                const response = await fetch(`${process.env.REACT_APP_BASE_URL}/datascraper/api/get-company-codes/`);
                 const companyCodes = await response.json();
                 setCompanyCodes(companyCodes);
             } catch (error) {
@@ -34,7 +35,7 @@ const TimeSeriesContainer = () => {
             const fetchTimeSeriesData = async () => {
                 try {
                     const response = await fetch(
-                        `http://localhost:8000/datascraper/api/get-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
+                        `${process.env.REACT_APP_BASE_URL}/datascraper/api/get-data/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
                     );
                     if (!response.ok) {
                         throw new Error("Не успеа да се преземат податоците");
@@ -69,7 +70,7 @@ const TimeSeriesContainer = () => {
             const fetchTimeSeriesData = async () => {
                 try {
                     const response = await fetch(
-                        `http://localhost:8001/lstm/api/time-series-analysis/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
+                        `${process.env.REACT_APP_LSTM_URL}/lstm/api/time-series-analysis/?company_code=${selectedCompanyCode}&start_date=${startDate}&end_date=${endDate}`
                     );
                     if (!response.ok) {
                         throw new Error("Failed to fetch data");
